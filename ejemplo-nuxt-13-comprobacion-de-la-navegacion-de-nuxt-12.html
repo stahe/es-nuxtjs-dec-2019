@@ -1,0 +1,1362 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Una introducción al marco NUXT.JS a través de ejemplos">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/es-nuxtjs-dec-2019/ejemplo-nuxt-13-comprobacion-de-la-navegacion-de-nuxt-12.html">
+      
+      
+        <link rel="prev" href="ejemplo-nuxt-12-solicitudes-http-con-axios.html">
+      
+      
+        <link rel="next" href="ejemplo-nuxt-20-portar-el-ejemplo-vuejs-22.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>16. Ejemplo [nuxt-13]: Comprobación de la navegación de [nuxt-12] - Una introducción al marco NUXT.JS a través de ejemplos</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "Una introducción al marco NUXT.JS a través de ejemplos";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#16-ejemplo-nuxt-13-comprobacion-de-la-navegacion-de-nuxt-12" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Una introducción al marco NUXT.JS a través de ejemplos" class="md-header__button md-logo" aria-label="Una introducción al marco NUXT.JS a través de ejemplos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Una introducción al marco NUXT.JS a través de ejemplos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              16. Ejemplo [nuxt-13]: Comprobación de la navegación de [nuxt-12]
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/es-nuxtjs-dec-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Una introducción al marco NUXT.JS a través de ejemplos" class="md-nav__button md-logo" aria-label="Una introducción al marco NUXT.JS a través de ejemplos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Una introducción al marco NUXT.JS a través de ejemplos
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/es-nuxtjs-dec-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bienvenidos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduccion-al-marco-nuxtjs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducción al marco NUXT.JS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="el-entorno-de-trabajo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. El entorno de trabajo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="una-primera-aplicacion-nuxtjs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Una primera aplicación [nuxt.js]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-01-enrutamiento-y-navegacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Ejemplo [nuxt-01]: Enrutamiento y navegación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-02-paginas-del-servidor-y-del-cliente.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Ejemplo [nuxt-02]: Páginas del servidor y del cliente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-03-nuxtserverinit.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Ejemplo [nuxt-03]: nuxtServerInit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-04-mantener-una-sesion-clienteservidor.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Ejemplo [nuxt-04]: Mantener una sesión cliente/servidor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-05-persistencia-del-almacen-con-una-cookie-de-sesion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Ejemplo [nuxt-05]: Persistencia del almacén con una cookie de sesión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-06-inyeccion-en-el-contexto-de-un-gestor-de-sesiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Ejemplo [nuxt-06]: Inyección en el contexto de un gestor de sesiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-07-contextos-de-cliente-y-servidor.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Ejemplo [nuxt-07]: Contextos de cliente y servidor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-08-middleware-de-enrutamiento.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Ejemplo [nuxt-08]: Middleware de enrutamiento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-09-control-de-la-navegacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Ejemplo [nuxt-09]: Control de la navegación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-10-asyncdata-y-loading.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Ejemplo [nuxt-10]: asyncData y loading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-11-personalizacion-de-la-imagen-de-carga.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Ejemplo [nuxt-11]: Personalización de la imagen de carga
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-12-solicitudes-http-con-axios.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Ejemplo [nuxt-12]: Solicitudes HTTP con axios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Ejemplo [nuxt-13]: Comprobación de la navegación de [nuxt-12]
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ejemplo-nuxt-13-comprobacion-de-la-navegacion-de-nuxt-12.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Ejemplo [nuxt-13]: Comprobación de la navegación de [nuxt-12]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#161-enrutamiento-para-la-aplicacion-nuxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.1. Enrutamiento para la aplicación [nuxt]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#162-enrutamiento-del-cliente-nuxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.2. Enrutamiento del cliente [nuxt]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#163-enrutamiento-del-servidor-nuxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.3. Enrutamiento del servidor [Nuxt]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#164-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.4. Ejecución
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#165-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.5. Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-20-portar-el-ejemplo-vuejs-22.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Ejemplo [nuxt-20]: Portar el ejemplo [vuejs-22]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="16-ejemplo-nuxt-13-comprobacion-de-la-navegacion-de-nuxt-12">16. <span style="color: #365f91">Ejemplo [nuxt-13]: Comprobación de la navegación de [nuxt-12]</span></h1>
+<p>En este ejemplo, nos centramos en la navegación de [nuxt-12]. No lo hicimos en [nuxt-12] porque controlar la navegación habría añadido complejidad a un ejemplo que ya era complejo.</p>
+<p><strong>Objetivo</strong>: queremos que el usuario solo pueda realizar acciones autorizadas:</p>
+<ul>
+  <li>si la sesión JSON no ha comenzado, solo se permite la URL [/];
+  </li>
+  <li>si la sesión JSON ha comenzado pero el usuario no está autenticado, solo se permite la URL [/authentication];
+  </li>
+  <li>si la sesión JSON ha comenzado y el usuario está autenticado, solo se permiten las URL [/get-admindata, /end-session];
+  </li>
+  <li>cuando el destino de enrutamiento actual no esté autorizado, se realizará una redirección a una URL autorizada;
+  </li>
+</ul>
+
+<p>El ejemplo [nuxt-13] se obtiene inicialmente copiando el ejemplo [nuxt-12]:</p>
+<p><img src="images/100000000000016A000002088749E060.png" width="145" height="208" style="width:3.829cm;height:5.5cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016A000002088749E060.png" /></p>
+<p>Los cambios se realizarán en la carpeta de enrutamiento [middleware].</p>
+<h2 id="161-enrutamiento-para-la-aplicacion-nuxt">16.1. <span style="color: #4f81bd">Enrutamiento para la aplicación [nuxt]</span></h2>
+<p>El enrutamiento de la aplicación se configura de la siguiente manera en el archivo [nuxt.config]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">// router</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  router: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// application URL root</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    base: <span style="color:#a31515">&#x27;/nuxt-13/&#x27;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// routing middleware</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    middleware: [<span style="color:#a31515">&#x27;routing&#x27;</span>]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">},</span></span>
+</code></pre></div>
+
+<ul>
+  <li>línea 6: el enrutamiento de la aplicación se controla mediante el archivo [middleware/routing];
+  </li>
+</ul>
+
+<p>El archivo [middleware/routing] es el siguiente:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// on importe les middleware du serveur et du client</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> serverRouting </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;./server/routing&#x27;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> clientRouting </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;./client/routing&#x27;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> </span>function<span style="color:#000000">(context) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// qui exécute ce code ?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  console.log(<span style="color:#a31515">&#x27;[middleware], process.server&#x27;</span>, process.server, <span style="color:#a31515">&#x27;, process.client=&#x27;</span>, process.client)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (process.server) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// routage serveur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    serverRouting(context)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  } <span style="color:#0000ff">else</span> {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// routage client</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    clientRouting(context)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<ul>
+  <li>líneas 10–16: el enrutamiento del cliente y del servidor [nuxt] se gestiona de forma diferente. Este es un punto de diferencia importante entre ambos;
+  </li>
+  <li>línea 4: el enrutamiento del servidor se implementa mediante el script [middleware/server/routing];
+  </li>
+  <li>línea 5: el enrutamiento del cliente se implementa mediante el script [middleware/client/routing];
+  </li>
+</ul>
+<h2 id="162-enrutamiento-del-cliente-nuxt">16.2. <span style="color: #4f81bd">Enrutamiento del cliente [nuxt]</span></h2>
+<p>El enrutamiento del lado del cliente [nuxt] sigue siendo el mismo que en [nuxt-12]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> </span>function<span style="color:#000000">(context) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// who executes this code?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span>&#x27;[middleware client], process.server&#x27;<span style="color:#000000">, process.server, </span>&#x27;, process.client=&#x27;<span style="color:#000000">, process.client)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// management of the PHP session cookie in the browser</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the browser&#x27;s PHP session cookie must be identical to the one found in the nuxt session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// acion [fin-session] receives a new cookie PHP (server as nuxt client)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// if the server receives it, the client must pass it on to the browser</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// for its own exchanges with the PHP server</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// this is customer routing</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// retrieve the session cookie PHP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> phpSessionCookie = context.store.state.phpSessionCookie</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (phpSessionCookie) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// if it exists, we assign the PHP session cookie to the browser</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    document.cookie = phpSessionCookie</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  ...</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p>Para evitar que el cliente acceda a rutas no autorizadas, simplemente ofreceremos solo las rutas autorizadas en el menú de navegación del cliente. El componente [components/navigation] queda así:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- bootstrap menu with three options --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-nav</span><span style="color:#000000"> </span>vertical<span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">b-nav-item</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span>=&quot;$store.state.jsonSessionStarted &amp;&amp; !$store.state.userAuthenticated&quot;<span style="color:#000000"> </span><span style="color:#ff0000">to</span>=&quot;/authentification&quot;<span style="color:#000000"> </span><span style="color:#ff0000">exact</span><span style="color:#000000"> </span><span style="color:#ff0000">exact-active-class</span>=&quot;active&quot;&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      Authentification</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span>b-nav-item<span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span>b-nav-item</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#ff0000">v-if</span>=&quot;$store.state.jsonSessionStarted &amp;&amp; $store.state.userAuthenticated &amp;&amp; !$store.state.adminData&quot;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#ff0000">to</span>=&quot;/get-admindata&quot;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#ff0000">exact</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span>exact-active-class<span style="color:#0000ff">=&quot;active&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      Requête AdminData</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span>b-nav-item<span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">b-nav-item</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span>=&quot;$store.state.jsonSessionStarted &amp;&amp; $store.state.userAuthenticated&quot;<span style="color:#000000"> </span><span style="color:#ff0000">to</span>=&quot;/fin-session&quot;<span style="color:#000000"> </span><span style="color:#ff0000">exact</span><span style="color:#000000"> </span><span style="color:#ff0000">exact-active-class</span>=&quot;active&quot;&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      Fin session impôt</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span>b-nav-item<span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>b-nav<span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<ul>
+  <li>línea 4: la opción [Authentication] solo está disponible si la sesión JSON ha comenzado pero el usuario no está autenticado. Si la sesión JSON no ha comenzado o el usuario ya está autenticado, la opción no está disponible;
+  </li>
+  <li>Líneas 7-11: la opción [Solicitud de datos de administración] solo está disponible si la sesión JSON ha comenzado, el usuario está autenticado y los datos de administración aún no se han recuperado. Si no se cumple alguna de estas tres condiciones (sesión JSON no iniciada, usuario no autenticado o datos de administración ya recuperados), la opción no se ofrece;
+  </li>
+  <li>Línea 15: la opción [End Tax Session] está disponible tan pronto como se haya iniciado la sesión JSON y el usuario esté autenticado; de lo contrario, no está disponible;
+  </li>
+</ul>
+<p><a id="nuxt13routagenuxtserver"></a>
+<a id="refheadingtoc1463512091980367"></a></p>
+<h2 id="163-enrutamiento-del-servidor-nuxt">16.3. <span style="color: #4f81bd">Enrutamiento del servidor [Nuxt]</span></h2>
+<p>El enrutamiento del servidor suele ser más complejo que el enrutamiento del lado del cliente, ya que el usuario puede escribir cualquier URL en la barra de direcciones de su navegador. Podemos permitir que eso ocurra (al fin y al cabo, no se supone que el usuario haga eso) o intentar controlarlo. Eso es lo que haremos aquí, a efectos de este ejemplo, porque en el caso de la aplicación [nuxt-12], podemos prescindir fácilmente de ello, ya que el servidor de cálculo de impuestos está bien protegido contra estas URL introducidas manualmente y sabe cómo enviar los mensajes de error adecuados. Lo vimos en [next-12], donde no había control de enrutamiento.</p>
+<p>El enrutamiento en un servidor [nuxt] es muy diferente al de un cliente [nuxt] en lo que respecta a la redirección:</p>
+<ul>
+  <li>cuando un servidor [nuxt] es redirigido, envía una solicitud de redirección al navegador del cliente con el destino de la redirección. A continuación, el navegador realiza una nueva solicitud al servidor [nuxt], pidiendo el destino que se le ha enviado. Es como si el usuario hubiera escrito manualmente la URL del destino de la redirección: toda la aplicación [nuxt] se reinicia y, con ella, todo su ciclo de vida (plugins del servidor, store, enrutamiento del servidor, páginas);
+  </li>
+  <li>cuando se redirige un cliente [nuxt], nada de esto ocurre. Simplemente se produce un cambio de página, igual que habría ocurrido si el usuario hubiera hecho clic en un enlace que llevara al destino de la redirección. El ciclo de vida es entonces diferente (enrutamiento del lado del cliente, renderización del destino de la ruta);
+  </li>
+</ul>
+
+<p>Por este motivo, es preferible separar el enrutamiento del lado del cliente del enrutamiento del lado del servidor, aunque las dos bases de código puedan parecer similares.</p>
+<p>El script de enrutamiento del servidor [middleware/server/routing] será el siguiente:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> </span>function<span style="color:#000000">(context) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// qui exécute ce code ?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span>&#x27;[middleware server], process.server&#x27;<span style="color:#000000">, process.server, </span>&#x27;, process.client=&#x27;<span style="color:#000000">, process.client)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// on récupère quelques informations dans le store [nuxt]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> store = context.store</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// d&#x27;où vient-on ?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> from = store.state.from || <span style="color:#a31515">&#x27;nowhere&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  ...</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<ul>
+  <li>En el enrutamiento del lado del cliente, la función de enrutamiento recibe el contexto [context] con la propiedad [context.from], que es la ruta de la página de la que venimos. La ruta a la que nos dirigimos se obtiene a través de [context.route];
+  </li>
+  <li>En el enrutamiento del lado del servidor, la función de enrutamiento recibe el contexto [context] <b>sin </b>la propiedad [context.from]. El enrutamiento del lado del servidor solo se produce cuando se solicita manualmente una URL al servidor [nuxt]. Sabemos que, en ese momento, toda la aplicación [nuxt] se reinicia. Es como si empezáramos desde cero, por lo que no existe el concepto de «página anterior»;
+  </li>
+  <li>gracias a la sesión [nuxt], sabemos que el servidor puede recuperar esta sesión y así evitar empezar desde cero. Por lo tanto, es en esta sesión [nuxt], y más concretamente en el almacén de la sesión, donde almacenaremos el nombre de la última página mostrada por el navegador del cliente antes de que se solicite una URL al servidor [nuxt];
+  </li>
+  <li>Líneas 7–9: Recuperamos el nombre de la última página mostrada por el navegador del cliente. Cuando se inicia la aplicación, esta información [from] no existe en el almacén. A continuación, asignamos el nombre [nowhere] a la variable [from];
+  </li>
+</ul>
+
+<p>Para que el servidor [nuxt] pueda recuperar del almacén el nombre de la última página mostrada por el navegador del cliente, el cliente [nuxt] también debe introducir esta información en el almacén. Por lo tanto, el script de enrutamiento del cliente [nuxt] queda completado de la siguiente manera:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> </span>function<span style="color:#000000">(context) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// qui exécute ce code ?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span>&#x27;[middleware client], process.server&#x27;<span style="color:#000000">, process.server, </span>&#x27;, process.client=&#x27;<span style="color:#000000">, process.client)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// gestion du cookie de la session PHP dans le navigateur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// le cookie de la session PHP du navigateur doit être identique à celui trouvé en session nuxt</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// l&#x27;acion [fin-session] reçoit un nouveau cookie PHP (serveur comme client nuxt)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// si c&#x27;est le serveur qui le reçoit, le client doit le transmettre au navigateur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// pour ses propres échanges avec le serveur PHP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// on est ici dans un routing client</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// on récupère le cookie de la session PHP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> phpSessionCookie = context.store.state.phpSessionCookie</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (phpSessionCookie) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// s&#x27;il existe, on affecte le cookie de session PHP au navigateur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    document.cookie = phpSessionCookie</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// on met dans la session le nom de la page où on va - pas de redirection serveur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  context.store.commit(<span style="color:#a31515">&#x27;replace&#x27;</span>, { serverRedirection: <span style="color:#0000ff">false</span>, from: context.route.name })</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// on sauvegarde le store dans la session [nuxt]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> session = context.app.$session()</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  session.value.store = context.store.state</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  session.save(context)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<ul>
+  <li>Se añaden las líneas 19–24;
+  </li>
+  <li>Línea 20: Almacenamos el nombre de la página [<span style="color: #000000">context.route.name</span>] que se mostrará en el almacén, que luego servirá como la página de la que venimos durante el siguiente paso de enrutamiento. Además, veremos que, en el enrutamiento del servidor [nuxt], este necesita saber si el enrutamiento actual proviene de una redirección previa realizada por el servidor [nuxt]. En este caso, no es así, por lo que establecemos la propiedad [<span style="color: #000000">serverRedirection</span>] en [false];
+  </li>
+  <li>líneas 22–24: el estado del almacén se coloca en la sesión [nuxt] (línea 23), luego la sesión [nuxt] se guarda en una cookie (línea 24), que a su vez se guardará en el navegador del cliente [nuxt];
+  </li>
+</ul>
+
+<p>Volvamos al script de enrutamiento del servidor [nuxt]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> </span>function<span style="color:#000000">(context) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// qui exécute ce code ?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span>&#x27;[middleware server], process.server&#x27;<span style="color:#000000">, process.server, </span>&#x27;, process.client=&#x27;<span style="color:#000000">, process.client)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// on récupère quelques informations dans le store [nuxt]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> store = context.store</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// d&#x27;où vient-on ?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> from = store.state.from || <span style="color:#a31515">&#x27;nowhere&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// où va-t-on ?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> to = context.route.name</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// éventuelle redirection</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">let</span> redirection = <span style="color:#a31515">&#x27;&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// gestion du routage terminé</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">let</span> done = <span style="color:#0000ff">false</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// est-on déjà dans une redirection du serveur [nuxt]?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (store.state.serverRedirection) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// rien à faire</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    done = <span style="color:#0000ff">true</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// est-ce un rechargement de page ?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (to === from) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// rien à faire</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    done = <span style="color:#0000ff">true</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// contrôle de la navigation du serveur [nuxt]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// on s&#x27;inspire de la navigation client dans le composant [navigation]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// cas où la session PHP n&#x27;a pas démarré</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (!done &amp;&amp; !store.state.jsonSessionStarted &amp;&amp; to !== <span style="color:#a31515">&#x27;index&#x27;</span>) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// redirection</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    redirection = <span style="color:#a31515">&#x27;index&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// travail terminé</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    done = <span style="color:#0000ff">true</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// cas où l&#x27;utilisateur n&#x27;est pas authentifié</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (!done &amp;&amp; store.state.jsonSessionStarted &amp;&amp; !store.state.userAuthenticated &amp;&amp; to !== <span style="color:#a31515">&#x27;authentification&#x27;</span>) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// redirection</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    redirection = from</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// travail terminé</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    done = <span style="color:#0000ff">true</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// cas où l&#x27;utilisateur a été authentifié</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (!done &amp;&amp; store.state.jsonSessionStarted &amp;&amp; store.state.userAuthenticated &amp;&amp; to !== <span style="color:#a31515">&#x27;get-admindata&#x27;</span> &amp;&amp; to !== <span style="color:#a31515">&#x27;fin-session&#x27;</span>) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// on reste sur la même page</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    redirection = from</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// travail terminé</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    done = <span style="color:#0000ff">true</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// cas où [adminData] a été obtenu</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (!done &amp;&amp; store.state.jsonSessionStarted &amp;&amp; store.state.userAuthenticated &amp;&amp; store.state.adminData &amp;&amp; to !== <span style="color:#a31515">&#x27;fin-session&#x27;</span>) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// on reste sur la même page</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    redirection = from</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// travail terminé</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    done = <span style="color:#0000ff">true</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// on a fait tous les contrôles ---------------------</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// redirection ?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (redirection) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// on note la redirection dans le store</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    store.commit(<span style="color:#a31515">&#x27;replace&#x27;</span>, { serverRedirection: <span style="color:#0000ff">true</span> })</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  } <span style="color:#0000ff">else</span> {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// pas de redirection</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    store.commit(<span style="color:#a31515">&#x27;replace&#x27;</span>, { serverRedirection: <span style="color:#0000ff">false</span>, from: to })</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// on sauvegarde le store dans la session [nuxt]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> session = context.app.$session()</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  session.value.store = store.state</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  session.save(context)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// on fait l&#x27;éventuelle redirection</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (redirection) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    context.redirect({ name: redirection })</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<ul>
+  <li>líneas 6–9: recuperamos el valor de [from] del almacén del servidor [nuxt];
+  </li>
+  <li>línea 11: anotamos el destino de la ruta actual;
+  </li>
+  <li>línea 13: el enrutamiento puede dar lugar a una redirección del navegador del cliente. [redirection] será el destino de esta redirección;
+  </li>
+  <li>línea 15: [done] establecido en [true] indica que el enrutamiento ha finalizado;
+  </li>
+  <li>líneas 17–21: En primer lugar, comprobamos si el enrutamiento actual se debe a una solicitud de redireccionamiento enviada al navegador del cliente. Esta información se almacena en la propiedad [serverRedirection] del almacén. Si esta propiedad es true, entonces el servidor [nuxt] envió un redireccionamiento al navegador del cliente durante la solicitud anterior al servidor [nuxt]. En este caso, no es necesario realizar ningún enrutamiento. Durante la solicitud anterior, el enrutador del servidor [nuxt] decidió que el navegador del cliente debía ser redirigido. No es necesario anular esta decisión con un nuevo enrutamiento;
+  </li>
+  <li>líneas 23–27: comprobamos si el enrutamiento actual es una recarga de página. Si es así, dejamos que continúe;
+  </li>
+  <li>A partir de la línea 29, retomamos las reglas aplicadas en el componente [navigation] del cliente [nuxt] (véase el párrafo anterior);
+  </li>
+  <li>líneas 32–38: gestionamos el caso en el que la sesión JSON no ha comenzado y el destino de la ruta no es la página [index]. En este caso, redirigimos el navegador del cliente a la página [index];
+  </li>
+  <li>líneas 40–46: gestionamos el caso en el que la sesión JSON ha comenzado, el usuario no está autenticado y el destino de enrutamiento actual no es la página [authentication]. En este caso, rechazamos el enrutamiento y permanecemos donde estábamos;
+  </li>
+  <li>líneas 48–54: gestionan el caso en el que la sesión JSON ha comenzado, el usuario está autenticado y el destino de enrutamiento actual no es ni la página [get-admindata] ni la página [end-session], que son entonces los únicos destinos posibles. En este caso, se rechaza el enrutamiento solicitado y volvemos a donde estábamos anteriormente;
+  </li>
+  <li>líneas 56–62: gestionamos el caso en el que se ha obtenido [adminData]. En este caso, solo hay un destino de enrutamiento posible: la página [fin-session]. Si esa no era la página solicitada, rechazamos el enrutamiento y volvemos a donde estábamos anteriormente;
+  </li>
+  <li>líneas 64–72: si se ha producido una redirección, la registramos en el almacén del servidor [nuxt]: [<span style="color: #000000">serverRedirection: </span><span style="color: #0000ff">true</span>]. Ten en cuenta que no asignamos ningún valor a la propiedad [from] del almacén. El motivo es que habrá una redirección desde el navegador del cliente, y hemos visto que, en este caso, no hubo enrutamiento (líneas 17–20) y la propiedad [from] del almacén no se utiliza;
+  </li>
+  <li>Líneas 66–69: Si no hay redireccionamiento, esto también se anota en el almacén del servidor [nuxt]: [<span style="color: #000000">serverRedirection: </span><span style="color: #0000ff">false</span>]. Además, el enrutamiento actual mostrará la página [to], que para la siguiente solicitud (del cliente o del servidor [nuxt]) se convertirá en la página anterior. Por eso escribimos [<span style="color: #000000"><mark style="background-color: #ffff00">from: to</mark></span>];
+  </li>
+  <li>líneas 73–76: Guardamos el almacén en la sesión [nuxt], que a su vez se guarda en una cookie;
+  </li>
+  <li>líneas 77–80: si [redirection] no está vacío, entonces le indicamos al navegador que redirija. De lo contrario (no se muestra aquí), el ciclo de vida del servidor [nuxt] continuará: la página [to] será procesada por el servidor [nuxt] y enviada al navegador del cliente [nuxt] junto con la cookie de sesión [nuxt];
+  </li>
+</ul>
+
+<p>El enrutamiento elegido aquí para el servidor [nuxt] es arbitrario. Podríamos haber elegido otro o, como se ha mencionado, no haber utilizado ningún enrutamiento. El elegido anteriormente tiene la ventaja de mantener siempre la aplicación en un estado estable, independientemente de la URL solicitada por el usuario.</p>
+<p>Podemos mejorar esto ligeramente cuando la página que se carga finalmente es la página original. Hay dos casos:</p>
+<ul>
+  <li>el usuario ha provocado una recarga de la página (to===from);
+  </li>
+  <li>hay redireccionamientos a la página original (redirección===desde);
+  </li>
+</ul>
+
+<p>En ambos casos, la página original se ejecutará de nuevo con su llamada asíncrona al servidor de cálculo de impuestos. Veamos un ejemplo. Si, una vez autenticado, el usuario recarga la página (F5). En este caso, en el enrutamiento anterior, tenemos: [to]=[from]=[authentication]. No hay redireccionamiento. La página [to=authentication] será ejecutada por el servidor [nuxt]. Si no hacemos nada, la función [asyncData] se ejecutará de nuevo. Esto es innecesario, ya que la autenticación ya se ha realizado.</p>
+<p>Podemos mejorar esto modificando ligeramente la página [authentication]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
+<span class="odt-code-line"><span class="odt-code-line-content">// asynchronous data</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">async</span> asyncData(context) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// log</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[authentification asyncData started]&#x27;<span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// don&#x27;t do things twice if the page has already been requested</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server &amp;&amp; context.store.state.userAuthenticated) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span>&#x27;[authentification asyncData canceled]&#x27;<span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">return</span> { result: <span style="color:#a31515">&#x27;[succès]&#x27;</span> }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      // customer [nuxt]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.client) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// start waiting</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      context.app.$eventBus().$emit(<span style="color:#a31515">&#x27;loading&#x27;</span>, <span style="color:#0000ff">true</span>)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// no error</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      context.app.$eventBus().$emit(<span style="color:#a31515">&#x27;errorLoading&#x27;</span>, <span style="color:#0000ff">false</span>)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">try</span> {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// authenticate to the server</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
+</code></pre></div>
+
+<ul>
+  <li>líneas 6-9: si la página está siendo servida por el servidor [nuxt] y encontramos en el almacén que ya se ha realizado la autenticación, entonces devolvemos el resultado deseado directamente (línea 8);
+  </li>
+</ul>
+
+<p>Hacemos lo mismo para todas las páginas:</p>
+<p><strong>Página [index]</strong>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
+<span class="odt-code-line"><span class="odt-code-line-content">// asynchronous data</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">async</span> asyncData(context) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// log</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[index asyncData started]&#x27;<span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// don&#x27;t do things twice if the page has already been requested</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server &amp;&amp; context.store.state.jsonSessionStarted) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span>&#x27;[index asyncData canceled]&#x27;<span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">return</span> { result: <span style="color:#a31515">&#x27;[succès]&#x27;</span> }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">try</span> {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
+</code></pre></div>
+
+<p><strong>Página [get-admindata]</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
+<span class="odt-code-line"><span class="odt-code-line-content">// asynchronous data</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">async</span> asyncData(context) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// log</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[get-admindata asyncData started]&#x27;<span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// don&#x27;t do things twice if the page has already been requested</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server &amp;&amp; context.store.state.adminData) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span>&#x27;[get-admindata asyncData canceled]&#x27;<span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">return</span> { result: context.store.state.adminData }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// customer</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.client) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// start waiting</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      context.app.$eventBus().$emit(<span style="color:#a31515">&#x27;loading&#x27;</span>, <span style="color:#0000ff">true</span>)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// no error</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      context.app.$eventBus().$emit(<span style="color:#a31515">&#x27;errorLoading&#x27;</span>, <span style="color:#0000ff">false</span>)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">try</span> {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   ...  </span></span>
+</code></pre></div>
+
+<p><strong>Página [fin de sesión]</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
+<span class="odt-code-line"><span class="odt-code-line-content">// asynchronous data</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">async</span> asyncData(context) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// log</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[fin-session asyncData started]&#x27;<span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// don&#x27;t do things twice if the page has already been requested</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server &amp;&amp; context.store.state.jsonSessionStarted &amp;&amp; !context.store.state.userAuthenticated) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span>&#x27;[fin-session asyncData canceled]&#x27;<span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> { result: </span>&quot;[succès]. La session jSON reste initialisée mais vous n&#x27;êtes plus authentifié(e).&quot;<span style="color:#000000"> }</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// customer case [nuxt]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.client) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// start waiting</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      context.app.$eventBus().$emit(<span style="color:#a31515">&#x27;loading&#x27;</span>, <span style="color:#0000ff">true</span>)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// no error</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      context.app.$eventBus().$emit(<span style="color:#a31515">&#x27;errorLoading&#x27;</span>, <span style="color:#0000ff">false</span>)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">try</span> {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+</code></pre></div>
+
+<h2 id="164-ejecucion">16.4. <span style="color: #4f81bd">Ejecución</span></h2>
+<p>Para ejecutar este ejemplo, asegúrate de eliminar la cookie de sesión [nuxt] y la cookie PHP del navegador en el que se ejecuta el cliente [nuxt] antes de la ejecución, para empezar desde cero. A continuación se muestra un ejemplo utilizando el navegador Chrome:</p>
+<p><img src="images/1000000000000380000001D2F02C8ECA.png" width="358" height="186" style="width:9.479cm;height:4.93cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000380000001D2F02C8ECA.png" /></p>
+<h2 id="165-conclusion">16.5. <span style="color: #4f81bd">Conclusión</span></h2>
+<p>El enrutamiento en el servidor [nuxt] es complejo porque debes anticipar todas las URL que el usuario podría escribir manualmente. Este es un ejemplo clásico. Una aplicación [nuxt] no está pensada para usarse de esta manera. Una vez que la página [index] es servida por el enrutador del servidor [nuxt], las solicitudes posteriores realizadas al servidor podrían ser redirigidas a una página de error.</p>
+<p>En el caso concreto de nuestro ejemplo [nuxt-13], el enrutamiento del servidor [nuxt] era innecesario. El comportamiento predeterminado (esencialmente, sin enrutamiento) del ejemplo [nuxt-12] funcionaba perfectamente.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        Este curso-tutorial escrito por <strong>Serge Tahé</strong> se pone a disposición del público según los términos de la
+        <em>Licencia Creative Commons Reconocimiento – Sin uso comercial –
+        Compartir en las mismas condiciones 3.0 no adaptada</em>.
+
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>

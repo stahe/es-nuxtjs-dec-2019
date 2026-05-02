@@ -1,0 +1,931 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Una introducción al marco NUXT.JS a través de ejemplos">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/es-nuxtjs-dec-2019/introduccion-al-marco-nuxtjs.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="el-entorno-de-trabajo.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>1. Introducción al marco NUXT.JS - Una introducción al marco NUXT.JS a través de ejemplos</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "Una introducción al marco NUXT.JS a través de ejemplos";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-introduccion-al-marco-nuxtjs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Una introducción al marco NUXT.JS a través de ejemplos" class="md-header__button md-logo" aria-label="Una introducción al marco NUXT.JS a través de ejemplos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Una introducción al marco NUXT.JS a través de ejemplos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. Introducción al marco NUXT.JS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/es-nuxtjs-dec-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Una introducción al marco NUXT.JS a través de ejemplos" class="md-nav__button md-logo" aria-label="Una introducción al marco NUXT.JS a través de ejemplos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Una introducción al marco NUXT.JS a través de ejemplos
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/es-nuxtjs-dec-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bienvenidos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="introduccion-al-marco-nuxtjs.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducción al marco NUXT.JS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="el-entorno-de-trabajo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. El entorno de trabajo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="una-primera-aplicacion-nuxtjs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Una primera aplicación [nuxt.js]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-01-enrutamiento-y-navegacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Ejemplo [nuxt-01]: Enrutamiento y navegación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-02-paginas-del-servidor-y-del-cliente.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Ejemplo [nuxt-02]: Páginas del servidor y del cliente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-03-nuxtserverinit.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Ejemplo [nuxt-03]: nuxtServerInit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-04-mantener-una-sesion-clienteservidor.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Ejemplo [nuxt-04]: Mantener una sesión cliente/servidor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-05-persistencia-del-almacen-con-una-cookie-de-sesion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Ejemplo [nuxt-05]: Persistencia del almacén con una cookie de sesión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-06-inyeccion-en-el-contexto-de-un-gestor-de-sesiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Ejemplo [nuxt-06]: Inyección en el contexto de un gestor de sesiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-07-contextos-de-cliente-y-servidor.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Ejemplo [nuxt-07]: Contextos de cliente y servidor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-08-middleware-de-enrutamiento.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Ejemplo [nuxt-08]: Middleware de enrutamiento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-09-control-de-la-navegacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Ejemplo [nuxt-09]: Control de la navegación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-10-asyncdata-y-loading.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Ejemplo [nuxt-10]: asyncData y loading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-11-personalizacion-de-la-imagen-de-carga.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Ejemplo [nuxt-11]: Personalización de la imagen de carga
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-12-solicitudes-http-con-axios.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Ejemplo [nuxt-12]: Solicitudes HTTP con axios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-13-comprobacion-de-la-navegacion-de-nuxt-12.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Ejemplo [nuxt-13]: Comprobación de la navegación de [nuxt-12]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplo-nuxt-20-portar-el-ejemplo-vuejs-22.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Ejemplo [nuxt-20]: Portar el ejemplo [vuejs-22]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1-introduccion-al-marco-nuxtjs">1. <span style="color: #365f91">Introducción al marco NUXT.JS</span></h1>
+<p>El PDF de este documento está disponible |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQBUwLxugkpIQ4IM9T7D-CHrAdGqHEeRv_1h4uU1mBbWyp0?e=vcAArk">AQUÍ</a>|.</p>
+<p>Los ejemplos de este documento están disponibles |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQAmQIGSQ1fNTLVQbVH7UpDrATF3ZMzsa4AFt4VnuQoEVuc?e=J7970K">AQUÍ</a>|.</p>
+<p>Este documento forma parte de una serie de cuatro artículos:</p>
+<ol>
+<li><a href="https://stahe.github.io/es-php7-juillet-2019/"><u><span style="color: #0563c1">|</span></u>Introducción a PHP7 a través de ejemplos</a>|;</li>
+</ol>
+<ol start="2">
+  <li><u><span style="color: #0563c1">|</span></u><a href="https://stahe.github.io/es-ecmascript6-oct-2019/">Introducción a ECMASCRIPT 6 a través de ejemplos</a>| ;
+  </li>
+  <li><u><span style="color: #0563c1">|</span></u><a href="https://stahe.github.io/es-vuejs-oct-2019/">Introducción al marco VUE.JS a través de ejemplos</a>|;
+  </li>
+  <li><u><span style="color: #0563c1">|</span></u><a href="https://stahe.github.io/es-nuxtjs-dec-2019/">Introducción al marco NUXT.JS a través de ejemplos</a>|. <b>Este es el documento actual</b>;
+  </li>
+</ol>
+
+<p>Todos estos son documentos para <strong>principiantes</strong>. Los artículos siguen una secuencia lógica, pero <strong>están vagamente relacionados entre sí</strong>:</p>
+<ul>
+  <li>el documento [1] presenta el lenguaje PHP 7. Los lectores interesados únicamente en PHP y no en el JavaScript tratado en los siguientes artículos deberían detenerse aquí;
+  </li>
+  <li>Los documentos [2–4] tienen como objetivo crear un cliente JavaScript para el servidor de cálculo de impuestos desarrollado en el documento [1];
+  </li>
+  <li>Los marcos de trabajo de JavaScript [vue.js] y [nuxt.js] de los artículos 3 y 4 requieren conocimientos de las últimas versiones de ECMAScript, concretamente la versión 6. Por lo tanto, el documento [2] está destinado a quienes no estén familiarizados con esta versión de JavaScript. Hace referencia al servidor de cálculo de impuestos creado en el documento [1]. Por lo tanto, los lectores del [2] tendrán que volver a consultar el documento [1] en algunas ocasiones;
+  </li>
+  <li>Una vez dominado ECMASCRIPT 6, podemos pasar al marco VUE.JS, que permite la creación de clientes JavaScript que se ejecutan en un navegador en modo SPA (aplicación de página única). Este es el documento [3]. Hace referencia tanto al servidor de cálculo de impuestos creado en el documento [1] como al código del cliente JavaScript independiente creado en [2]. Por lo tanto, los lectores de [3] tendrán que consultar en ocasiones los documentos [1] y [2];
+  </li>
+  <li>Una vez que domines VUE.JS, podrás pasar al marco NUXT.JS, que te permite crear clientes JavaScript que se ejecutan en un navegador en modo SSR (renderizado del lado del servidor). Se refiere al servidor de cálculo de impuestos creado en el documento [1], al código de cliente JavaScript independiente creado en [2] y a la aplicación [vue.js] desarrollada en el documento [3]. Por lo tanto, los lectores de [4] tendrán que consultar ocasionalmente los documentos [1], [2] y [3];
+  </li>
+</ul>
+
+<p>Este documento continúa el trabajo realizado en el documento [3] utilizando el marco Vue.js.</p>
+<p>Esta sección se centra en la siguiente arquitectura:</p>
+<p><img src="images/10000000000007BF00000349CF7EFC56.png" width="595" height="252" style="width:15.739cm;height:6.675cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007BF00000349CF7EFC56.png" /></p>
+<ul>
+  <li>En <b>[1]</b>, un navegador web muestra páginas web <b>[5, 7] </b>procedentes de un servidor [3] destinadas a un usuario. Estas páginas contienen JavaScript que implementa un cliente para un servicio de datos web <b>[2]</b>, así como un cliente para un servidor de fragmentos de páginas web <b>[3]</b>;
+  </li>
+  <li>En <b>[2]</b>, el servidor web actúa como servidor de datos. Puede estar escrito en cualquier lenguaje de programación. No genera páginas web en el sentido tradicional (HTML, CSS, JavaScript), salvo quizá la primera vez. Sin embargo, esa primera página puede obtenerse de un servidor web tradicional <b>[3] </b>(no de un servidor de datos). El JavaScript de la página inicial generará entonces las distintas páginas web de la aplicación recuperando los datos <b>[4] </b>que se van a mostrar del servidor web, que actúa como servidor de datos <b>[2]</b>. También puede recuperar fragmentos de páginas web <b>[5] </b>para dar formato a estos datos del servidor de páginas web <b>[3]</b>;
+  </li>
+  <li>en <b>[4]</b>, el usuario inicia una acción;
+  </li>
+  <li>en <b>[6,7]</b>: recibe datos formateados por un fragmento de página web;
+  </li>
+</ul>
+
+<p>El marco [nuxt.js] |<a href="https://fr.nuxtjs.org/"><u><span style="color: #0563c1">https://fr.nuxtjs.org/</span></u></a>| nos permitirá implementar el siguiente flujo de trabajo:</p>
+<ul>
+  <li>La primera página de la aplicación es servida por el servidor [node.js] [3]. Además, el resto de páginas de la aplicación también están alojadas en este mismo servidor. Se sirven cuando el usuario escribe manualmente su URL en el navegador. Estas páginas incorporan una aplicación [vue.js] (aproximadamente);
+  </li>
+  <li>una vez que la primera página se ha cargado en el navegador, la aplicación se comporta como una aplicación [Vue.js] estándar. En nuestro diagrama anterior, se comunicará entonces con el servidor de datos [2];
+  </li>
+</ul>
+
+<p>En definitiva, la aplicación se comporta como una aplicación [Vue.js], salvo en la primera página y cuando el usuario introduce manualmente las URL. En estos casos, la página se recupera del servidor [3]. Cuando un motor de búsqueda solicita las distintas páginas de la aplicación, recibe las páginas del servidor [3]. Estas páginas pueden haber sido optimizadas para SEO (Search Engine Optimization). En una aplicación [Vue.js], el motor de búsqueda recibe una página con escaso valor SEO. Por ejemplo, en la aplicación cliente para el servidor de cálculo de impuestos sobre documentos [3], la página recibida por el navegador al iniciar la aplicación era la siguiente:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">&lt;</span>!DOCTYPE<span style="font-style:italic;color:#008080"> </span><span style="color:#000000">html&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;<span style="color:#800080">html</span><span style="font-style:italic;color:#008080"> </span>lang=<span style="color:#000080">&quot;en&quot;</span>&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &lt;<span style="color:#800080">head</span>&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &lt;<span style="color:#800080">meta</span><span style="font-style:italic;color:#008080"> </span>charset=<span style="color:#000080">&quot;utf-8&quot;</span>&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#000000">&lt;</span><span style="font-weight:bold;color:#800080">meta</span><span style="font-style:italic;color:#008080"> </span><span style="font-weight:bold;color:#000000">http-equiv=</span>&quot;X-UA-Compatible&quot;<span style="font-style:italic;color:#008080"> </span><span style="font-weight:bold;color:#000000">content=</span>&quot;IE=edge&quot;<span style="font-weight:bold;color:#000000">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#000000">&lt;</span><span style="font-weight:bold;color:#800080">meta</span><span style="font-style:italic;color:#008080"> </span><span style="font-weight:bold;color:#000000">name=</span>&quot;viewport&quot;<span style="font-style:italic;color:#008080"> </span><span style="font-weight:bold;color:#000000">content=</span>&quot;width=device-width,initial-scale=1.0&quot;<span style="font-weight:bold;color:#000000">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#000000">&lt;</span><span style="font-weight:bold;color:#800080">link</span><span style="font-style:italic;color:#008080"> </span><span style="font-weight:bold;color:#000000">rel=</span>&quot;icon&quot;<span style="font-style:italic;color:#008080"> </span><span style="font-weight:bold;color:#000000">href=</span>&quot;/client-vuejs-impot/favicon.ico&quot;<span style="font-weight:bold;color:#000000">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &lt;<span style="color:#800080">title</span>&gt;vuejs&lt;<span style="color:#800080">/title</span>&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#000000">&lt;</span><span style="font-weight:bold;color:#800080">link</span><span style="font-style:italic;color:#008080"> </span><span style="font-weight:bold;color:#000000">href=</span>&quot;/client-vuejs-impot/app.js&quot;<span style="font-style:italic;color:#008080"> </span><span style="font-weight:bold;color:#000000">rel=</span>&quot;preload&quot;<span style="font-style:italic;color:#008080"> </span><span style="font-weight:bold;color:#000000">as=</span>&quot;script&quot;<span style="font-weight:bold;color:#000000">&gt;&lt;</span><span style="font-weight:bold;color:#800080">/head</span><span style="font-weight:bold;color:#000000">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &lt;<span style="color:#800080">body</span>&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    &lt;</span>noscript<span style="color:#000000">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-weight:bold">&lt;</span><span style="font-weight:bold;color:#800080">strong</span><span style="font-weight:bold">&gt;</span>We&#x27;re sorry but vuejs doesn&#x27;t work properly without JavaScript enabled. Please enable it to continue.<span style="font-weight:bold">&lt;</span><span style="font-weight:bold;color:#800080">/strong</span><span style="font-weight:bold">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    &lt;</span>/noscript<span style="color:#000000">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &lt;<span style="color:#800080">div</span><span style="font-style:italic;color:#008080"> </span>id=<span style="color:#000080">&quot;app&quot;</span>&gt;&lt;<span style="color:#800080">/div</span>&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- built files will be auto injected --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &lt;script type=&quot;text/javascript&quot; src=&quot;/client-vuejs-impot/app.js&quot;&gt;&lt;/script&gt;<span style="font-weight:bold">&lt;</span><span style="font-weight:bold;color:#800080">/body</span><span style="font-weight:bold">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">&lt;</span>/html<span style="color:#000000">&gt;</span></span></span>
+</code></pre></div>
+
+<p>Esta es la única página que carga el navegador. El resto de páginas de la aplicación se generan dinámicamente mediante JavaScript sin la ayuda del navegador. Algunos motores de búsqueda se conforman con esta página. Otros van más allá y ejecutan el JavaScript contenido en la página (línea 9 anterior). A continuación, se obtiene otra página. Esta página puede contener una operación asíncrona para recuperar los datos que mostrará. En este caso, los motores de búsqueda no esperan. Nos quedamos entonces con una página incompleta. Quizá recuerdes que este es el caso de nuestro cliente [Vue.js] en el servidor de cálculo de impuestos: de forma asíncrona, mientras se carga la primera página, inicializa una sesión JSON con el servidor de cálculo de impuestos. En este caso concreto, esto no afecta a la página recuperada por el motor de búsqueda. Para otras aplicaciones, esto podría ser perjudicial en términos de SEO.</p>
+<p>Con [nuxt.js], podemos ofrecer una página más significativa al motor de búsqueda para cada página de la aplicación.</p>
+<p>Los scripts de este documento están comentados y se reproduce su salida en la consola. En ocasiones se proporcionan explicaciones adicionales. El documento requiere una lectura activa: para comprender un script, debes leer su código, los comentarios y los resultados de la ejecución.</p>
+<p>Los ejemplos de este documento están disponibles <strong>|aquí|</strong>.</p>
+<p>La aplicación de servidor PHP 7 se puede probar <strong>|aquí|</strong>.</p>
+<p>Serge Tahé, diciembre de 2019</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        Este curso-tutorial escrito por <strong>Serge Tahé</strong> se pone a disposición del público según los términos de la
+        <em>Licencia Creative Commons Reconocimiento – Sin uso comercial –
+        Compartir en las mismas condiciones 3.0 no adaptada</em>.
+
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
