@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/es-nuxtjs-dec-2019/ejemplo-nuxt-04-mantener-una-sesion-clienteservidor.html">
+        <link rel="canonical" href="https://stahe.github.io/es-nuxtjs-dec-2019/ejemplo-nuxt-04-mantenimiento-de-una-sesion-clienteservidor.html">
       
       
         <link rel="prev" href="ejemplo-nuxt-03-nuxtserverinit.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>7. Ejemplo [nuxt-04]: Mantener una sesión cliente/servidor - Una introducción al marco NUXT.JS a través de ejemplos</title>
+        <title>7. Ejemplo [nuxt-04]: mantenimiento de una sesión cliente/servidor - Una introducción al marco NUXT.JS a través de ejemplos</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#7-ejemplo-nuxt-04-mantener-una-sesion-clienteservidor" class="md-skip">
+        <a href="#7-ejemplo-nuxt-04-mantenimiento-de-una-sesion-clienteservidor" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7. Ejemplo [nuxt-04]: Mantener una sesión cliente/servidor
+              7. Ejemplo [nuxt-04]: mantenimiento de una sesión cliente/servidor
             
           </span>
         </div>
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-01-enrutamiento-y-navegacion.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-01-enrutamiento-y-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Ejemplo [nuxt-01]: Enrutamiento y navegación
+    4. Ejemplo [nuxt-01]: enrutamiento y navigation
   
 
     
@@ -418,7 +420,7 @@
   <span class="md-ellipsis">
     
   
-    5. Ejemplo [nuxt-02]: Páginas del servidor y del cliente
+    5. Ejemplo [nuxt-02]: páginas del servidor y del cliente
   
 
     
@@ -474,14 +476,14 @@
         
       
       
-      <a href="ejemplo-nuxt-04-mantener-una-sesion-clienteservidor.html" class="md-nav__link md-nav__link--active">
+      <a href="ejemplo-nuxt-04-mantenimiento-de-una-sesion-clienteservidor.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Ejemplo [nuxt-04]: Mantener una sesión cliente/servidor
+    7. Ejemplo [nuxt-04]: mantenimiento de una sesión cliente/servidor
   
 
     
@@ -509,7 +511,7 @@
   <span class="md-ellipsis">
     
   
-    8. Ejemplo [nuxt-05]: Persistencia del almacén con una cookie de sesión
+    8. Ejemplo [nuxt-05]: persistencia del almacén con una cookie de sesión
   
 
     
@@ -529,14 +531,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-06-inyeccion-en-el-contexto-de-un-gestor-de-sesiones.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-06-inyeccion-en-el-contexto-de-un-gestor-de-sesion.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. Ejemplo [nuxt-06]: Inyección en el contexto de un gestor de sesiones
+    9. Ejemplo [nuxt-06]: inyección en el contexto de un gestor de sesión
   
 
     
@@ -556,14 +558,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-07-contextos-de-cliente-y-servidor.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-07-los-contextos-de-cliente-y-servidor.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Ejemplo [nuxt-07]: Contextos de cliente y servidor
+    10. Ejemplo [nuxt-07]: los contextos de cliente y servidor
   
 
     
@@ -583,14 +585,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-08-middleware-de-enrutamiento.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-08-middlewares-de-enrutamiento.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. Ejemplo [nuxt-08]: Middleware de enrutamiento
+    11. Ejemplo [nuxt-08]: middlewares de enrutamiento
   
 
     
@@ -610,14 +612,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-09-control-de-la-navegacion.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-09-control-de-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Ejemplo [nuxt-09]: Control de la navegación
+    12. Ejemplo [nuxt-09]: control de navigation
   
 
     
@@ -664,14 +666,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-11-personalizacion-de-la-imagen-de-carga.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-11-personalizacion-de-la-imagen-de-espera.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Ejemplo [nuxt-11]: Personalización de la imagen de carga
+    14. Ejemplo [nuxt-11]: personalización de la imagen de espera
   
 
     
@@ -698,7 +700,7 @@
   <span class="md-ellipsis">
     
   
-    15. Ejemplo [nuxt-12]: Solicitudes HTTP con axios
+    15. Ejemplo [nuxt-12]: solicitudes HTTP con axios
   
 
     
@@ -718,14 +720,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-13-comprobacion-de-la-navegacion-de-nuxt-12.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-13-control-de-la-navigation-de-nuxt-12.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. Ejemplo [nuxt-13]: Comprobación de la navegación de [nuxt-12]
+    16. Ejemplo [nuxt-13]: control de la navigation de [nuxt-12]
   
 
     
@@ -745,14 +747,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-20-portar-el-ejemplo-vuejs-22.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-20-adaptacion-del-ejemplo-vuejs-22.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. Ejemplo [nuxt-20]: Portar el ejemplo [vuejs-22]
+    17. Ejemplo [nuxt-20]: adaptación del ejemplo [vuejs-22]
   
 
     
@@ -782,30 +784,30 @@
 
 
 
-<h1 id="7-ejemplo-nuxt-04-mantener-una-sesion-clienteservidor">7. <span style="color: #365f91">Ejemplo [nuxt-04]: Mantener una sesión cliente/servidor</span></h1>
-<p>El proyecto [nuxt-04] aborda el tema del mantenimiento de una sesión cliente/servidor. Utilizaremos el proyecto [nuxt-03] con las siguientes modificaciones:</p>
+<h1 id="7-ejemplo-nuxt-04-mantenimiento-de-una-sesion-clienteservidor">7. <span style="color: #365f91">Ejemplo [nuxt-04]: mantenimiento de una sesión cliente/servidor</span></h1>
+<p>El proyecto [nuxt-04] aborda el problema del mantenimiento de una sesión cliente/servidor. Retomamos el proyecto [nuxt-03] con las siguientes modificaciones:</p>
 <ul>
-  <li>la página [index] tendrá un botón que incrementa el contador del almacén [Vuex];
+  <li>la página [index] tendrá un botón que permitirá incrementar el contador del almacén [Vuex];
   </li>
-  <li>La página [page1] permanece sin cambios;
+  <li>la página [page1] permanece sin cambios;
   </li>
-  <li>queremos que el servidor devuelva la página solicitada con un almacén [Vuex] cuyo valor del contador sea el último valor que tenía en el lado del cliente cuando se solicita manualmente una página al servidor;
+  <li>queremos que, cuando se solicite una página manualmente al servidor, este devuelva la página solicitada con un almacén [Vuex] cuyo valor de contador sea el último valor que tenía en el lado del cliente;
   </li>
 </ul>
 
-<p>El proyecto [nuxt-04] se crea inicialmente clonando el proyecto [nuxt-03]:</p>
-<p><img src="images/10000000000001970000018C0984BDAE.png" width="163" height="158" style="width:4.309cm;height:4.193cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001970000018C0984BDAE.png" /></p>
+<p>El proyecto [nuxt-04] se crea inicialmente copiando el proyecto [nuxt-03]:</p>
+<p><img src="images/10000000000001970000018C0984BDAE.png" width="163" height="158" style="width:4.309cm;height:4.189cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001970000018C0984BDAE.png" /></p>
 <p>Solo cambia la página [index]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- page [index] --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página [index] --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- message--&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;right&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span> <span style="color:#ff0000">show</span> <span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;&gt;</span> Home - value= <span style="font-weight:bold">{{</span> <span style="color:#800080">value</span> <span style="font-weight:bold">}}</span> <span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- bouton --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- botón --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span>&lt;<span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span>=&quot;incrementCounter&quot;<span style="color:#000000"> </span><span style="color:#ff0000">class</span>=&quot;ml-3&quot;<span style="color:#000000"> </span><span style="color:#ff0000">variant</span>=&quot;primary&quot;&gt;<span style="color:#000000">Incrémenter</span>&lt;/<span style="color:#800000">b-button</span>&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
@@ -820,7 +822,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Home&#x27;</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// components used</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  components: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    Layout,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    Navigation</span></span>
@@ -830,31 +832,31 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      value: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// life cycle</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// client and server</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  created() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// client and server</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">this</span>.value = <span style="color:#0000ff">this</span>.$store.state.counter</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home created], value=&#x27;</span>, <span style="color:#0000ff">this</span>.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// customer only</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// customer only</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// event management</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// gestión de eventos</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  methods: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    incrementCounter() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      console.log(<span style="color:#a31515">&#x27;incrementCounter&#x27;</span>)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// counter increment of 1</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// contador incremento de 1</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.$store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 1)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// change display value</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// cambiar el valor mostrado</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.value = <span style="color:#0000ff">this</span>.$store.state.counter</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
@@ -863,56 +865,56 @@
 </code></pre></div>
 
 <ul>
-  <li>línea 10: hemos añadido un botón para incrementar el contador del almacén [Vuex];
+  <li>línea 10: se ha añadido un botón para incrementar el contador de la tienda [Vuex];
   </li>
-  <li>línea 54: el método que gestiona el [clic] en el botón [Incrementar];
+  <li>línea 54: el método que gestiona el [clic] en el botón [Incrémenter];
   </li>
-  <li>línea 57: el contador del almacén se incrementa en 1;
+  <li>línea 57: el contador de la persiana se incrementa en 1;
   </li>
   <li>línea 59: el valor del contador se asigna a la propiedad [value] para que se muestre en la línea 8;
   </li>
 </ul>
 
-<p>Ejecuta el proyecto [nuxt-04] con el siguiente archivo [nuxt.config.js]:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">// source code directory</span></span>
+<p>Se ejecuta el proyecto [nuxt-04] con el siguiente archivo [nuxt.config.js]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">// directorio de código fuente</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  srcDir: <span style="color:#a31515">&#x27;nuxt-04&#x27;</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// router</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// enrutador</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  router: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// application URL root</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// raíz de URL para la aplicación</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    base: </span>&#x27;/nuxt-04/&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// server</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  server: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// service port, default 3000</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// puerto de servicio, por defecto 3000</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    port: 81,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// network addresses listened to, default localhost: 127.0.0.1</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 0.0.0.0 = all the machine&#x27;s network addresses</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// direcciones de red escuchadas, por defecto localhost: 127.0.0.1</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 0.0.0.0 = todas las direcciones de red de la máquina</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    host: </span>&#x27;localhost&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>Al ejecutarse, la primera página que se muestra es la siguiente:</p>
-<p><img src="images/10000000000006140000029B71F9DB39.png" width="467" height="200" style="width:12.353cm;height:5.295cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006140000029B71F9DB39.png" /></p>
-<p>Al hacer clic varias veces en el botón [3], aparece la siguiente página nueva:</p>
-<p><img src="images/10000000000006080000026FFEE2C398.png" width="463" height="187" style="width:12.263cm;height:4.948cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006080000026FFEE2C398.png" /></p>
-<p>Si utilizas el enlace [3], aparecerá la siguiente página:</p>
-<p><img src="images/100000000000060C00000233F80A9994.png" width="465" height="169" style="width:12.293cm;height:4.471cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000060C00000233F80A9994.png" /></p>
+<p>Al ejecutarlo, la primera página que se muestra es la siguiente:</p>
+<p><img src="images/10000000000006140000029B71F9DB39.png" width="467" height="200" style="width:12.353cm;height:5.292cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006140000029B71F9DB39.png" /></p>
+<p>Al pulsar varias veces el botón [3], se obtiene la siguiente página nueva:</p>
+<p><img src="images/10000000000006080000026FFEE2C398.png" width="463" height="187" style="width:12.263cm;height:4.941cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006080000026FFEE2C398.png" /></p>
+<p>Si se utiliza el enlace [3], se obtiene la siguiente página:</p>
+<p><img src="images/100000000000060C00000233F80A9994.png" width="465" height="169" style="width:12.293cm;height:4.47cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000060C00000233F80A9994.png" /></p>
 <ul>
-  <li>En [2], la página [page1] [1] muestra correctamente el valor del contador;
+  <li>en [2], la página [page1] [1] muestra correctamente el valor del contador;
   </li>
 </ul>
 
 <p>Ahora, actualicemos la página con [3]. La nueva página es la siguiente:</p>
-<p><img src="images/10000000000004DD0000017FF4470033.png" width="622" height="191" style="width:16.469cm;height:5.066cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004DD0000017FF4470033.png" /></p>
+<p><img src="images/10000000000004DD0000017FF4470033.png" width="622" height="192" style="width:16.469cm;height:5.069cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004DD0000017FF4470033.png" /></p>
 <ul>
-  <li>En [2], hemos perdido el valor actual del contador. Hemos vuelto a su valor inicial;
+  <li>en [2], se ha perdido el valor actual del contador. Se ha vuelto a su valor inicial;
   </li>
 </ul>
 
-<p>Este resultado tiene mucho sentido si se miran los registros:</p>
+<p>Este resultado es totalmente comprensible si miramos los registros:</p>
 <ul>
-  <li>En [1], el servidor volvió a ejecutar la función [nuxtServerInit]. Sin embargo, esta función es la siguiente:
+  <li>en [1], el servidor ha vuelto a ejecutar la función [nuxtServerInit]. Ahora bien, esta es la siguiente:
   </li>
 </ul>
 
@@ -949,12 +951,12 @@
 <span class="normal"><a href="#__codelineno-0-31">31</a></span>
 <span class="normal"><a href="#__codelineno-0-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cm">/* eslint-disable no-console */</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="c1">// account</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">   </span><span class="c1">// cuenta</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="nx">counter</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">})</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">mutations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">   </span><span class="c1">// increment counter by one [inc] value</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">   </span><span class="c1">// incrementar el contador en un valor [inc]</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="nx">increment</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span><span class="w"> </span><span class="nx">inc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="nx">state</span><span class="p">.</span><span class="nx">counter</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">inc</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span><span class="p">}</span>
@@ -962,29 +964,29 @@
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a>
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">actions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="k">async</span><span class="w"> </span><span class="nx">nuxtServerInit</span><span class="p">(</span><span class="nx">store</span><span class="p">,</span><span class="w"> </span><span class="nx">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">      </span><span class="c1">// who executes this code?</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">     </span><span class="c1">// ¿quién ejecuta este código?</span>
 <a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;nuxtServerInit, client=&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">client</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;serveur=&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">server</span><span class="p">)</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">     </span><span class="c1">// waiting for a promise to be fulfilled</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">     </span><span class="c1">// esperando que se cumpla una promesa</span>
 <a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="nx">reject</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">       </span><span class="c1">// this is normally an asynchronous function</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">       </span><span class="c1">// we simulate it with a one-second wait</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">       </span><span class="c1">// normalmente se trata de una función asíncrona</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">       </span><span class="c1">// lo simulamos con una espera de un segundo</span>
 <a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">      </span><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">          </span><span class="c1">// success</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">         </span><span class="c1">// éxito</span>
 <a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">        </span><span class="nx">resolve</span><span class="p">()</span>
 <a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">      </span><span class="p">},</span><span class="w"> </span><span class="mf">1000</span><span class="p">)</span>
 <a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="p">})</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">     </span><span class="c1">// modify the blind</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">     </span><span class="c1">// modificar los ciegos</span>
 <a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">    </span><span class="nx">store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;increment&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">53</span><span class="p">)</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">      </span><span class="c1">// log</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">     </span><span class="c1">// registro</span>
 <a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;nuxtServerInit commit terminé&#39;</span><span class="p">)</span>
 <a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>La línea 28 establece el contador en 53.</p>
-<p>Analicemos la solicitud HTTP realizada por el navegador cuando actualizamos la página [page1]:</p>
+<p>La línea 28 asigna el valor 53 al contador.</p>
+<p>Examinemos la solicitud HTTP realizada por el navegador al actualizar la página [page1]:</p>
 <p><img src="images/100000000000045E0000029C0D65900B.png" width="335" height="200" style="width:8.871cm;height:5.3cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000045E0000029C0D65900B.png" /></p>
-<p>Podemos ver que, además de la página [page1] [1], el cliente solicita varios scripts al servidor. Fíjate en los scripts [pages_index, pages_page1], que son los scripts asociados a las páginas [index, page]. Estos scripts se envían con cada solicitud al servidor, independientemente de la página solicitada;</p>
-<p>En [1], se solicita la página [page1] al servidor con la siguiente solicitud HTTP:</p>
+<p>Se observa que, además de la página [page1] [1], el cliente solicita una serie de scripts al servidor. Cabe destacar los scripts [pages_index, pages_page1], que son los scripts asociados a las páginas [index, page]. Estos scripts se envían al servidor con cada solicitud, independientemente de la página solicitada;</p>
+<p>En [1], se solicita al servidor la página [page1] con la siguiente solicitud HTTP:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -1007,8 +1009,8 @@
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="n">Pragma</span><span class="p">:</span> <span class="n">no</span><span class="o">-</span><span class="n">cache</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="n">Cache</span><span class="o">-</span><span class="n">Control</span><span class="p">:</span> <span class="n">no</span><span class="o">-</span><span class="n">cache</span>
 </code></pre></div></td></tr></table></div>
-<p>Podemos ver que esta solicitud no envía ninguna información al servidor. Por lo tanto, el servidor no tiene forma de conocer el estado del almacén [Vuex] en el lado del cliente. Para que eso ocurriera, el cliente habría tenido que enviar esta información al servidor.</p>
-<p>En el siguiente proyecto [nuxt-05], utilizamos una cookie para que el cliente pueda enviar información al servidor cuando se le solicite.</p>
+<p>Se observa que esta solicitud no transmite ninguna información al servidor. Por lo tanto, este no tiene forma alguna de conocer el estado de la tienda [Vuex] en el lado del cliente. Para ello, habría sido necesario que el cliente le enviara dicha información.</p>
+<p>En el siguiente proyecto [nuxt-05] utilizamos una cookie para que el cliente pueda enviar información al servidor cuando este la solicita.</p>
 
 
 

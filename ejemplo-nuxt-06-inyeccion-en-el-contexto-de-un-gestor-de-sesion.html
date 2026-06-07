@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/es-nuxtjs-dec-2019/ejemplo-nuxt-06-inyeccion-en-el-contexto-de-un-gestor-de-sesiones.html">
+        <link rel="canonical" href="https://stahe.github.io/es-nuxtjs-dec-2019/ejemplo-nuxt-06-inyeccion-en-el-contexto-de-un-gestor-de-sesion.html">
       
       
         <link rel="prev" href="ejemplo-nuxt-05-persistencia-del-almacen-con-una-cookie-de-sesion.html">
       
       
-        <link rel="next" href="ejemplo-nuxt-07-contextos-de-cliente-y-servidor.html">
+        <link rel="next" href="ejemplo-nuxt-07-los-contextos-de-cliente-y-servidor.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>9. Ejemplo [nuxt-06]: Inyección en el contexto de un gestor de sesiones - Una introducción al marco NUXT.JS a través de ejemplos</title>
+        <title>9. Ejemplo [nuxt-06]: inyección en el contexto de un gestor de sesión - Una introducción al marco NUXT.JS a través de ejemplos</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#9-ejemplo-nuxt-06-inyeccion-en-el-contexto-de-un-gestor-de-sesiones" class="md-skip">
+        <a href="#9-ejemplo-nuxt-06-inyeccion-en-el-contexto-de-un-gestor-de-sesion" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              9. Ejemplo [nuxt-06]: Inyección en el contexto de un gestor de sesiones
+              9. Ejemplo [nuxt-06]: inyección en el contexto de un gestor de sesión
             
           </span>
         </div>
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-01-enrutamiento-y-navegacion.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-01-enrutamiento-y-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Ejemplo [nuxt-01]: Enrutamiento y navegación
+    4. Ejemplo [nuxt-01]: enrutamiento y navigation
   
 
     
@@ -418,7 +420,7 @@
   <span class="md-ellipsis">
     
   
-    5. Ejemplo [nuxt-02]: Páginas del servidor y del cliente
+    5. Ejemplo [nuxt-02]: páginas del servidor y del cliente
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-04-mantener-una-sesion-clienteservidor.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-04-mantenimiento-de-una-sesion-clienteservidor.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Ejemplo [nuxt-04]: Mantener una sesión cliente/servidor
+    7. Ejemplo [nuxt-04]: mantenimiento de una sesión cliente/servidor
   
 
     
@@ -499,7 +501,7 @@
   <span class="md-ellipsis">
     
   
-    8. Ejemplo [nuxt-05]: Persistencia del almacén con una cookie de sesión
+    8. Ejemplo [nuxt-05]: persistencia del almacén con una cookie de sesión
   
 
     
@@ -535,7 +537,7 @@
   <span class="md-ellipsis">
     
   
-    9. Ejemplo [nuxt-06]: Inyección en el contexto de un gestor de sesiones
+    9. Ejemplo [nuxt-06]: inyección en el contexto de un gestor de sesión
   
 
     
@@ -546,14 +548,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="ejemplo-nuxt-06-inyeccion-en-el-contexto-de-un-gestor-de-sesiones.html" class="md-nav__link md-nav__link--active">
+      <a href="ejemplo-nuxt-06-inyeccion-en-el-contexto-de-un-gestor-de-sesion.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. Ejemplo [nuxt-06]: Inyección en el contexto de un gestor de sesiones
+    9. Ejemplo [nuxt-06]: inyección en el contexto de un gestor de sesión
   
 
     
@@ -579,10 +581,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#91-resumen" class="md-nav__link">
+  <a href="#91-presentacion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.1. Resumen
+        9.1. Presentación
       
     </span>
   </a>
@@ -590,10 +592,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#92-el-concepto-de-un-plugin-nuxt" class="md-nav__link">
+  <a href="#92-el-concepto-de-plugin-nuxt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.2. El concepto de un plugin [nuxt]
+        9.2. el concepto de plugin [nuxt]
       
     </span>
   </a>
@@ -601,10 +603,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#93-el-complemento-session-del-servidor" class="md-nav__link">
+  <a href="#93-el-plugin-session-del-servidor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.3. El complemento [session] del servidor
+        9.3. El plugin [session] del servidor
       
     </span>
   </a>
@@ -623,10 +625,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#95-el-complemento-client-session-del-cliente" class="md-nav__link">
+  <a href="#95-el-plugin-client-session-del-cliente" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.5. El complemento [client / session] del cliente
+        9.5. El plugin [client / session] del cliente
       
     </span>
   </a>
@@ -692,14 +694,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-07-contextos-de-cliente-y-servidor.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-07-los-contextos-de-cliente-y-servidor.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Ejemplo [nuxt-07]: Contextos de cliente y servidor
+    10. Ejemplo [nuxt-07]: los contextos de cliente y servidor
   
 
     
@@ -719,14 +721,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-08-middleware-de-enrutamiento.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-08-middlewares-de-enrutamiento.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. Ejemplo [nuxt-08]: Middleware de enrutamiento
+    11. Ejemplo [nuxt-08]: middlewares de enrutamiento
   
 
     
@@ -746,14 +748,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-09-control-de-la-navegacion.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-09-control-de-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Ejemplo [nuxt-09]: Control de la navegación
+    12. Ejemplo [nuxt-09]: control de navigation
   
 
     
@@ -800,14 +802,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-11-personalizacion-de-la-imagen-de-carga.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-11-personalizacion-de-la-imagen-de-espera.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Ejemplo [nuxt-11]: Personalización de la imagen de carga
+    14. Ejemplo [nuxt-11]: personalización de la imagen de espera
   
 
     
@@ -834,7 +836,7 @@
   <span class="md-ellipsis">
     
   
-    15. Ejemplo [nuxt-12]: Solicitudes HTTP con axios
+    15. Ejemplo [nuxt-12]: solicitudes HTTP con axios
   
 
     
@@ -854,14 +856,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-13-comprobacion-de-la-navegacion-de-nuxt-12.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-13-control-de-la-navigation-de-nuxt-12.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. Ejemplo [nuxt-13]: Comprobación de la navegación de [nuxt-12]
+    16. Ejemplo [nuxt-13]: control de la navigation de [nuxt-12]
   
 
     
@@ -881,14 +883,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-20-portar-el-ejemplo-vuejs-22.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-20-adaptacion-del-ejemplo-vuejs-22.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. Ejemplo [nuxt-20]: Portar el ejemplo [vuejs-22]
+    17. Ejemplo [nuxt-20]: adaptación del ejemplo [vuejs-22]
   
 
     
@@ -918,19 +920,19 @@
 
 
 
-<h1 id="9-ejemplo-nuxt-06-inyeccion-en-el-contexto-de-un-gestor-de-sesiones">9. <span style="color: #365f91">Ejemplo [nuxt-06]: Inyección en el contexto de un gestor de sesiones</span></h1>
-<h2 id="91-resumen">9.1. <span style="color: #4f81bd">Resumen</span></h2>
-<p>El ejemplo [nuxt-05] mostró que el almacén puede conservarse incluso cuando el usuario fuerza las llamadas al servidor. Los elementos del almacén son reactivos, por lo que, si se integran en las vistas, estas reaccionan a los cambios en el almacén. Es posible que también desees conservar elementos a lo largo de los intercambios entre el cliente y el servidor sin que sean reactivos, simplemente porque no se muestran en las vistas. En ese caso, puedes almacenarlos en la sesión sin que estén en el almacén.</p>
-<p>Se puede acceder fácilmente al almacén a través de propiedades como [context.app.$store] fuera de las vistas o [this.$store] dentro de las vistas. Nos gustaría algo similar para la sesión, algo como [context.app.$session] o [this.$session]. Veremos que esto es posible gracias al concepto de inyección. Sin embargo, no podemos inyectar objetos en el contexto, solo funciones. Esta función estará entonces disponible a través de las expresiones [context.app.$session<strong><span style="color: #c9211e">()</span></strong>] o [this.$session<strong><span style="color: #c9211e">()</span></strong>].</p>
-<p>Por último, presentaremos el concepto [plugin] de [nuxt].</p>
-<p>El ejemplo [nuxt-06] se crea inicialmente clonando el proyecto [nuxt-05]:</p>
+<h1 id="9-ejemplo-nuxt-06-inyeccion-en-el-contexto-de-un-gestor-de-sesion">9. <span style="color: #365f91">Ejemplo [nuxt-06]: inyección en el contexto de un gestor de sesión</span></h1>
+<h2 id="91-presentacion">9.1. <span style="color: #4f81bd">Presentación</span></h2>
+<p>El ejemplo [nuxt-05] ha demostrado que se puede mantener el almacén incluso cuando el usuario fuerza llamadas al servidor. Los elementos del almacén son reactivos, de modo que, si se integran en vistas, estas reaccionan a los cambios del almacén. También puede ser deseable persistir elementos a lo largo de los intercambios cliente/servidor sin que sean reactivos, simplemente porque no se muestran en vistas. En ese caso, se pueden almacenar en la sesión sin que estén necesariamente en el almacén.</p>
+<p>Se puede acceder fácilmente al almacén a través de propiedades como [context.app.$store] fuera de las vistas o [this.$store] dentro de las vistas. Nos gustaría algo similar para la sesión, algo como [context.app.$session] o [this.$session]. Veremos que esto es posible gracias al concepto de inyección. Sin embargo, no se pueden inyectar objetos en el contexto, solo funciones. Esta estará entonces disponible a través de las expresiones [context.app.$session()] o [this.$session()].</p>
+<p>Por último, vamos a presentar el concepto [nuxt] de [plugin].</p>
+<p>El ejemplo [nuxt-06] se obtiene inicialmente copiando el proyecto [nuxt-05]:</p>
 <p><img src="images/10000000000001640000024717468ECB.png" width="142" height="233" style="width:3.769cm;height:6.172cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001640000024717468ECB.png" /></p>
 <ul>
-  <li>En [1], añadiremos una carpeta [plugins];
+  <li>en [1], añadiremos una carpeta [plugins];
   </li>
 </ul>
-<h2 id="92-el-concepto-de-un-plugin-nuxt">9.2. <span style="color: #4f81bd">El concepto de un plugin [nuxt]</span></h2>
-<p>[nuxt] se refiere a [plugin] como cualquier código que se ejecuta al iniciar la aplicación, incluso antes de que el servidor ejecute la función [nuxtServerInit], que hasta ahora era la primera función de usuario en ejecutarse. Los plugins de la aplicación deben declararse en la clave [plugins] del archivo de configuración [nuxt.config.js]:</p>
+<h2 id="92-el-concepto-de-plugin-nuxt">9.2. <span style="color: #4f81bd">el concepto de plugin [nuxt]</span></h2>
+<p>[nuxt] denomina [plugin] a todo código ejecutado al iniciar la aplicación, incluso antes de que el servidor ejecute la función [nuxtServerInit], que hasta ahora era la primera función de usuario en ejecutarse. Los complementos de la aplicación deben declararse en la clave [plugins] del archivo de configuración [nuxt.config.js]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008000">/*</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   ** Plugins to load before mounting the App</span></span>
@@ -942,107 +944,107 @@
 </code></pre></div>
 
 <ul>
-  <li>líneas 5-6: un complemento se identifica por su ruta [src] y su modo de ejecución [mode]. [mode] puede tener tres valores:
+  <li>líneas 5-6: un plugin se identifica por su ruta [src] y su modo de ejecución [mode]. [mode] puede tener tres valores:
     <ul>
-      <li>[client]: el complemento debe ejecutarse únicamente en el lado del cliente;
+      <li>[client]: el plugin debe ejecutarse únicamente en el lado del cliente;
       </li>
-      <li>[server]: el complemento debe ejecutarse únicamente en el lado del servidor;
+      <li>[server]: el plugin debe ejecutarse únicamente en el lado del servidor;
       </li>
-      <li>Falta la clave [mode]: en este caso, el complemento debe ejecutarse tanto en el lado del cliente como en el del servidor;
+      <li>ausencia de la clave [mode]: en este caso, el plugin debe ejecutarse tanto en el lado del cliente como en el del servidor;
       </li>
     </ul>
   </li>
-  <li>líneas 5-6: hemos colocado nuestros dos complementos en una carpeta [plugins]. Esto no es obligatorio. Los complementos se pueden colocar en cualquier lugar de la estructura de directorios del proyecto. Del mismo modo, los nombres de las subcarpetas [client, server] son arbitrarios en este caso;
+  <li>líneas 5-6: hemos colocado nuestros dos complementos en una carpeta [plugins]. No hay ninguna obligación de hacerlo así. Los complementos se pueden colocar en cualquier lugar del árbol de directorios del proyecto. Del mismo modo, los nombres de las subcarpetas [client, server] son aquí arbitrarios;
   </li>
 </ul>
 
 <p><img src="images/10000000000001640000024711C4FD7E.png" width="142" height="233" style="width:3.769cm;height:6.172cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001640000024711C4FD7E.png" /></p>
-<h2 id="93-el-complemento-session-del-servidor">9.3. <span style="color: #4f81bd">El complemento [session] del servidor</span></h2>
-<p>El complemento [server / session.js] es el siguiente:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<h2 id="93-el-plugin-session-del-servidor">9.3. <span style="color: #4f81bd">El plugin [session] del servidor</span></h2>
+<p>El plugin [server / session.js] es el siguiente:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span> <span style="color:#0000ff">default</span> (context, inject) =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// server session management</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// gestión de sesiones de servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// is there an existing session?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ¿existe una sesión?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">let</span> value = context.app.$cookies.get(<span style="color:#a31515">&#x27;session&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (!value) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// new session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// nueva sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&quot;[plugin session server], démarrage d&#x27;une nouvelle session&quot;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    value = initValue</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  } <span style="color:#0000ff">else</span> {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// existing session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sesión existente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&quot;[plugin session server], reprise d&#x27;une session existante&quot;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// session definition</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// definición de sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> session = {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// session content</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// contenido de la sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    value,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// save the session in a cookie</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// guardar la sesión en una cookie</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    save(context) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      context.app.$cookies.set(<span style="color:#a31515">&#x27;session&#x27;</span>, <span style="color:#0000ff">this</span>.value, { path: context.base, maxAge: context.env.maxAge })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// we inject a function into [context, Vue] that will render the current session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// inyectamos una función en [context, Vue] que renderizará la sesión actual</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  inject(<span style="color:#a31515">&#x27;session&#x27;</span>, () =&gt; session)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// initial session value</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// valor inicial de la sesión</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span> initValue = {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  initSessionDone: <span style="color:#0000ff">false</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
-  <li>Línea 2: Los complementos se ejecutan cada vez que hay una solicitud al servidor: al iniciar y cada vez que el usuario fuerza una solicitud al servidor introduciendo manualmente una URL:
+  <li>línea 2: los complementos se ejecutan cada vez que hay una llamada al servidor: al inicio y cada vez que el usuario fuerza una llamada al servidor escribiendo un URL manualmente:
     <ul>
-      <li>primero, se ejecutan los complementos del servidor;
+      <li>primero se ejecutan el plugin o los plugins del servidor;
       </li>
-      <li>una vez que el navegador del cliente ha recibido la respuesta del servidor, es el turno de los complementos del cliente;
+      <li>cuando el navegador del cliente ha recibido la respuesta del servidor, es el turno del plugin (o plugins) del cliente de ejecutarse;
       </li>
     </ul>
   </li>
-  <li>Línea 2: Cada complemento, ya sea del lado del cliente o del servidor, recibe dos parámetros:
+  <li>línea 2: cualquier plugin, ya sea del cliente o del servidor, recibe dos parámetros:
     <ul>
-      <li>[context]: el contexto del servidor o del cliente, dependiendo de cuál esté ejecutando el complemento;
+      <li>[context]: el contexto del servidor o del cliente, según quién ejecute el plugin;
       </li>
       <li>[inject]: una función que permite inyectar una función en el contexto del servidor o del cliente;
       </li>
     </ul>
   </li>
-  <li>El propósito del complemento [server / session] es doble:
+  <li>el objetivo del plugin [server / session] es doble:
     <ul>
       <li>definir una sesión (líneas 16-23);
       </li>
-      <li>definir una función [$session] dentro del contexto que devuelva la sesión de la línea 16. La línea 25 hace esto;
+      <li>definir, dentro del contexto, una función [$session] que devolverá como resultado la sesión de la línea 16. Esto lo hace la línea 25;
       </li>
     </ul>
   </li>
   <li>líneas 16-23: la sesión encapsulará sus datos en el objeto [value] de la línea 18;
   </li>
-  <li>líneas 20-22: tiene una función [save] que toma un objeto [context] como parámetro. El código de llamada proporciona este contexto. Con él, la función [save] guarda el valor de la sesión, el objeto [value], en la cookie de sesión;
+  <li>líneas 20-22: dispone de una función [save] que recibe como parámetro un objeto [context]. Es el código llamante el que le proporciona este contexto. Con este, la función [save] guarda el valor de la sesión, el objeto [value], en la cookie de sesión;
   </li>
-  <li>línea 6: cuando se ejecuta el complemento [server / session], primero comprueba si el servidor ha recibido una cookie de sesión;
+  <li>línea 6: cuando se ejecuta el plugin [server / session], comienza por comprobar si el servidor ha recibido una cookie de sesión;
     <ul>
-      <li>si es así, el objeto [value] de la línea 6 representa el valor de la sesión, el conjunto de datos encapsulados en él;
+      <li>si es así, el objeto [value] de la línea 6 representa el valor de la sesión, es decir, el conjunto de datos encapsulados en ella;
       </li>
-      <li>si no es así, en las líneas 7–11, establecemos el valor inicial de la sesión. Este será el objeto [initValue] de las líneas 29–31. Los elementos de la sesión se definirán en la función [nuxtServerInit], que se ejecuta después del plugin del servidor;
+      <li>si no, en las líneas 7-11 se establece el valor inicial de la sesión. Este será el objeto [initValue] de las líneas 29-31. Los elementos de la sesión se definirán en la función [nuxtServerInit], que se ejecuta después del plugin del servidor;
       </li>
     </ul>
   </li>
-  <li>línea 18: la notación [value] es una forma abreviada de la notación [value:value]. El [value] de la izquierda es el nombre de una clave de objeto; el [value] de la derecha es el objeto [value] declarado en la línea 6;
+  <li>línea 18: la notación [value] es un atajo para la notación [value:value]. El [value] de la izquierda es el nombre de una clave de objeto, el [value] de la derecha es el objeto [value] declarado en la línea 6;
   </li>
-  <li>línea 25: cuando se llega a esta línea, la sesión se ha creado porque no existía, o se ha recuperado de la solicitud HTTP del navegador del cliente;
+  <li>línea 25: al llegar a esta línea, la sesión se ha creado porque no existía, o bien se ha recuperado de la solicitud HTTP del navegador del cliente;
   </li>
-  <li>línea 25: inyectamos una nueva función en el contexto del servidor:
+  <li>línea 25: se inyecta en el contexto del servidor una nueva función:
     <ul>
-      <li>el primer parámetro de [inject] es el nombre de la función que se está creando, en este caso «session». [nuxt] le asignará en realidad el nombre «$session»;
+      <li>el primer parámetro de [inject] es el nombre de la función que se crea, en este caso «session». [nuxt] le asignará, de hecho, el nombre «$session»;
       </li>
       <li>el segundo parámetro es la definición de la función. Aquí, la función [$session]
         <ul>
-          <li>no aceptará ningún parámetro;
+          <li>no admitirá ningún parámetro;
           </li>
-          <li>devuelve el objeto [session] de la línea 16;
+          <li>devolverá el objeto [session] de la línea 16;
           </li>
         </ul>
       </li>
@@ -1050,30 +1052,30 @@
   </li>
   <li>una vez ejecutado el plugin:
     <ul>
-      <li>la función [$session] está disponible en [<b>context.app.$session</b>] siempre que el objeto [context] esté disponible, o en [<b>this.$session</b>] en una vista o en el almacén [vuex];
+      <li>la función [$session] estará disponible en [context.app.$session] donde el objeto [context] está disponible, o [this.$session] en una vista o en el almacén [vuex];
       </li>
-      <li>la función [$session] devuelve un objeto [session] con una única clave [value];
+      <li>la función [$session] devuelve un objeto [session] con una clave única [value];
       </li>
-      <li>Al crear la sesión inicialmente, el objeto [value] solo tiene una clave [initStoreDone] (líneas 29–31). La clave [initStoreDone:false] indica que el almacén aún no se ha añadido a la sesión. Esto lo hará la función [nuxtServerInit];
+      <li>al crear inicialmente la sesión, el objeto [value] solo tiene una clave [initStoreDone] (líneas 29-31). La clave [initStoreDone:false] sirve para indicar que el almacén aún no se ha colocado en la sesión. Esto lo hará la función [nuxtServerInit];
       </li>
     </ul>
   </li>
 </ul>
 <h2 id="94-inicializacion-de-la-sesion">9.4. <span style="color: #4f81bd">Inicialización de la sesión</span></h2>
-<p>Una vez que el servidor ejecuta el complemento [session / server], el servidor ejecutará el siguiente script [store / index.js]:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
+<p>Una vez que el servidor ha ejecutado el complemento [session / server], este ejecutará el siguiente script [store / index.js]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span> <span style="color:#0000ff">const</span> state = () =&gt; ({</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// meter</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// contador</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  counter: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">})</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span> <span style="color:#0000ff">const</span> mutations = {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// increment counter by one [inc] value</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// incrementar el contador en un valor [inc]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  increment(state, inc) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    state.counter += inc</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// state replacement</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// sustitución estatal</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  replace(state, newState) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">for</span> (<span style="color:#0000ff">const</span> attr <span style="color:#0000ff">in</span> newState) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      state[attr] = newState[attr]</span></span>
@@ -1083,16 +1085,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span> <span style="color:#0000ff">const</span> actions = {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">async</span> nuxtServerInit(store, context) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// who executes this code?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿quién ejecuta este código?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;nuxtServerInit, client=&#x27;</span>, process.client, <span style="color:#a31515">&#x27;serveur=&#x27;</span>, process.server, <span style="color:#a31515">&#x27;env=&#x27;</span>, context.env)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// waiting for a promise to be fulfilled</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// esperando que se cumpla una promesa</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">await</span> <span style="color:#0000ff">new</span> Promise(<span style="color:#0000ff">function</span>(resolve, reject) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// this is normally an asynchronous function</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// we simulate it with a one-second wait</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// normalmente se trata de una función asíncrona</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// lo simulamos con una espera de un segundo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      setTimeout(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// init session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// iniciar sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        initSession(store, context)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// success</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// éxito</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        resolve()</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }, 1000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    })</span></span>
@@ -1100,112 +1102,112 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span> initSession(store, context) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// store is the blind to be initialized</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// store es el almacén a inicializar</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// retrieve the session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// recuperar la sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> session = context.app.$session()</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// has the session already been initiated?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ¿se ha iniciado ya la sesión?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (!session.value.initSessionDone) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// start a new blind</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// iniciar una nueva persiana</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&quot;nuxtServerInit, initialisation d&#x27;une nouvelle session&quot;<span style="color:#000000">)</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// initialize the blind</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// inicializar la persiana</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 77)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// put the blind in the session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// poner la persiana en la sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    session.value.store = store.state</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// initialize a new session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// inicializamos una nueva sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    session.value.somethingImportant = { x: 2, y: 4 }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the session is now initialized</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// la sesión ya está inicializada</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    session.value.initSessionDone = <span style="color:#0000ff">true</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  } <span style="color:#0000ff">else</span> {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&quot;nuxtServerInit, reprise d&#x27;un store existant&quot;<span style="color:#000000">)</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// update the store with the session store</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// actualizar el almacén con el almacén de sesiones</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    store.commit(<span style="color:#a31515">&#x27;replace&#x27;</span>, session.value.store)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// save the session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// guardar la sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  session.save(context)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// log</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// registrar</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  console.log(<span style="color:#a31515">&#x27;initSession terminé, store=&#x27;</span>, store.state, <span style="color:#a31515">&#x27;session=&#x27;</span>, session.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>En comparación con el almacén del proyecto [nuxt-05], solo ha cambiado la función [initSession] (antes <em>initStore</em>) en las líneas 38–60:</p>
+<p>En comparación con el almacén del proyecto [nuxt-05], solo cambia la función [initSession] (antes <em>initStore</em>) de las líneas 38-60:</p>
 <ul>
-  <li>línea 42: recuperamos la sesión utilizando la función [$session], que se ha inyectado en el contexto del servidor;
+  <li>línea 42: se recupera la sesión mediante la función [$session], que se ha inyectado en el contexto del servidor;
   </li>
-  <li>línea 44: comprobamos si la sesión ya se ha inicializado;
+  <li>línea 44: se comprueba si la sesión ya se ha inicializado;
   </li>
   <li>líneas 45-54: si no es así:
     <ul>
       <li>línea 48: se inicializa el almacén;
       </li>
-      <li>línea 50: el estado del almacén se coloca en la sesión;
+      <li>línea 50: el estado del almacén se guarda en la sesión;
       </li>
-      <li>línea 52: añadimos otro objeto [somethingImportant] a la sesión. Este objeto no formará parte del almacén;
+      <li>línea 52: se añade otro objeto [somethingImportant] a la sesión. Este no formará parte del almacén;
       </li>
-      <li>línea 54: observamos que la sesión ya está inicializada;
+      <li>línea 54: se indica que la sesión ya está inicializada;
       </li>
     </ul>
   </li>
-  <li>líneas 55–59: si la sesión ya estaba inicializada:
+  <li>líneas 55-59: si la sesión ya estaba inicializada:
     <ul>
-      <li>línea 58: se inicializa el nuevo almacén con el contenido de la sesión;
+      <li>línea 58: el nuevo almacén se inicializa con el contenido de la sesión;
       </li>
     </ul>
   </li>
-  <li>línea 61: la sesión se guarda en la cookie de sesión. Ten en cuenta que esto implica incluir la cookie en la respuesta HTTP que el servidor enviará al navegador del cliente;
+  <li>línea 61: la sesión se guarda en la cookie de sesión. Recordemos que esto consiste en colocar la cookie en la respuesta HTTP que el servidor enviará al navegador del cliente;
   </li>
 </ul>
-<h2 id="95-el-complemento-client-session-del-cliente">9.5. <span style="color: #4f81bd">El complemento [client / session] del cliente</span></h2>
-<p>Una vez que el servidor haya ejecutado los scripts [plugins / server / session] y [store / index], enviará una de las páginas [index, page1] al navegador del cliente. La respuesta HTTP del servidor incluirá la cookie de sesión. Una vez que el navegador del cliente reciba la página, se ejecutarán los scripts del lado del cliente incrustados en la página. A continuación, se ejecutará el complemento [client / session]:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<h2 id="95-el-plugin-client-session-del-cliente">9.5. <span style="color: #4f81bd">El plugin [client / session] del cliente</span></h2>
+<p>Una vez que el servidor haya ejecutado los scripts [plugins / server / session] y [store / index], enviará una de las páginas [index, page1] al navegador del cliente. En la respuesta HTTP del servidor, se incluirá la cookie de sesión. Una vez que el navegador del cliente haya recibido la página, se ejecutarán los scripts del cliente incrustados en la página. A continuación, se ejecutará el complemento [client / session]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span> <span style="color:#0000ff">default</span> (context, inject) =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// customer session management</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// gestión de sesiones de clientes</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the session necessarily exists, initialized by the server</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// la sesión debe existir, inicializada por el servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span>&#x27;[plugin session client], reprise de la session du serveur&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// session definition</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// definición de sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> session = {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// session content</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// contenido de la sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    value: context.app.$cookies.get(<span style="color:#a31515">&#x27;session&#x27;</span>),</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// save the session in a cookie</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// guardar la sesión en una cookie</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    save(context) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      context.app.$cookies.set(<span style="color:#a31515">&#x27;session&#x27;</span>, <span style="color:#0000ff">this</span>.value, { path: context.base, maxAge: context.env.maxAge })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// we inject a function into [context, Vue] that will render the current session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// inyectamos una función en [context, Vue] que renderizará la sesión actual</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  inject(<span style="color:#a31515">&#x27;session&#x27;</span>, () =&gt; session)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
-  <li>Cuando se ejecuta el complemento del cliente, el navegador del cliente ya ha recibido la cookie de sesión;
+  <li>cuando se ejecuta el complemento del cliente, el navegador del cliente ya ha recibido la cookie de sesión;
   </li>
-  <li>el objetivo del complemento [client] es inyectar también una función [$session] en el contexto del cliente. Esta función devolvería la sesión enviada por el servidor;
+  <li>el objetivo del plugin [client] es inyectar también una función [$session] en el contexto del cliente. Esta función devolvería la sesión enviada por el servidor;
   </li>
-  <li>línea 19: la función inyectada [$session] devolverá la sesión de las líneas 9–16;
+  <li>línea 19: la función inyectada [$session] devolverá la sesión de las líneas 9-16;
   </li>
-  <li>Líneas 9-16: El objeto [session] gestionado por el cliente. Será una copia de la sesión enviada por el servidor;
+  <li>líneas 9-16: el objeto [session] gestionado por el cliente. Será una copia de la sesión enviada por el servidor;
   </li>
-  <li>línea 11: el valor de la sesión del cliente se recupera de la cookie de sesión enviada por el servidor [nuxt];
+  <li>línea 11: el valor de la sesión del cliente se toma de la cookie de sesión enviada por el servidor [nuxt];
   </li>
-  <li>líneas 13-15: al igual que con la sesión del servidor, la sesión del cliente tiene una función [save] que permite guardar el valor de la sesión, [this.value] en la línea 14, en la cookie de sesión almacenada en el navegador;
+  <li>líneas 13-15: al igual que en la sesión del servidor, la sesión del cliente tiene una función [save] que permite guardar el valor de la sesión, [this.value] (línea 14), en la cookie de sesión almacenada en el navegador;
   </li>
 </ul>
 <h2 id="96-la-pagina-index">9.6. <span style="color: #4f81bd">La página [index]</span></h2>
 <p>La página [index] evoluciona de la siguiente manera:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- page [index] --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página [index] --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- message--&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;right&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span> <span style="color:#ff0000">show</span> <span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;&gt;</span> Home - session= <span style="font-weight:bold">{{</span> <span style="color:#800080">jsonSession</span> <span style="font-weight:bold">}}</span>, counter= <span style="font-weight:bold">{{</span> <span style="color:#800080">$store.state.counter</span> <span style="font-weight:bold">}}</span> <span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- bouton --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- botón --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span>&lt;<span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span>=&quot;incrementCounter&quot;<span style="color:#000000"> </span><span style="color:#ff0000">class</span>=&quot;ml-3&quot;<span style="color:#000000"> </span><span style="color:#ff0000">variant</span>=&quot;primary&quot;&gt;<span style="color:#000000">Incrémenter</span>&lt;/<span style="color:#800000">b-button</span>&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
@@ -1220,7 +1222,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Home&#x27;</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// components used</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  components: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    Layout,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    Navigation</span></span>
@@ -1230,35 +1232,35 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">return</span> JSON.stringify(<span style="color:#0000ff">this</span>.$session().value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// life cycle</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// client and server</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  created() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// client and server</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home created], session=&#x27;</span>, <span style="color:#0000ff">this</span>.$session().value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// customer only</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// customer only</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// event management</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// gestión de eventos</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  methods: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    incrementCounter() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      console.log(<span style="color:#a31515">&#x27;incrementCounter&#x27;</span>)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// counter increment of 1</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// contador incremento de 1</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.$store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 1)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// session modification</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// modificación de la sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">const</span> session = <span style="color:#0000ff">this</span>.$session()</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      session.value.store = <span style="color:#0000ff">this</span>.$store.state</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      session.value.somethingImportant.x++</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      session.value.somethingImportant.y++</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// save session in session cookie</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// guardar la sesión en la cookie de sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      session.save(<span style="color:#0000ff">this</span>.$nuxt.context)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
@@ -1266,41 +1268,41 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>script<span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>Ten en cuenta que esta página se ejecuta tanto en el servidor como en el cliente.</p>
+<p>Hay que recordar que esta página se ejecuta tanto en el lado del servidor como en el del cliente.</p>
 <ul>
-  <li>Línea 8: Ahora mostramos tanto la sesión como el almacén;
+  <li>línea 8: ahora se muestran tanto la sesión como el almacén;
   </li>
-  <li>línea 30: [jsonSession] es una propiedad calculada que devuelve la cadena JSON del valor de la sesión;
+  <li>línea 30: [jsonSession] es una propiedad calculada que devuelve la cadena jSON del valor de la sesión;
   </li>
-  <li>línea 41: mostramos el valor de la sesión utilizando la función inyectada [this.$session]. Esta existe tanto en el contexto del servidor como en el del cliente;
+  <li>línea 41: se muestra el valor de la sesión mediante la función inyectada [this.$session]. Esta existe tanto en el contexto del servidor como en el del cliente;
   </li>
-  <li>línea 53: el método [incrementCounter] se ejecuta solo en el lado del cliente;
+  <li>línea 53: el método [incrementCounter] solo se ejecuta en el lado del cliente;
   </li>
-  <li>Línea 56: El contador ciego se incrementa y se muestra como antes;
+  <li>línea 56: se incrementa el contador del almacén y se muestra como antes;
   </li>
-  <li>línea 58: la sesión se recupera utilizando la función inyectada [this.$session];
+  <li>línea 58: se recupera la sesión mediante la función inyectada [this.$session];
   </li>
   <li>línea 59: se actualiza el almacén de la sesión;
   </li>
-  <li>líneas 60–61: incrementamos los atributos de la sesión [somethingImportant.x, somethingImportant.y]. Esto es solo para mostrar que una sesión se puede utilizar para transportar datos distintos de los del almacén;
+  <li>líneas 60-61: se incrementan los atributos [somethingImportant.x, somethingImportant.y] de la sesión. Esto solo para mostrar que una sesión puede servir para transportar algo más que el almacén;
   </li>
-  <li>Línea 63: la sesión se guarda en la cookie de sesión almacenada en el navegador. En una vista de cliente, el contexto de sesión está disponible en [this.$nuxt.context];
+  <li>línea 63: la sesión se guarda en la cookie de sesión almacenada en el navegador. En una vista de cliente, el contexto de esta está disponible en [this.$nuxt.context];
   </li>
 </ul>
 
-<p>El propósito de la página [index] es demostrar que la sesión no es reactiva, mientras que el almacén sí lo es. Cuando incrementamos los elementos de la sesión, veremos que la vista no se actualiza. La vista [page1] presenta una solución a este problema.</p>
+<p>El objetivo de la página [index] es mostrar que la sesión no es reactiva, mientras que el almacén sí lo es. Al incrementar los elementos de la sesión, se observará que la vista no se actualiza. La vista [page1] presenta una solución a este problema.</p>
 <h2 id="97-la-pagina-page1">9.7. <span style="color: #4f81bd">La página [page1]</span></h2>
-<p>La página [page1] se crea copiando la página [index] y modificándola ligeramente:</p>
+<p>La página [page1] se obtiene copiando la página [index] y modificándola ligeramente:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- page [index] --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página [index] --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- message--&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;right&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span> <span style="color:#ff0000">show</span> <span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;&gt;</span> Page1 - session= <span style="font-weight:bold">{{</span> <span style="color:#800080">jsonSession</span> <span style="font-weight:bold">}}</span>, counter= <span style="font-weight:bold">{{</span> <span style="color:#800080">$store.state.counter</span> <span style="font-weight:bold">}}</span> <span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- bouton --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- botón --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span>&lt;<span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span>=&quot;incrementCounter&quot;<span style="color:#000000"> </span><span style="color:#ff0000">class</span>=&quot;ml-3&quot;<span style="color:#000000"> </span><span style="color:#ff0000">variant</span>=&quot;primary&quot;&gt;<span style="color:#000000">Incrémenter</span>&lt;/<span style="color:#800000">b-button</span>&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
@@ -1315,7 +1317,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Page1&#x27;</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// components used</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  components: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    Layout,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    Navigation</span></span>
@@ -1330,37 +1332,37 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">return</span> JSON.stringify(<span style="color:#0000ff">this</span>.session.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// life cycle</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// client and server</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page1 beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  created() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// client and server</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// set the session in the page&#x27;s reactive properties</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// poner la sesión en las propiedades reactivas de la página</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">this</span>.session = <span style="color:#0000ff">this</span>.$session()</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// log</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// registro</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page1 created], session=&#x27;</span>, <span style="color:#0000ff">this</span>.session.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// customer only</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page1 beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// customer only</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page1 mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// event management</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// gestión de eventos</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  methods: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    incrementCounter() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      console.log(<span style="color:#a31515">&#x27;incrementCounter&#x27;</span>)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// counter increment of 1</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// contador incremento de 1</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.$store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 1)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// session modification</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// modificación de la sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.session.value.store = <span style="color:#0000ff">this</span>.$store.state</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.session.value.somethingImportant.x++</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.session.value.somethingImportant.y++</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// save session in session cookie</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// guardar la sesión en la cookie de sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.session.save(<span style="color:#0000ff">this</span>.$nuxt.context)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
@@ -1369,18 +1371,18 @@
 </code></pre></div>
 
 <ul>
-  <li>línea 47: la principal diferencia es que estamos añadiendo la sesión actual a las propiedades de la página (líneas 29–33). Esto hará que la sesión sea reactiva. Cuando la función [incrementCounter] incremente los elementos de la sesión, la vista [page1] se actualizará;
+  <li>línea 47: la principal diferencia radica en que se incluye la sesión actual en las propiedades de la página (líneas 29-33). Esto hará que, a partir de ahora, la sesión sea reactiva. Cuando la función [incrementCounter] incremente los elementos de la sesión, se actualizará la vista [page1];
   </li>
 </ul>
 <h2 id="98-ejecucion-del-proyecto">9.8. <span style="color: #4f81bd">Ejecución del proyecto</span></h2>
-<p>Antes de ejecutar el proyecto, comprueba la cookie de sesión de tu navegador y, si existe, elimínala para que el servidor cree una nueva sesión:</p>
-<p><img src="images/10000000000005B000000269DCC3E5FE.png" width="437" height="185" style="width:11.561cm;height:4.898cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005B000000269DCC3E5FE.png" /></p>
-<p>Ahora solicitemos la URL [http://localhost:81/nuxt-06/]:</p>
-<p><img src="images/100000000000092300000281C960AAD6.png" width="585" height="160" style="width:15.469cm;height:4.239cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000092300000281C960AAD6.png" /></p>
+<p>Antes de ejecutar el proyecto, compruebe la cookie de sesión de su navegador y, si existe, elimínela para que el servidor cree una sesión nueva:</p>
+<p><img src="images/10000000000005B000000269DCC3E5FE.png" width="437" height="185" style="width:11.561cm;height:4.902cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005B000000269DCC3E5FE.png" /></p>
+<p>Ahora solicitemos URL [http://localhost:81/nuxt-06/]:</p>
+<p><img src="images/100000000000092300000281C960AAD6.png" width="585" height="160" style="width:15.469cm;height:4.24cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000092300000281C960AAD6.png" /></p>
 <p>Los registros del navegador son entonces los siguientes:</p>
-<p><img src="images/10000000000004F4000003E43312D2E8.png" width="380" height="299" style="width:10.059cm;height:7.9cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004F4000003E43312D2E8.png" /></p>
+<p><img src="images/10000000000004F4000003E43312D2E8.png" width="380" height="299" style="width:10.059cm;height:7.909cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004F4000003E43312D2E8.png" /></p>
 <ul>
-  <li>En [2], el servidor inicia una nueva sesión en el complemento [session] del servidor;
+  <li>en [2], el servidor inicia una nueva sesión en el complemento [session] del servidor;
   </li>
   <li>en [3], esta nueva sesión se inicializa en [nuxtServerInit];
   </li>
@@ -1393,72 +1395,72 @@
 <p>Ahora incrementemos el contador tres veces:</p>
 <p><img src="images/10000000000009A40000028069157B07.png" width="617" height="160" style="width:16.32cm;height:4.232cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000009A40000028069157B07.png" /></p>
 <ul>
-  <li>en [3], el contador se ha incrementado, pero no la sesión en [2]. Mientras que [3] muestra el almacén, que es reactivo, [2] muestra la sesión, que no es reactiva:
+  <li>en [3], el contador se ha incrementado correctamente, pero no la sesión en [2]. Mientras que [3] muestra el almacén, que está activo, [2] muestra la sesión, que no está activa:
   </li>
 </ul>
 
 <p>Ahora recarguemos la página (F5). Los registros son los siguientes tras esta recarga:</p>
-<p><img src="images/10000000000004DC000003D69FCEB1CF.png" width="373" height="295" style="width:9.871cm;height:7.793cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004DC000003D69FCEB1CF.png" /></p>
+<p><img src="images/10000000000004DC000003D69FCEB1CF.png" width="373" height="294" style="width:9.871cm;height:7.789cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004DC000003D69FCEB1CF.png" /></p>
 <ul>
-  <li>En [2], vemos que el servidor recibió una cookie de sesión enviada por el navegador del cliente;
+  <li>en [2], vemos que el servidor ha recibido una cookie de sesión enviada por el navegador del cliente;
   </li>
-  <li>en [4], vemos que el almacén no se reinicia, sino que se transfiere desde la sesión recibida;
+  <li>en [4], vemos que el almacén no se reinicia, sino que se retoma en la sesión recibida;
   </li>
-  <li>en [4-5]: vemos que, efectivamente, todos los atributos de sesión se han incrementado tres veces;
+  <li>en [4-5]: se ve que todos los atributos de la sesión se han incrementado tres veces;
   </li>
 </ul>
 
 <p>La página enviada por el servidor es entonces la siguiente;</p>
 <p><img src="images/10000000000009340000026FAD722BCF.png" width="589" height="156" style="width:15.58cm;height:4.12cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000009340000026FAD722BCF.png" /></p>
-<p>La conclusión que se extrae de esta página es que la sesión puede contener elementos distintos del almacén, pero estos no son reactivos.</p>
-<p>Ahora hagamos clic en el enlace [Página 1] [4]. La nueva página que aparece es la siguiente:</p>
-<p><img src="images/10000000000008380000023A4AB5718A.png" width="526" height="143" style="width:13.921cm;height:3.771cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008380000023A4AB5718A.png" /></p>
-<p>A continuación, utilicemos el botón [Incrementar] tres veces. La página queda así:</p>
-<p><img src="images/1000000000000864000002439DF02F45.png" width="537" height="145" style="width:14.212cm;height:3.831cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000864000002439DF02F45.png" /></p>
-<p>Esta vez, la sesión se muestra correctamente en [2]. Aquí es reactiva. Esto se puede ver en los registros:</p>
-<p><img src="images/100000000000048E0000040829D81976.png" width="350" height="310" style="width:9.26cm;height:8.197cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000048E0000040829D81976.png" /></p>
+<p>La conclusión que se extrae de esta página es que la sesión puede transportar otros elementos además del almacén, pero estos no son reactivos.</p>
+<p>Ahora hagamos clic en el enlace [Page 1] [4]. La nueva página que se muestra es la siguiente:</p>
+<p><img src="images/10000000000008380000023A4AB5718A.png" width="526" height="142" style="width:13.921cm;height:3.769cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008380000023A4AB5718A.png" /></p>
+<p>A continuación, utilicemos el botón [Incrémenter] tres veces. La página pasa a ser la siguiente:</p>
+<p><img src="images/1000000000000864000002439DF02F45.png" width="537" height="145" style="width:14.212cm;height:3.829cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000864000002439DF02F45.png" /></p>
+<p>Esta vez, la sesión se muestra correctamente en [2]. Aquí funciona correctamente. Esto se puede ver en los registros:</p>
+<p><img src="images/100000000000048E0000040829D81976.png" width="350" height="310" style="width:9.26cm;height:8.192cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000048E0000040829D81976.png" /></p>
 <ul>
   <li>en [1-3], los valores de la sesión;
   </li>
-  <li>en [4-6], los getter y setter reactivos para los elementos de la sesión;
+  <li>en [4-6], los getters y setters reactivos de los elementos de la sesión;
   </li>
 </ul>
 
-<p>Ahora hagamos clic en el enlace [Inicio] [4]. Aparecerá la siguiente página:</p>
-<p><img src="images/100000000000099B000002872FBB8CC2.png" width="615" height="162" style="width:16.26cm;height:4.277cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000099B000002872FBB8CC2.png" /></p>
-<p>A continuación, haz clic dos veces en el botón [Incrementar] [4]. La página cambia a lo siguiente:</p>
-<p><img src="images/100000000000083A000002373763BAAB.png" width="526" height="142" style="width:13.929cm;height:3.75cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000083A000002373763BAAB.png" /></p>
-<p>Podemos ver que aquí también la sesión se ha vuelto reactiva [2].</p>
-<p>Recuperemos el valor devuelto por la función [this.$session()]:</p>
+<p>Ahora hagamos clic en el enlace [Home] [4]. Obtenemos la siguiente página:</p>
+<p><img src="images/100000000000099B000002872FBB8CC2.png" width="615" height="162" style="width:16.26cm;height:4.279cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000099B000002872FBB8CC2.png" /></p>
+<p>A continuación, hagamos doble clic en el botón [Incrémenter] [4]. La página se convierte en la siguiente:</p>
+<p><img src="images/100000000000083A000002373763BAAB.png" width="526" height="142" style="width:13.929cm;height:3.752cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000083A000002373763BAAB.png" /></p>
+<p>Observamos que, también en este caso, la sesión se ha vuelto reactiva: [2].</p>
+<p>Solicitemos el valor devuelto por la función [this.$session()]:</p>
 <p><img src="images/10000000000006B40000035665CD6F32.png" width="515" height="256" style="width:13.623cm;height:6.78cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006B40000035665CD6F32.png" /></p>
 <ul>
-  <li>En la pestaña [View], selecciona la página actual [Home] para obtener su referencia [$vm0] [3];
+  <li>en la pestaña [Vue], seleccionamos la página actual [Home] para obtener su referencia [$vm0] [3];
   </li>
 </ul>
 
-<p>A continuación, en la pestaña [Consola] [4], recuperemos el valor de la función [$vm0.$session()]:</p>
-<p><img src="images/10000000000004DD00000257D109F034.png" width="622" height="299" style="width:16.469cm;height:7.923cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004DD00000257D109F034.png" /></p>
+<p>A continuación, en la pestaña [Console] [4], solicitamos el valor de la función [$vm0.$session()]:</p>
+<p><img src="images/10000000000004DD00000257D109F034.png" width="622" height="300" style="width:16.469cm;height:7.93cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004DD00000257D109F034.png" /></p>
 <ul>
-  <li>en [5], vemos que la sesión se ha vuelto reactiva, mientras que inicialmente no lo era;
+  <li>en [5], vemos que la sesión se ha vuelto reactiva, cuando inicialmente no lo era;
   </li>
-  <li>en [6], solicitamos el valor de la sesión;
+  <li>en [6], solicitamos ver el valor de la sesión;
   </li>
-  <li>en [7-8], descubrimos que este valor también se ha vuelto reactivo;
+  <li>en [7-8], se descubre que este valor también se ha vuelto reactivo;
   </li>
 </ul>
 
-<p>Por lo tanto, aquí nos encontramos con un resultado inesperado: si un elemento se vuelve reactivo en una página porque se ha incluido en las propiedades de la página, entonces también se vuelve reactivo en páginas en las que no forma parte de las propiedades.</p>
+<p>Por lo tanto, nos encontramos ante un resultado inesperado: si un elemento se vuelve reactivo en una página porque se ha incluido en las propiedades de la página, entonces también se vuelve reactivo en las páginas en las que no forma parte de las propiedades.</p>
 <h2 id="99-conclusion">9.9. <span style="color: #4f81bd">Conclusión</span></h2>
-<p>El ejemplo [nuxt-05] mostró que podíamos persistir el almacén a través de las solicitudes realizadas al servidor. El ejemplo [nuxt-06] hace lo mismo con un objeto que llamamos [session] por analogía con la sesión web. Vimos que esta sesión podía tener las mismas propiedades que el almacén [Vuex] y volverse reactiva también, aunque no lo fuera de forma nativa.</p>
-<p>Entonces, ¿qué sentido tiene el almacén [Vuex]? Debo admitir que, por ahora, no me ha quedado claro. Es probable que se me haya escapado algo. Por lo tanto, en caso de duda, recomendaría utilizar:</p>
+<p>El ejemplo [nuxt-05] ha demostrado que se puede mantener el almacén a lo largo de las solicitudes realizadas al servidor. El ejemplo [nuxt-06] hace lo mismo con un objeto al que hemos llamado [session] por analogía con la sesión web. Hemos visto que esta sesión podía tener las mismas propiedades que el almacén [Vuex] y volverse reactiva también, aunque de forma nativa no lo era.</p>
+<p>Entonces, ¿qué interés tiene el almacén [Vuex]? Debo admitir que, por el momento, no lo veo. Es probable que se me haya escapado algo. Así que, en caso de duda, recomendaría utilizar:</p>
 <ul>
-  <li>un <b>almacén [Vuex] </b>para guardar todo lo que deba compartirse entre las páginas del lado del cliente, y cualquier cosa que pueda necesitar compartirse entre el cliente y el servidor;
+  <li>un <b>almacén [Vuex] </b>para guardar todo lo que deba compartirse entre las páginas del cliente, y lo que eventualmente deba compartirse entre el cliente y el servidor;
   </li>
-  <li>una <b>cookie de sesión </b>si el almacén debe persistir durante una solicitud del cliente al servidor, con la sesión conteniendo únicamente el almacén;
+  <li>una <b>cookie de sesión </b>si el almacén debe persistir durante una llamada del cliente al servidor, de modo que la sesión contenga únicamente el almacén;
   </li>
 </ul>
 
-<p>Los ejemplos [nuxt-05] y [nuxt-06] tenían como objetivo mostrar cómo garantizar la continuidad de la aplicación cuando el usuario fuerza una llamada al servidor escribiendo manualmente las URL. Ten en cuenta que el comportamiento predeterminado en este caso es un reinicio de la aplicación, lo que provoca que se pierda su estado actual.</p>
+<p>Los ejemplos [nuxt-05] y [nuxt-06] tenían como objetivo mostrar cómo se podía garantizar la continuidad de la aplicación cuando el usuario fuerza la llamada al servidor introduciendo manualmente URL. Recordamos que el comportamiento por defecto en este caso es un reinicio de la aplicación, con lo que se pierde su estado actual.</p>
 
 
 

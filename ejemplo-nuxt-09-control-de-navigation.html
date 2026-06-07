@@ -12,10 +12,10 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/es-nuxtjs-dec-2019/ejemplo-nuxt-09-control-de-la-navegacion.html">
+        <link rel="canonical" href="https://stahe.github.io/es-nuxtjs-dec-2019/ejemplo-nuxt-09-control-de-navigation.html">
       
       
-        <link rel="prev" href="ejemplo-nuxt-08-middleware-de-enrutamiento.html">
+        <link rel="prev" href="ejemplo-nuxt-08-middlewares-de-enrutamiento.html">
       
       
         <link rel="next" href="ejemplo-nuxt-10-asyncdata-y-loading.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>12. Ejemplo [nuxt-09]: Control de la navegación - Una introducción al marco NUXT.JS a través de ejemplos</title>
+        <title>12. Ejemplo [nuxt-09]: control de navigation - Una introducción al marco NUXT.JS a través de ejemplos</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#12-ejemplo-nuxt-09-control-de-la-navegacion" class="md-skip">
+        <a href="#12-ejemplo-nuxt-09-control-de-navigation" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              12. Ejemplo [nuxt-09]: Control de la navegación
+              12. Ejemplo [nuxt-09]: control de navigation
             
           </span>
         </div>
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-01-enrutamiento-y-navegacion.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-01-enrutamiento-y-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Ejemplo [nuxt-01]: Enrutamiento y navegación
+    4. Ejemplo [nuxt-01]: enrutamiento y navigation
   
 
     
@@ -418,7 +420,7 @@
   <span class="md-ellipsis">
     
   
-    5. Ejemplo [nuxt-02]: Páginas del servidor y del cliente
+    5. Ejemplo [nuxt-02]: páginas del servidor y del cliente
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-04-mantener-una-sesion-clienteservidor.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-04-mantenimiento-de-una-sesion-clienteservidor.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Ejemplo [nuxt-04]: Mantener una sesión cliente/servidor
+    7. Ejemplo [nuxt-04]: mantenimiento de una sesión cliente/servidor
   
 
     
@@ -499,7 +501,7 @@
   <span class="md-ellipsis">
     
   
-    8. Ejemplo [nuxt-05]: Persistencia del almacén con una cookie de sesión
+    8. Ejemplo [nuxt-05]: persistencia del almacén con una cookie de sesión
   
 
     
@@ -519,14 +521,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-06-inyeccion-en-el-contexto-de-un-gestor-de-sesiones.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-06-inyeccion-en-el-contexto-de-un-gestor-de-sesion.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. Ejemplo [nuxt-06]: Inyección en el contexto de un gestor de sesiones
+    9. Ejemplo [nuxt-06]: inyección en el contexto de un gestor de sesión
   
 
     
@@ -546,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-07-contextos-de-cliente-y-servidor.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-07-los-contextos-de-cliente-y-servidor.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Ejemplo [nuxt-07]: Contextos de cliente y servidor
+    10. Ejemplo [nuxt-07]: los contextos de cliente y servidor
   
 
     
@@ -573,14 +575,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-08-middleware-de-enrutamiento.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-08-middlewares-de-enrutamiento.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. Ejemplo [nuxt-08]: Middleware de enrutamiento
+    11. Ejemplo [nuxt-08]: middlewares de enrutamiento
   
 
     
@@ -616,7 +618,7 @@
   <span class="md-ellipsis">
     
   
-    12. Ejemplo [nuxt-09]: Control de la navegación
+    12. Ejemplo [nuxt-09]: control de navigation
   
 
     
@@ -627,14 +629,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="ejemplo-nuxt-09-control-de-la-navegacion.html" class="md-nav__link md-nav__link--active">
+      <a href="ejemplo-nuxt-09-control-de-navigation.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Ejemplo [nuxt-09]: Control de la navegación
+    12. Ejemplo [nuxt-09]: control de navigation
   
 
     
@@ -734,14 +736,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-11-personalizacion-de-la-imagen-de-carga.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-11-personalizacion-de-la-imagen-de-espera.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Ejemplo [nuxt-11]: Personalización de la imagen de carga
+    14. Ejemplo [nuxt-11]: personalización de la imagen de espera
   
 
     
@@ -768,7 +770,7 @@
   <span class="md-ellipsis">
     
   
-    15. Ejemplo [nuxt-12]: Solicitudes HTTP con axios
+    15. Ejemplo [nuxt-12]: solicitudes HTTP con axios
   
 
     
@@ -788,14 +790,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-13-comprobacion-de-la-navegacion-de-nuxt-12.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-13-control-de-la-navigation-de-nuxt-12.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. Ejemplo [nuxt-13]: Comprobación de la navegación de [nuxt-12]
+    16. Ejemplo [nuxt-13]: control de la navigation de [nuxt-12]
   
 
     
@@ -815,14 +817,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-20-portar-el-ejemplo-vuejs-22.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-20-adaptacion-del-ejemplo-vuejs-22.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. Ejemplo [nuxt-20]: Portar el ejemplo [vuejs-22]
+    17. Ejemplo [nuxt-20]: adaptación del ejemplo [vuejs-22]
   
 
     
@@ -852,27 +854,27 @@
 
 
 
-<h1 id="12-ejemplo-nuxt-09-control-de-la-navegacion">12. <span style="color: #365f91">Ejemplo [nuxt-09]: Control de la navegación</span></h1>
-<p><span style="color: #000000">El ejemplo [nuxt-09] utiliza un middleware para controlar la navegación del cliente. Además, se añade una nueva vista para los casos en los que el usuario solicita al servidor una URL que no existe en la aplicación.</span></p>
-<p><span style="color: #000000">El ejemplo [nuxt-09] se crea inicialmente copiando el ejemplo [nuxt-01]:</span></p>
-<p><img src="images/10000000000001A0000001D7251FD4A6.png" width="166" height="188" style="width:4.399cm;height:4.981cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A0000001D7251FD4A6.png" /></p>
+<h1 id="12-ejemplo-nuxt-09-control-de-navigation">12. <span style="color: #365f91">Ejemplo [nuxt-09]: control de navigation</span></h1>
+<p><span style="color: #000000">El ejemplo [nuxt-09] utiliza un middleware para controlar el navigation del cliente. Además, se añade una nueva vista para los casos en los que el usuario solicita al servidor un URL que no existe en la aplicación.</span></p>
+<p><span style="color: #000000">El ejemplo [nuxt-09] se obtiene inicialmente copiando el ejemplo [nuxt-01]:</span></p>
+<p><img src="images/10000000000001A0000001D7251FD4A6.png" width="166" height="188" style="width:4.399cm;height:4.979cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A0000001D7251FD4A6.png" /></p>
 <h2 id="121-la-pagina-_vue">12.1. <span style="color: #4f81bd">La página [_.vue]</span></h2>
-<p><span style="color: #000000">Ya mencionamos que las rutas de la aplicación se construyen a partir del contenido de la carpeta [pages]. Aquí, hemos añadido la página [_.vue] a esta carpeta. Esta página específica se muestra cada vez que la aplicación se redirige a una página que no existe. En nuestro ejemplo, esto no puede suceder para el cliente. Pero sí puede suceder para el servidor si, por ejemplo, se le solicita la URL [</span><strong><span style="color: #000000">/nuxt-09/abcd</span></strong><span style="color: #000000">]. Dado que la página [abcd] no existe, se mostrará la página [_.vue]. Aquí, tendrá este aspecto:</span></p>
-<p><img src="images/10000000000007C200000290EE453908.png" width="496" height="164" style="width:13.13cm;height:4.337cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007C200000290EE453908.png" /></p>
+<p><span style="color: #000000">Hemos dicho que las rutas de la aplicación se construyen a partir del contenido de la carpeta [pages]. Aquí, hemos añadido a esta carpeta la página [_.vue]. Esta página en concreto se muestra cada vez que la aplicación es redirigida a una página que no existe. En nuestro ejemplo, esto no puede sucederle al cliente. Pero sí puede sucederle al servidor si, por ejemplo, se le solicita la página URL [/nuxt-09/abcd]. Como la página [abcd] no existe, se mostrará la página [_.vue]. En este caso, será la siguiente:</span></p>
+<p><img src="images/10000000000007C200000290EE453908.png" width="496" height="164" style="width:13.13cm;height:4.339cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007C200000290EE453908.png" /></p>
 <p><span style="color: #000000">El código de la página [_.vue] es el siguiente:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- définition HTML de la vue --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- definición HTML de la vista --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- mise en page --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- diseño --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- alerte dans la colonne de droite --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- alerta en la columna de la derecha --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;right&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- message sur fond jaune --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- mensaje sobre fondo amarillo --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span>&lt;<span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span>=&quot;warning&quot;<span style="color:#000000"> </span><span style="color:#ff0000">align</span>=&quot;center&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span>La page demandée n&#x27;existe pas<span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span>b-alert<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- menu de navigation dans la colonne de gauche --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- menú navigation en la columna de la izquierda --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
@@ -887,26 +889,26 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;</span><span style="color:#a31515">404</span><span style="color:#a31515">&#x27;</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// components used</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  components: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    Layout,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    Navigation</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// life cycle</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// client and server</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[404 beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  created() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// client and server</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[404 created]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// customer only</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[404 beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// customer only</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[404 mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -915,24 +917,24 @@
 
 <h2 id="122-el-middleware-del-cliente">12.2. <span style="color: #4f81bd">El middleware del cliente</span></h2>
 <p><span style="color: #000000">El código del middleware del cliente [client-routing] es el siguiente:</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-undef */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span> <span style="color:#0000ff">default</span> <span style="color:#0000ff">function</span>({ route, from, redirect }) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// seulement le client</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// sólo el cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (process.client) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[client-routing]&#x27;<span style="color:#000000">)</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ordre de navigation souhaité</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// orden navigation deseada</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> routes = [</span>&#x27;index&#x27;<span style="color:#000000">, </span>&#x27;page1&#x27;<span style="color:#000000">, </span>&#x27;page2&#x27;<span style="color:#000000">, </span>&#x27;index&#x27;<span style="color:#000000">]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// route courante</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ruta actual</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">const</span> current = route.name</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// route précédente</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ruta anterior</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">const</span> previous = from.name</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// on veut une navigation circulaire</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// routes[i] vers routes[i+1]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// queremos un navigation circular</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// routes[i] a routes[i+1]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">for</span> (<span style="color:#0000ff">let</span> i = 0; i &lt; routes.length - 1; i++) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">if</span> (previous === routes[i] &amp;&amp; current !== routes[i + 1]) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on reste sur la même page</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// seguimos en la misma línea</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        redirect({ name: routes[i] })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">return</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
@@ -942,11 +944,11 @@
 </code></pre></div>
 
 <ul>
-  <li>Línea 3: Sabemos que la función de enrutamiento solo toma un parámetro, el objeto [context] de la entidad que la ejecuta, ya sea el servidor o el cliente. La notación [<span style="color: #0000ff">function</span><span style="color: #000000">({ route, from, redirect })]</span>
+  <li>línea 3: sabemos que la función de enrutamiento solo recibe un parámetro, el objeto [context] de quien la ejecuta, ya sea el servidor o el cliente. La notación [function({ route, from, redirect })]
     <ul>
-      <li><span style="color: #000000">es equivalente a [</span><span style="color: #0000ff">function</span><span style="color: #000000">({ route:route, from:from, redirect:redirect })];</span>
+      <li><span style="color: #000000">es equivalente a [function({ route:route, from:from, redirect:redirect })];</span>
       </li>
-      <li><span style="color: #000000">lo que significa que { route:route, from:from, redirect:redirect } &lt;-- contexto;</span>
+      <li><span style="color: #000000">lo que da como resultado { route:route, from:from, redirect:redirect } &lt;-- contexto;</span>
       </li>
       <li><span style="color: #000000">lo que crea tres parámetros [route, from, redirect] tales como:</span>
         <ul>
@@ -962,21 +964,21 @@
   </li>
 </ul>
 
-<p><span style="color: #000000">La documentación de [nuxt] hace un uso extensivo de esta notación. Es importante familiarizarse con ella;</span></p>
+<p><span style="color: #000000">La documentación de [nuxt] utiliza ampliamente esta notación. Es necesario conocerla;</span></p>
 <ul>
-  <li><span style="color: #000000">línea 8: una matriz con los nombres de las páginas en el orden de navegación deseado</span>
+  <li><span style="color: #000000">línea 8: una tabla con los nombres de las páginas en el orden deseado por navigation</span>
   </li>
-  <li><span style="color: #000000">línea 10: el nombre de la página de destino para la ruta actual;</span>
+  <li><span style="color: #000000">línea 10: el nombre de la página de destino del enrutamiento actual;</span>
   </li>
-  <li><span style="color: #000000">línea 12: el nombre de la página anterior en la ruta actual;</span>
+  <li><span style="color: #000000">líneas 12: el nombre de la página anterior del enrutamiento actual;</span>
   </li>
-  <li><span style="color: #000000">línea 14: como ejercicio, solo permitiremos la navegación circular [índice --&gt; página1 --&gt; página2 --&gt; índice];</span>
+  <li><span style="color: #000000">línea 14: como ejercicio, solo permitiremos un bucle circular navigation [index --&gt; page1 --&gt; page2 --&gt; index];</span>
   </li>
-  <li><span style="color: #000000">líneas 15–21: iteramos por la matriz para determinar el orden de navegación deseado;</span>
+  <li><span style="color: #000000">líneas 15-21: recorremos la tabla dando la orden de navigation deseado;</span>
   </li>
-  <li><span style="color: #000000">línea 16: si encontramos que routes[i] fue la última página a la que se navegó, entonces la siguiente debe ser routes[i+1];</span>
+  <li><span style="color: #000000">línea 16: si se descubre que routes[i] fue la última página enrutada, entonces la siguiente debe ser routes[i+1];</span>
   </li>
-  <li><span style="color: #000000">líneas 18–19: si no es así, redirigimos la aplicación a routes[i], es decir, no cambiamos de página: rechazamos la navegación;</span>
+  <li><span style="color: #000000">líneas 18-19: si no es así, se redirige la aplicación a routes[i], es decir, no se cambia de página: se rechaza la navigation;</span>
   </li>
 </ul>
 <h2 id="123-ejecucion">12.3. <span style="color: #4f81bd">Ejecución</span></h2>
@@ -999,7 +1001,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008000">/*</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   ** Customize the progress-bar color</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  loading: { color: <span style="color:#a31515">&#x27;#fff&#x27;</span> },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  loading: { color: &#x27;#fff&#x27; },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008000">/*</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   ** Global CSS</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   */</span></span>
@@ -1022,11 +1024,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Doc: https://bootstrap-vue.js.org</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&#x27;bootstrap-vue/nuxt&#x27;,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Doc: https://axios.nuxtjs.org/usage</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&#x27;@nuxtjs/axios&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&#x27;@nuxtjs/axios&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  ],</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008000">/*</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   ** Axios module configuration</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">   ** See https://axios.nuxtjs.org/options</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   ** See https://axios.nuxtjs.org/opciones</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  axios: {},</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008000">/*</span></span></span>
@@ -1038,29 +1040,29 @@
 <span class="odt-code-line"><span class="odt-code-line-content">     */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    extend(config, ctx) {}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// source code directory</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// directorio de código fuente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  srcDir: <span style="color:#a31515">&#x27;nuxt-09&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  router: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    base: <span style="color:#a31515">&#x27;/nuxt-09/&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    middleware: [<span style="color:#a31515">&#x27;client-routing&#x27;</span>]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// server</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  server: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    port: 81, // default: 3000</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    host: &#x27;localhost&#x27; // default: localhost</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    port: 81, // por defecto: 3000</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    host: &#x27;localhost&#x27; // por defecto: localhost</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">Comprueba lo siguiente:</span></p>
+<p><span style="color: #000000">Compruebe los siguientes puntos:</span></p>
 <ul>
-  <li><span style="color: #000000">cuando estás en la página [Inicio], solo puedes ir a la página [Página 1];</span>
+  <li><span style="color: #000000">cuando se encuentre en la página [Home], solo podrá navegar hacia la página [Page 1];</span>
   </li>
-  <li><span style="color: #000000">cuando estás en la página [Página 1], solo puedes ir a la página [Página 2];</span>
+  <li><span style="color: #000000">cuando se encuentra en la página [Page 1], solo puede navegar a la página [Page 2];</span>
   </li>
-  <li><span style="color: #000000">cuando estás en la página [Página 2], solo puedes navegar a la página [Inicio];</span>
+  <li><span style="color: #000000">cuando se encuentra en la página [Page 2], solo puede navegar a la página [Home];</span>
   </li>
-  <li><span style="color: #000000">Cuando solicitas una URL no válida, como [</span><b>http://localhost:81/nuxt-09b/abcd</b><span style="color: #000000">], aparece un mensaje indicando que la página solicitada no existe;</span>
+  <li><span style="color: #000000">cuando solicitas una URL incorrecta, como [http://localhost:81/nuxt-09b/abcd], obtienes la vista que indica que la página solicitada no existe;</span>
   </li>
 </ul>
 
