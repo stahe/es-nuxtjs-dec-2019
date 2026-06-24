@@ -386,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-01-enrutamiento-y-navigation.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-01-enrutamiento-y-navegacion.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Ejemplo [nuxt-01]: enrutamiento y navigation
+    4. Ejemplo [nuxt-01]: enrutamiento y navegación
   
 
     
@@ -554,10 +554,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#81-presentacion" class="md-nav__link">
+  <a href="#81-presentation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.1. Presentación
+        8.1. Présentation
       
     </span>
   </a>
@@ -715,14 +715,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-09-control-de-navigation.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-09-control-de-la-navegacion.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Ejemplo [nuxt-09]: control de navigation
+    12. Ejemplo [nuxt-09]: control de la navegación
   
 
     
@@ -749,7 +749,7 @@
   <span class="md-ellipsis">
     
   
-    13. Ejemplo [nuxt-10]: asyncData y loading
+    13. Ejemplo [nuxt-10]: asyncData y «loading»
   
 
     
@@ -823,14 +823,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-13-control-de-la-navigation-de-nuxt-12.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-13-comprobacion-de-la-navegacion-de-nuxt-12.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. Ejemplo [nuxt-13]: control de la navigation de [nuxt-12]
+    16. Ejemplo [nuxt-13]: comprobación de la navegación de [nuxt-12]
   
 
     
@@ -890,21 +890,22 @@
 <h1 id="8-ejemplo-nuxt-05-persistencia-del-almacen-con-una-cookie-de-sesion">8. <span style="color: #365f91">Ejemplo [nuxt-05]: persistencia del almacén con una cookie de sesión</span></h1>
 <p><strong>Objetivo</strong>: queremos que el almacén [Vuex] no se reinicie con cada solicitud al servidor. Para ello, utilizaremos una cookie de sesión:</p>
 <ul>
-  <li>el almacén será inicializado por el servidor y este lo colocará en una cookie de sesión;
+  <li>el almacén será inicializado por el servidor y este lo incluirá en una cookie de sesión;
   </li>
   <li>el navegador del cliente recibirá esta cookie de sesión y la enviará automáticamente con cada nueva solicitud al servidor;
   </li>
   <li>el servidor podrá entonces recuperar esta cookie de sesión y trabajar con el almacén que contiene, un almacén actualizado por el cliente;
   </li>
 </ul>
-<h2 id="81-presentacion">8.1. <span style="color: #4f81bd">Presentación</span></h2>
+
+<h2 id="81-presentation">8.1. <span style="color: #4f81bd">Présentation</span></h2>
 <p>El proyecto [nuxt-05] se obtiene inicialmente copiando el proyecto [nuxt-04]:</p>
 <p><img src="images/100000000000014D00000194D2B72658.png" width="133" height="161" style="width:3.53cm;height:4.27cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000014D00000194D2B72658.png" /></p>
 <p>Veremos que solo cambiará el archivo [store / index.js].</p>
-<p>Para utilizar cookies con [nuxt], utilizaremos el módulo [cookie-universal-nuxt], que instalamos junto con [yarn] en un terminal VSCode:</p>
+<p>Para utilizar cookies con [nuxt], utilizaremos el módulo [cookie-universal-nuxt], que instalaremos junto con [yarn] en un terminal VSCode:</p>
 <p><img src="images/10000000000004C800000124EE164342.png" width="612" height="146" style="width:16.193cm;height:3.859cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004C800000124EE164342.png" /></p>
 <ul>
-  <li>en [4], escribimos el comando [yarn add cookie-universal-nuxt];
+  <li>En [4], escribimos el comando [yarn add cookie-universal-nuxt];
   </li>
 </ul>
 
@@ -998,7 +999,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  ],</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008000">/*</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   ** Axios module configuration</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">   ** See https://axios.nuxtjs.org/opciones</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   ** See https://axios.nuxtjs.org/options</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  axios: {},</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008000">/*</span></span></span>
@@ -1010,22 +1011,22 @@
 <span class="odt-code-line"><span class="odt-code-line-content">     */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    extend(config, ctx) {}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// directorio de código fuente</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// directorio del código fuente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  srcDir: <span style="color:#a31515">&#x27;nuxt-05&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// enrutador</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  router: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// raíz de URL para la aplicación</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// raíz de los URL de la aplicación</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    base: </span>&#x27;/nuxt-05/&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  server: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// puerto de servicio, por defecto 3000</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// puerto de servicio, 3000 por defecto</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    port: 81,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// direcciones de red escuchadas, por defecto localhost: 127.0.0.1</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 0.0.0.0 = todas las direcciones de red de la máquina</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// direcciones de red a las que escucha, por defecto localhost: 127.0.0.1</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 0.0.0.0 = todas las direcciones de red del equipo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    host: </span>&#x27;localhost&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// medio ambiente</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// entorno</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold">env</span>: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    maxAge: 60 * 5</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
@@ -1038,10 +1039,11 @@
   <li>línea 80: el atributo [maxAge] será la duración máxima de la cookie de sesión, que se mide desde la última vez que se inicializó la cookie. Esta duración se expresa en segundos. Aquí se ha establecido una duración de 5 minutos;
   </li>
 </ul>
+
 <h2 id="83-el-principio-de-la-persistencia-del-almacen">8.3. <span style="color: #4f81bd">El principio de la persistencia del almacén</span></h2>
 <p>Las cookies intercambiadas entre el cliente y el servidor están disponibles en ambos lados (cliente y servidor) en:</p>
 <ul>
-  <li>[context.app.$cookies] allí donde el objeto [context] está disponible, es decir, prácticamente en todas partes;
+  <li>[context.app.$cookies], allí donde está disponible el objeto [context], es decir, prácticamente en todas partes;
   </li>
   <li>[this.$cookies] dentro de una vista;
   </li>
@@ -1050,11 +1052,11 @@
 <p>Se obtiene una cookie concreta con la expresión [...$cookies.get(‘nom_du_cookie’)]. Se establece el valor de una cookie con la expresión [...$cookies.set(‘nom_du_cookie’, valeur_du_cookie)].</p>
 <p>El principio de la cookie de persistencia del almacén será el siguiente:</p>
 <ul>
-  <li>cuando el servidor inicialice el almacén en la función [nuxtServerInit], el estado del almacén se almacenará en una cookie llamada «session»;
+  <li>cuando el servidor inicialice el almacén en la función [nuxtServerInit], el estado del almacén se almacenará en una cookie denominada «session»;
   </li>
   <li>la cookie «session» formará entonces parte de la respuesta HTTP del servidor. Sabemos que un navegador devuelve al servidor las cookies que este le ha enviado. Lo hace con cada nueva solicitud que realiza al servidor. También sabemos que el servidor envía el almacén dentro de la página que envía al cliente;
   </li>
-  <li>dentro del navegador, la aplicación cliente recupera el almacén enviado por el servidor y, a continuación, realiza su trabajo. Nos aseguraremos de que, cada vez que modifique el almacén, su nuevo estado se guarde en la cookie «session» registrada por el navegador;
+  <li>dentro del navegador, la aplicación cliente recupera el «store» enviado por el servidor y, a continuación, realiza su trabajo. Nos aseguraremos de que, cada vez que modifique el «store», su nuevo estado se almacene en la cookie «session» registrada por el navegador;
   </li>
   <li>si el usuario fuerza una llamada al servidor, el navegador cliente reenviará automáticamente todas las cookies que el servidor le haya enviado previamente, en particular la cookie denominada «session»;
   </li>
@@ -1063,6 +1065,7 @@
   <li>por lo tanto, habrá continuidad del almacén entre el cliente y el servidor;
   </li>
 </ul>
+
 <h2 id="84-inicializacion-del-almacen">8.4. <span style="color: #4f81bd">Inicialización del almacén</span></h2>
 <p>El almacén está implementado en el archivo [store / index.js]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
@@ -1071,53 +1074,53 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// contador</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  counter: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">})</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span> <span style="color:#0000ff">const</span> mutations = {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// incrementar el contador en un valor [inc]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// incremento del contador en un valor [inc]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  increment(state, inc) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    state.counter += inc</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// sustitución estatal</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// sustitución del estado</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  replace(state, newState) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">for</span> (<span style="color:#0000ff">const</span> attr <span style="color:#0000ff">in</span> newState) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      state[attr] = newState[attr]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span> <span style="color:#0000ff">const</span> actions = {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">async</span> nuxtServerInit(store, context) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿quién ejecuta este código?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿Quién ejecuta este código?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;nuxtServerInit, client=&#x27;</span>, process.client, <span style="color:#a31515">&#x27;serveur=&#x27;</span>, process.server, <span style="color:#a31515">&#x27;env=&#x27;</span>, context.env)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// esperando que se cumpla una promesa</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// se espera a que finalice una promesa</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">await</span> <span style="color:#0000ff">new</span> Promise(<span style="color:#0000ff">function</span>(resolve, reject) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// normalmente se trata de una función asíncrona</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// lo simulamos con una espera de un segundo</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// Normalmente, aquí hay una función asíncrona</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// la simulamos con una espera de un segundo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      setTimeout(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// iniciar sesión</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// inicialización de la sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        initStore(store, context)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// éxito</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// Éxito</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        resolve()</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }, 1000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span> initStore(store, context) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ¿hay una cookie de sesión en la solicitud actual?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ¿Hay alguna cookie de sesión en la solicitud actual?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> cookies = context.app.$cookies</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> session = cookies.get(<span style="color:#a31515">&#x27;session&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (!session) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ninguna sesión existente</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// no hay ninguna sesión existente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&quot;nuxtServerInit, initialisation d&#x27;une nouvelle session&quot;<span style="color:#000000">)</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// inicializar la persiana</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// se inicializa el almacén</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 77)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  } <span style="color:#0000ff">else</span> {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&quot;nuxtServerInit, reprise d&#x27;une session existante&quot;<span style="color:#000000">)</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// actualizar el almacén con la cookie de sesión</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// se actualiza el almacén con la cookie de sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    store.commit(<span style="color:#a31515">&#x27;replace&#x27;</span>, session.store)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ponemos la tienda en la cookie de sesión</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Se guarda el almacén en la cookie de sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  cookies.set(<span style="color:#a31515">&#x27;session&#x27;</span>, { store: store.state }, { path: context.base, maxAge: context.env.maxAge })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// registro</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  console.log(<span style="color:#a31515">&#x27;initStore terminé, store=&#x27;</span>, store.state)</span></span>
@@ -1126,7 +1129,7 @@
 
 <p><strong>Comentarios</strong></p>
 <ul>
-  <li>líneas 2-5: el almacén estará compuesto por un contador;
+  <li>líneas 2-5: el almacén estará formado por un contador;
   </li>
   <li>líneas 9-11: este contador se podrá incrementar;
   </li>
@@ -1136,7 +1139,7 @@
   </li>
   <li>línea 30: cuando transcurre el tiempo de espera de un segundo, se inicializa el almacén mediante la función de las líneas 38-56;
   </li>
-  <li>líneas 40-41: se empieza por recuperar la cookie denominada «session»:
+  <li>líneas 40-41: primero se recupera la cookie denominada «session»:
   </li>
 </ul>
 
@@ -1144,22 +1147,22 @@
     <ol>
       <li>durante la primera ejecución de la aplicación y en la primera solicitud enviada al servidor, esta cookie <b>aún no existirá</b>. Se creará entonces (línea 53) y se enviará al navegador del cliente;
       </li>
-      <li>durante la misma ejecución de la aplicación y en las solicitudes n.º 2, 3, ... realizadas al servidor, esta cookie <b>existirá</b>, ya que el navegador del cliente la reenviará con cada nueva solicitud realizada al servidor;
+      <li>durante la misma ejecución de la aplicación y en las solicitudes n.º 2, 3, … realizadas al servidor, esta cookie ya <b>existirá</b>, ya que el navegador del cliente la reenviará con cada nueva solicitud realizada al servidor;
       </li>
-      <li>durante una segunda ejecución de la aplicación y en la primera solicitud realizada al servidor, esta cookie <b>también puede existir</b>. De hecho, al finalizar el paso 1, la cookie se ha almacenado en el navegador con una determinada duración. Si no se ha superado dicha duración, la cookie denominada «session» se enviará con la primera solicitud realizada al servidor
+      <li>durante una segunda ejecución de la aplicación y en la primera solicitud enviada al servidor, esta cookie <b>también puede existir</b>. De hecho, al finalizar el paso 1, la cookie se ha almacenado en el navegador con una determinada duración. Si no se ha superado dicha duración, la cookie denominada «session» se enviará con la primera solicitud enviada al servidor
       </li>
     </ol>
 </ol>
 
 <p>En resumen, para cada solicitud enviada al servidor: si la cookie «session» ya está almacenada en el navegador del cliente, el servidor la recibirá; de lo contrario, no la recibirá.</p>
 <ul>
-  <li>líneas 42-47: si el servidor no recibe la cookie de sesión, entonces el almacén se inicializa en la línea 46;
+  <li>líneas 42-47: si el servidor no recibe la cookie de sesión, el almacén se inicializa mediante la línea 46;
     <ul>
-      <li>luego, en la línea 53, se creará una cookie denominada «session» y se colocará en la respuesta HTTP del servidor. El valor de la cookie es el objeto [{ store: store.state }]. Por lo tanto, es el estado del almacén y no el almacén en sí lo que se coloca en la cookie de sesión;
+      <li>luego, en la línea 53, se creará una cookie denominada «session» y se incluirá en la respuesta HTTP del servidor. El valor de la cookie es el objeto [{ store: store.state }]. Por lo tanto, lo que se incluye en la cookie de sesión es el estado del almacén y no el almacén en sí;
       </li>
       <li>el tercer parámetro de la función [set] es un objeto de opciones:
         <ul>
-          <li>[path] indica a qué URL debe reenviarse esta cookie. [context.base] es el URL base de la aplicación [nuxt-05]. Este se define en el archivo [nuxt.config.js]:
+          <li>[path] indica a qué URL debe reenviarse esta cookie. [context.base] es el URL básico de la aplicación [nuxt-05]. Este se define en el archivo [nuxt.config.js]:
           </li>
         </ul>
       </li>
@@ -1170,7 +1173,7 @@
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// enrutador</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  router: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// raíz de URL para la aplicación</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// raíz de los URL de la aplicación</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    base: </span>&#x27;/nuxt-05/&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">},</span></span>
 </code></pre></div>
@@ -1178,7 +1181,7 @@
 <ol>
     <ol>
         <ul>
-          <li>[maxAge] es la duración en segundos de la cookie en el navegador. Transcurrido este tiempo, el navegador ya no la reenvía al servidor. [context.env.maxAge] vuelve a devolver un valor registrado en el archivo [nuxt.config.js]:
+          <li>[maxAge] es el tiempo de vida, en segundos, de la cookie en el navegador. Transcurrido este tiempo, el navegador ya no la reenvía al servidor. [context.env.maxAge] vuelve a devolver un valor registrado en el archivo [nuxt.config.js]:
           </li>
         </ul>
     </ol>
@@ -1187,18 +1190,18 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>// medio ambiente
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>// entorno
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>  env: {
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>    maxAge: 60 * 5
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>}
 </code></pre></div></td></tr></table></div>
-<p>[env] es una palabra clave reservada del archivo de configuración. Aquí se establece la duración en 5 minutos. Este tiempo se mide desde la última vez que el navegador recibió la cookie de sesión. Transcurrido este tiempo, la cookie no se reenviará al servidor, que deberá entonces iniciar una nueva sesión;</p>
+<p>[env] es una palabra clave reservada del archivo de configuración. Aquí se establece la vida útil en 5 minutos. Este tiempo se mide desde la última vez que el navegador recibió la cookie de sesión. Una vez transcurrido este tiempo, la cookie no se reenviará al servidor, que deberá iniciar entonces una nueva sesión;</p>
 <ul>
   <li>líneas 48-50: si el servidor recibe la cookie de sesión, se inicializa el estado del almacén con el objeto [store] de la cookie de sesión. Recordemos que este objeto contiene el estado guardado del almacén;
     <ul>
       <li>luego, en la línea 53, la cookie de sesión se incluirá en la respuesta enviada al navegador del cliente:
         <ul>
-          <li>la función [get] busca la cookie de sesión en la <b>solicitud recibida </b>por el servidor;
+          <li>la función [get] recupera la cookie de sesión de la <b>solicitud recibida </b>por el servidor;
           </li>
           <li>la función [set] incluye la cookie de sesión en la <b>respuesta </b>que el servidor envía al navegador del cliente;
           </li>
@@ -1207,6 +1210,7 @@
     </ul>
   </li>
 </ul>
+
 <h2 id="85-incremento-del-contador-de-la-tienda">8.5. <span style="color: #4f81bd">Incremento del contador de la tienda</span></h2>
 <p>El incremento del contador en la página [index.vue] se desarrolla de la siguiente manera:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
@@ -1214,17 +1218,17 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  methods: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    incrementCounter() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      console.log(&#x27;incrementCounter&#x27;)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">       // contador incremento de 1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">       // incremento del contador en 1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      this.$store.commit(&#x27;increment&#x27;, 1)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">       // cambiar el valor mostrado</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">       // cambio del valor mostrado</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      this.value = this.$store.state.counter</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">       // guardar la tienda en la cookie de sesión</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">       // guardar el estado en la cookie de sesión</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      this.$cookies.set(&#x27;session&#x27;, { store: this.$store.state }, { path: this.$nuxt.context.base, maxAge: this.$nuxt.context.env.maxAge })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>Del lado del cliente, cada vez que se modifica el almacén, hay que guardarlo en la cookie de sesión. De hecho, el usuario puede solicitar un URL manualmente en cualquier momento y, por lo tanto, debemos ser capaces de enviar al servidor un almacén actualizado. Por eso, en la línea 10, tras incrementar el contador del almacén, se guarda su estado en la cookie de sesión:</p>
+<p>Por parte del cliente, cada vez que se modifica el almacén, hay que guardarlo en la cookie de sesión. De hecho, el usuario puede solicitar una URL manualmente en cualquier momento y, en ese caso, hay que poder enviar al servidor un almacén actualizado. Por eso, en la línea 10, tras incrementar el contador del almacén, se guarda su estado en la cookie de sesión:</p>
 <ul>
   <li>las cookies están disponibles en la propiedad [this.$cookies];
   </li>
@@ -1235,17 +1239,18 @@
   <li>la vida útil de la cookie es [context.env.maxAge], disponible aquí en la propiedad [this.$nuxt.context.env.maxAge];
   </li>
 </ul>
+
 <h2 id="86-ejecucion-del-ejemplo-nuxt-05">8.6. <span style="color: #4f81bd">Ejecución del ejemplo [nuxt-05]</span></h2>
 <p>Iniciamos la aplicación [nuxt-05]:</p>
 <p><img src="images/10000000000004A4000000C393512E1D.png" width="594" height="98" style="width:15.722cm;height:2.581cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004A4000000C393512E1D.png" /></p>
-<p>Las siguientes capturas de pantalla corresponden a un navegador Chrome. Solicitamos el URL [http://localhost:81/nuxt-05/]. <strong>No olvide</strong> el último / detrás de /nuxt-05, de lo contrario no obtendrá los resultados esperados:</p>
+<p>Las siguientes capturas de pantalla corresponden a un navegador Chrome. Solicitamos el URL [http://localhost:81/nuxt-05/]. <strong>No olvides</strong> el último / detrás de /nuxt-05, ya que, de lo contrario, no obtendrás los resultados esperados:</p>
 <p><img src="images/10000000000007EA000002AD420D8580.png" width="608" height="206" style="width:16.08cm;height:5.442cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007EA000002AD420D8580.png" /></p>
 <ul>
   <li>en [4], hemos obtenido el valor inicial del store (77);
   </li>
 </ul>
 
-<p>Examinemos los registros del navegador (F12):</p>
+<p>Analicemos los registros del navegador (F12):</p>
 <p><img src="images/10000000000003A8000002BFF206F300.png" width="281" height="211" style="width:7.43cm;height:5.579cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003A8000002BFF206F300.png" /></p>
 <ul>
   <li>en [5-6], los registros del servidor;
@@ -1261,11 +1266,11 @@
 <p>Ahora veamos las cookies recibidas por el navegador:</p>
 <p><img src="images/100000000000071C0000026550FCE5E8.png" width="546" height="184" style="width:14.452cm;height:4.86cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000071C0000026550FCE5E8.png" /></p>
 <ul>
-  <li>en [1], seleccione la pestaña [Application] y, a continuación, option, [Cookies] y [2]. Entre todas las cookies de su navegador, seleccione la del dominio [http://localhost:81];
+  <li>en [1], selecciona la pestaña [Application] y, a continuación, la opción [Cookies] [2]. De entre todas las cookies de su navegador, seleccione la del dominio [http://localhost:81];
   </li>
   <li>en [4], la cookie denominada «session». Si no la tiene, actualice la página [F5]: quizá haya superado su tiempo de vida, que es de 5 minutos;
   </li>
-  <li>en [5], el valor de la cookie. Aunque no es muy legible debido a la codificación de los caracteres { :, se distingue el valor 77 del contador;
+  <li>en [5], el valor de la cookie. Aunque no sea muy legible debido a la codificación de los caracteres { :, se distingue el valor 77 del contador;
   </li>
   <li>en [6], el URL de la cookie: cada vez que se solicite este URL, el navegador enviará la cookie al servidor;
   </li>
@@ -1273,26 +1278,26 @@
   </li>
 </ul>
 
-<p>Asegúrese de tener esta cookie. Si no la tiene, actualice la página (F5). Cuando tenga la página con su cookie, actualice de nuevo la página (F5). Los registros serán entonces los siguientes:</p>
+<p>Asegúrate de tener esta cookie. Si no la tienes, actualiza la página (F5). Cuando tengas la página con su cookie, vuelve a actualizarla (F5). Los registros quedarán entonces así:</p>
 <p><img src="images/10000000000003F5000002D011D4BFB8.png" width="304" height="216" style="width:8.042cm;height:5.72cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003F5000002D011D4BFB8.png" /></p>
-<p>Esta vez, en [3], el servidor ha recuperado correctamente la cookie de sesión. Ha sido el navegador del cliente quien se la ha enviado.</p>
-<p>Ahora, incremente el contador y, de vez en cuando, recargue la página actual (F5), ya sea [index] o [page1], deberá observar que el contador no vuelve a 77 como en el ejemplo [nuxt-04], sino que mantiene el valor que tenía en el navegador del cliente antes de recargar la página:</p>
+<p>En este caso, en [3], el servidor ha recuperado correctamente la cookie de sesión. Ha sido el navegador del cliente quien se la ha enviado.</p>
+<p>Ahora, ve incrementando el contador y, de vez en cuando, vuelve a cargar la página actual (F5), ya sea [index] o [page1], deberás observar que el contador no vuelve a 77, como en el ejemplo [nuxt-04], sino que mantiene el valor que tenía en el navegador del cliente antes de recargar la página:</p>
 <p><img src="images/10000000000007E2000002B5201B12CF.png" width="605" height="208" style="width:16.02cm;height:5.502cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007E2000002B5201B12CF.png" /></p>
 <p><img src="images/10000000000007F9000002B492061390.png" width="612" height="207" style="width:16.2cm;height:5.489cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007F9000002B492061390.png" /></p>
 <p>Los registros del navegador son entonces los siguientes:</p>
 <p><img src="images/1000000000000530000001B45ACF1350.png" width="664" height="218" style="width:17.572cm;height:5.77cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000530000001B45ACF1350.png" /></p>
-<p><strong>Nota</strong>: para las pruebas, es posible que tengas que eliminar la cookie de sesión [5] almacenada en el navegador para comenzar con una nueva sesión, inicializada por el servidor, en la próxima solicitud que se le envíe.</p>
+<p><strong>Nota</strong>: para las pruebas, es posible que tengas que eliminar [5], la cookie de sesión almacenada en el navegador, para comenzar con una nueva sesión, inicializada por el servidor, en la próxima solicitud que se le envíe.</p>
 <p>Por último, veamos la influencia de la función [incrementCounter] de la página [index] sobre la cookie de sesión almacenada en el navegador del cliente:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">// gestión de eventos</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  methods: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    incrementCounter() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      console.log(<span style="color:#a31515">&#x27;incrementCounter&#x27;</span>)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// contador incremento de 1</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// incremento del contador en 1</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.$store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 1)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// cambiar el valor mostrado</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// cambio del valor mostrado</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.value = <span style="color:#0000ff">this</span>.$store.state.counter</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// guardar la tienda en la cookie de sesión</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// almacenamiento del valor en la cookie de sesión</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.$cookies.set(<span style="color:#a31515">&#x27;session&#x27;</span>, { store: <span style="color:#0000ff">this</span>.$store.state }, { path: <span style="color:#0000ff">this</span>.$nuxt.context.base, maxAge: <span style="color:#0000ff">this</span>.$nuxt.context.env.maxAge })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
@@ -1313,7 +1318,7 @@
 <p>Ahora, incrementemos el contador una vez: [5]. La cookie de sesión, que era [4], evoluciona de la siguiente manera:</p>
 <p><img src="images/10000000000007EC000005DCC967A8FF.png" width="609" height="450" style="width:16.103cm;height:11.912cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007EC000005DCC967A8FF.png" /></p>
 <ul>
-  <li>a [7]; el contador de la cookie de sesión ha pasado efectivamente a 84. Para verlo, hay que actualizar la vista [8]. Para ello, seleccione otra option de [Storage] [9] y, a continuación, vuelva a seleccionar option [8]. El nuevo valor de la cookie de sesión debería aparecer entonces;
+  <li>a [7]; el contador de la cookie de sesión ha pasado efectivamente a 84. Para comprobarlo, hay que actualizar la vista [8]. Para ello, selecciona otra opción de [Storage] ([9]) y, a continuación, vuelve a seleccionar la opción [8]. El nuevo valor de la cookie de sesión debería aparecer entonces;
   </li>
 </ul>
 

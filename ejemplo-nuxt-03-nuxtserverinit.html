@@ -386,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-01-enrutamiento-y-navigation.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-01-enrutamiento-y-navegacion.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Ejemplo [nuxt-01]: enrutamiento y navigation
+    4. Ejemplo [nuxt-01]: enrutamiento y navegación
   
 
     
@@ -500,10 +500,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#61-el-almacen-vuex" class="md-nav__link">
+  <a href="#61-el-store-vuex" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1. El almacén [Vuex]
+        6.1. El store [Vuex]
       
     </span>
   </a>
@@ -533,10 +533,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#64-ejecucion" class="md-nav__link">
+  <a href="#64-execution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.4. Ejecución
+        6.4. Exécution
       
     </span>
   </a>
@@ -693,14 +693,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-09-control-de-navigation.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-09-control-de-la-navegacion.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Ejemplo [nuxt-09]: control de navigation
+    12. Ejemplo [nuxt-09]: control de la navegación
   
 
     
@@ -727,7 +727,7 @@
   <span class="md-ellipsis">
     
   
-    13. Ejemplo [nuxt-10]: asyncData y loading
+    13. Ejemplo [nuxt-10]: asyncData y «loading»
   
 
     
@@ -801,14 +801,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-13-control-de-la-navigation-de-nuxt-12.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-13-comprobacion-de-la-navegacion-de-nuxt-12.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. Ejemplo [nuxt-13]: control de la navigation de [nuxt-12]
+    16. Ejemplo [nuxt-13]: comprobación de la navegación de [nuxt-12]
   
 
     
@@ -866,10 +866,10 @@
 
 
 <h1 id="6-ejemplo-nuxt-03-nuxtserverinit">6. <span style="color: #365f91">Ejemplo [nuxt-03]: nuxtServerInit</span></h1>
-<p>El proyecto [nuxt-03] tiene como objetivo presentar una función del almacén [Vuex] llamada [nuxtServerInit]. Permite al servidor inicializar el almacén [Vuex], al igual que lo hace la función [fetch]. Pero, a diferencia de la función [fetch], la función [nuxtServerInit] nunca es ejecutada por el cliente.</p>
+<p>El proyecto [nuxt-03] tiene como objetivo presentar una función del almacén [Vuex] denominada [nuxtServerInit]. Esta función permite al servidor inicializar el almacén [Vuex], al igual que lo hace la función [fetch]. Sin embargo, a diferencia de la función [fetch], la función [nuxtServerInit] nunca es ejecutada por el cliente.</p>
 <p><img src="images/100000000000014A00000194B95EBAE0.png" width="132" height="162" style="width:3.493cm;height:4.279cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000014A00000194B95EBAE0.png" /></p>
 <p>El proyecto [nuxt-03] se obtiene inicialmente mediante una copia del proyecto [nuxt-01], del que se elimina la página [page2] de la carpeta [pages] y del componente [navigation]. La carpeta [store] se obtiene copiando la carpeta [nuxt-02/store].</p>
-<h2 id="61-el-almacen-vuex">6.1. <span style="color: #4f81bd">El almacén [Vuex]</span></h2>
+<h2 id="61-el-store-vuex">6.1. <span style="color: #4f81bd"><strong>El store [Vuex]</strong></span></h2>
 <p>La tienda [Vuex] se implementará mediante el siguiente archivo [store/index.js]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
@@ -877,30 +877,30 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// contador</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  counter: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">})</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span> <span style="color:#0000ff">const</span> mutations = {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// incrementar el contador en un valor [inc]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// incremento del contador en un valor [inc]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  increment(state, inc) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    state.counter += inc</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span> <span style="color:#0000ff">const</span> actions = {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">async</span> nuxtServerInit(store, context) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿quién ejecuta este código?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿Quién ejecuta este código?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;nuxtServerInit, client=&#x27;</span>, process.client, <span style="color:#a31515">&#x27;serveur=&#x27;</span>, process.server)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// esperando que se cumpla una promesa</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// se espera a que finalice una promesa</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">await</span> <span style="color:#0000ff">new</span> Promise(<span style="color:#0000ff">function</span>(resolve, reject) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// normalmente se trata de una función asíncrona</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// lo simulamos con una espera de un segundo</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// Normalmente, aquí hay una función asíncrona</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// la simulamos con una espera de un segundo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      setTimeout(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// éxito</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// Éxito</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        resolve()</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }, 1000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    })</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// modificar los ciegos</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// se modifica el store</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 34)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// registrar</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// registro</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;nuxtServerInit commit terminé&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -911,7 +911,7 @@
   </li>
   <li>líneas 14-32: se exporta un objeto [actions]. Se trata de un término reservado del almacén de [Vuex];
   </li>
-  <li>línea 15: se define la función [nuxtServerInit]. Esta será ejecutada al inicio de la aplicación por el servidor. Su función habitual es inicializar un almacén [Vuex] utilizando datos externos obtenidos mediante una función asíncrona. [nuxt] espera a que esta devuelva sus resultados antes de iniciar el ciclo de vida de la página solicitada. La función recibe dos parámetros:
+  <li>línea 15: se define la función [nuxtServerInit]. El servidor la ejecutará al iniciar la aplicación. Su función habitual es inicializar un almacén [Vuex] utilizando datos externos obtenidos mediante una función asíncrona. [nuxt] espera a que esta función devuelva sus resultados antes de iniciar el ciclo de vida de la página solicitada. La función recibe dos parámetros:
     <ul>
       <li>el almacén [Vuex] que se va a inicializar;
       </li>
@@ -919,31 +919,32 @@
       </li>
     </ul>
   </li>
-  <li>líneas 19-26: se espera a que finalice la acción asíncrona, en este caso una espera artificial de un segundo (línea 15);
+  <li>líneas 19-26: se espera a que finalice la acción asíncrona; en este caso, una espera artificial de un segundo (línea 15);
   </li>
   <li>línea 28: se asigna al contador el valor 34;
   </li>
   <li>líneas 17 y 30: registros para seguir el desarrollo de la ejecución de la función [nuxtServerInit];
   </li>
 </ul>
+
 <h2 id="62-la-pagina-index">6.2. <span style="color: #4f81bd">La página [index]</span></h2>
 <p>La página [index] será la siguiente:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página [index] --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navegación --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span> <span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;right&quot;</span> <span style="color:#ff0000">show</span> <span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;&gt;</span> Home - value= <span style="font-weight:bold">{{</span> <span style="color:#800080">value</span> <span style="font-weight:bold">}}</span> <span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>script<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-undef */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable nuxt/no-env-in-hooks */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/layout&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
@@ -958,7 +959,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      value: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -969,11 +970,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home created], value=&#x27;</span>, <span style="color:#0000ff">this</span>.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -986,27 +987,28 @@
   <li>la línea 37 se ejecutará tanto en el servidor como en el cliente. En ambos casos, la propiedad [value] recibirá el mismo valor, lo que garantiza que la página generada por el servidor sea idéntica a la generada por el cliente;
   </li>
 </ul>
+
 <h2 id="63-la-pagina-page1">6.3. <span style="color: #4f81bd">La página [page1]</span></h2>
 <p>La página [page1] se obtiene copiando la página [index]. A continuación, se modifica su texto para sustituir [home] por [page1]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página [page1]] --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navegación --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span> <span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;right&quot;</span> <span style="color:#ff0000">show</span> <span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;&gt;</span> Page1 - value= <span style="font-weight:bold">{{</span> <span style="color:#800080">value</span> <span style="font-weight:bold">}}</span> <span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>script<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-undef */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable nuxt/no-env-in-hooks */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/layout&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Page1&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
@@ -1019,7 +1021,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      value: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page1 beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -1030,51 +1032,51 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page1 created], value=&#x27;</span>, <span style="color:#0000ff">this</span>.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page1 beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page1 mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>script<span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>Esta página solo sirve para hacer posible la navigation entre dos páginas.</p>
-<h2 id="64-ejecucion">6.4. <span style="color: #4f81bd">Ejecución</span></h2>
+<p>Esta página solo sirve para permitir la navegación entre dos páginas.</p>
+<h2 id="64-execution">6.4. <span style="color: #4f81bd">Exécution</span></h2>
 <p>El archivo [nuxt.config.js] se modifica de la siguiente manera:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">// directorio de código fuente</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// directorio del código fuente</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  srcDir: <span style="color:#a31515">&#x27;nuxt-03&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// enrutador</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  router: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// raíz de URL para la aplicación</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// raíz de los URL de la aplicación</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    base: </span>&#x27;/nuxt-03/&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  server: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// puerto de servicio, por defecto 3000</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// puerto de servicio, 3000 por defecto</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    port: 81,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// direcciones de red escuchadas, por defecto localhost: 127.0.0.1</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 0.0.0.0 = todas las direcciones de red de la máquina</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// direcciones de red a las que escucha, por defecto localhost: 127.0.0.1</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 0.0.0.0 = todas las direcciones de red del equipo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    host: </span>&#x27;localhost&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>La página que se muestra al ejecutarse es entonces la siguiente:</p>
+<p>La página que se muestra al ejecutarse es la siguiente:</p>
 <p><img src="images/100000000000050100000172E0F6CCD9.png" width="641" height="185" style="width:16.949cm;height:4.89cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000050100000172E0F6CCD9.png" /></p>
 <ul>
   <li>En [5], se observa que el servidor ha ejecutado la función [nuxtServerInit] antes del ciclo de vida de la página [index]. [nuxt] esperó a que la función asíncrona terminara su trabajo antes de pasar al ciclo de vida;
   </li>
-  <li>en [4], vemos que el cliente no ha ejecutado la función [nuxtServerInit];
+  <li>en [4], se observa que el cliente no ha ejecutado la función [nuxtServerInit];
   </li>
 </ul>
 
 <p>Ahora naveguemos dos veces: índice --&gt; página1 --&gt; índice. Los registros son entonces los siguientes:</p>
 <p><img src="images/1000000000000191000001CE1D9ABBD0.png" width="201" height="231" style="width:5.309cm;height:6.112cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000191000001CE1D9ABBD0.png" /></p>
 <ul>
-  <li>en [1-2], vemos que el cliente no ejecuta la función [nuxtServerInit];
+  <li>En [1-2], vemos que el cliente no ejecuta la función [nuxtServerInit];
   </li>
 </ul>
 

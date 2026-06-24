@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/es-nuxtjs-dec-2019/ejemplo-nuxt-02-paginas-del-servidor-y-del-cliente.html">
       
       
-        <link rel="prev" href="ejemplo-nuxt-01-enrutamiento-y-navigation.html">
+        <link rel="prev" href="ejemplo-nuxt-01-enrutamiento-y-navegacion.html">
       
       
         <link rel="next" href="ejemplo-nuxt-03-nuxtserverinit.html">
@@ -386,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-01-enrutamiento-y-navigation.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-01-enrutamiento-y-navegacion.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Ejemplo [nuxt-01]: enrutamiento y navigation
+    4. Ejemplo [nuxt-01]: enrutamiento y navegación
   
 
     
@@ -701,10 +701,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#56-navigation-en-la-aplicacion-vue" class="md-nav__link">
+  <a href="#56-navegacion-por-la-aplicacion-vue" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.6. Navigation en la aplicación [vue]
+        5.6. Navegación por la aplicación [vue]
       
     </span>
   </a>
@@ -712,10 +712,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#57-resumen" class="md-nav__link">
+  <a href="#57-resume" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.7. Resumen
+        5.7. Résumé
       
     </span>
   </a>
@@ -899,14 +899,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-09-control-de-navigation.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-09-control-de-la-navegacion.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Ejemplo [nuxt-09]: control de navigation
+    12. Ejemplo [nuxt-09]: control de la navegación
   
 
     
@@ -933,7 +933,7 @@
   <span class="md-ellipsis">
     
   
-    13. Ejemplo [nuxt-10]: asyncData y loading
+    13. Ejemplo [nuxt-10]: asyncData y «loading»
   
 
     
@@ -1007,14 +1007,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-13-control-de-la-navigation-de-nuxt-12.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-13-comprobacion-de-la-navegacion-de-nuxt-12.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. Ejemplo [nuxt-13]: control de la navigation de [nuxt-12]
+    16. Ejemplo [nuxt-13]: comprobación de la navegación de [nuxt-12]
   
 
     
@@ -1074,7 +1074,7 @@
 <h1 id="5-ejemplo-nuxt-02-paginas-del-servidor-y-del-cliente">5. <span style="color: #365f91">Ejemplo [nuxt-02]: páginas del servidor y del cliente</span></h1>
 <p>En este proyecto, mostramos:</p>
 <ul>
-  <li>que la página construida por el cliente puede ser visualmente diferente de la recibida del servidor. Se produce entonces un cambio rápido de página, perceptible para el usuario, lo que resulta perjudicial para la ergonomía de la aplicación. Por lo tanto, es una situación que hay que evitar;
+  <li>que la página generada por el cliente puede ser visualmente diferente de la recibida del servidor. Esto provoca un cambio rápido de página, perceptible para el usuario, lo que resulta perjudicial para la usabilidad de la aplicación. Por lo tanto, es una opción que conviene evitar;
   </li>
   <li>una solución para que la página del cliente recree la misma página que la enviada por el servidor;
   </li>
@@ -1082,7 +1082,7 @@
 
 <p>El proyecto [nuxt-02] se obtiene inicialmente mediante una copia del proyecto [nuxt-01].</p>
 <p><img src="images/1000000000000173000001FE59416804.png" width="149" height="204" style="width:3.932cm;height:5.399cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000173000001FE59416804.png" /></p>
-<p>Se añade al proyecto una carpeta [store], así como dos nuevas páginas. Volveremos sobre ello.</p>
+<p>Se añade al proyecto una carpeta [store], así como dos nuevas páginas. Volveremos sobre ello más adelante.</p>
 <h2 id="51-la-pagina-index">5.1. <span style="color: #4f81bd">La página [index]</span></h2>
 <h3 id="511-el-codigo-de-la-pagina">5.1.1. <span style="color: #4f81bd">El código de la página</span></h3>
 <p>El código de la página [index] queda así:</p>
@@ -1090,21 +1090,21 @@
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página principal --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navegación --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span> <span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;right&quot;</span> <span style="color:#ff0000">show</span> <span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;&gt;</span> Home - value= <span style="font-weight:bold">{{</span> <span style="color:#800080">value</span> <span style="font-weight:bold">}}</span> <span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>script<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-undef */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable nuxt/no-env-in-hooks */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/layout&#x27;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Home&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
@@ -1117,7 +1117,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      value: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -1125,7 +1125,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  created() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home created]&#x27;</span>)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.value = 10</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1133,11 +1133,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;value=&#x27;</span>, <span style="color:#0000ff">this</span>.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -1148,28 +1148,29 @@
 <ul>
   <li>línea 7: la página [index] mostrará el valor de su propiedad [value] (línea 28);
   </li>
-  <li>líneas 36-45: hay que recordar aquí que la función [created] se ejecuta tanto en el lado del servidor como en el del cliente. Líneas 40-42: el servidor establecerá en 10 el valor de la propiedad [value]. El cliente, por su parte, no modifica este valor. Simplemente queremos saber si el cliente conserva este valor. Veremos que no;
+  <li>líneas 36-45: hay que recordar aquí que la función [created] se ejecuta tanto en el lado del servidor como en el del cliente. En las líneas 40-42, el servidor establecerá en 10 el valor de la propiedad [value]. El cliente, por su parte, no modifica este valor. Simplemente queremos saber si el cliente conserva este valor. Veremos que no es así;
   </li>
 </ul>
+
 <p><span id="nuxt02indexexecution" name="nuxt02indexexecution" class="odt-bookmark-anchor"></span>
 <span id="refheadingtoc106094921827936" name="refheadingtoc106094921827936" class="odt-bookmark-anchor"></span></p>
 <h3 id="512-ejecucion">5.1.2. <span style="color: #4f81bd">Ejecución</span></h3>
 <p>Modificamos el archivo [/nuxt.config.js] para ejecutar el proyecto [nuxt-02]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// directorio de código fuente</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// directorio del código fuente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  srcDir: <span style="color:#a31515">&#x27;nuxt-02&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// enrutador</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  router: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// raíz de URL para la aplicación</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// raíz de los URL de la aplicación</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    base: </span>&#x27;/nuxt-02/&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  server: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// puerto de servicio, por defecto 3000</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// puerto de servicio, 3000 por defecto</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    port: 81,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// direcciones de red escuchadas, por defecto localhost: 127.0.0.1</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 0.0.0.0 = todas las direcciones de red de la máquina</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// direcciones de red a las que escucha, por defecto localhost: 127.0.0.1</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 0.0.0.0 = todas las direcciones de red del equipo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    host: </span>&#x27;localhost&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
@@ -1193,7 +1194,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      value: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -1201,7 +1202,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  created() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home created]&#x27;</span>)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.value = 10</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1209,11 +1210,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;value=&#x27;</span>, <span style="color:#0000ff">this</span>.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -1224,7 +1225,7 @@
   </li>
 </ul>
 
-<p>Esto se puede comprobar mirando el código fuente de la página recibida por el navegador (option [code source] en el navegador):</p>
+<p>Esto se puede comprobar consultando el código fuente de la página recibida por el navegador (opción [code source] en el navegador):</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>!doctype<span style="color:#000000"> </span><span style="color:#ff0000">html</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#000000"> </span>data-n-head-ssr<span style="color:#0000ff">&gt;</span></span></span>
@@ -1296,7 +1297,7 @@
 </ul>
 
 <p><u><strong>paso 2</strong></u></p>
-<p>Sabemos que, tras la recepción de la página, los scripts de las líneas 57-60 toman el control y transforman el comportamiento de la página recibida, e incluso la información mostrada, como en este caso. Estos scripts forman el cliente, que también ejecuta el código de la página [index], el mismo código que el servidor:</p>
+<p>Sabemos que, tras la recepción de la página, los scripts de las líneas 57-60 toman el control y modifican el comportamiento de la página recibida, e incluso la información mostrada, como ocurre aquí. Estos scripts conforman el cliente, que a su vez ejecuta el código de la página [index], el mismo código que el servidor:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Home&#x27;</span>,</span></span>
@@ -1310,7 +1311,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      value: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -1318,7 +1319,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  created() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home created]&#x27;</span>)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.value = 10</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1326,11 +1327,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;value=&#x27;</span>, <span style="color:#0000ff">this</span>.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -1353,7 +1354,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span> <span style="color:#0000ff">const</span> state = () =&gt; ({</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  counter: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">})</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span> <span style="color:#0000ff">const</span> mutations = {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  increment(state, inc) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    state.counter += inc</span></span>
@@ -1363,7 +1364,7 @@
 
 <p>[nuxt] implementa un almacén [Vuex] a partir del contenido de [index.js]:</p>
 <ul>
-  <li>líneas 1-3: definición del estado [state] del almacén. Este estado es devuelto por una <b>función</b>. Aquí, el estado solo tiene una propiedad, el contador de la línea 2. La función exportada debe llamarse [state];
+  <li>líneas 1-3: definición del estado [state] del almacén. Este estado lo devuelve una <b>función</b>. En este caso, el estado solo tiene una propiedad: el contador de la línea 2. La función exportada debe llamarse [state];
   </li>
   <li>líneas 5-9: las operaciones posibles sobre el estado del almacén. Se denominan [mutations]. Aquí, la mutación [increment] permite incrementar la propiedad [counter] en una cantidad [inc]. El objeto exportado debe llamarse [mutations];
   </li>
@@ -1371,24 +1372,24 @@
 
 <p>El [store] Vuex implementado por [nuxt] está disponible en diferentes lugares. En las vistas, está disponible en la propiedad [this.$store].</p>
 <h3 id="522-el-codigo-de-la-pagina">5.2.2. <span style="color: #4f81bd">El código de la página</span></h3>
-<p>Al igual que la página [index], la página [page1] mostrará un valor, el del contador del store Vuex:</p>
+<p>Al igual que la página [index], la página [page1] mostrará un valor, el del contador del store de Vuex:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página 1 --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navegación --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span> <span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;right&quot;</span> <span style="color:#ff0000">show</span> <span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;&gt;</span> Page 1 - value = <span style="font-weight:bold">{{</span> <span style="color:#800080">value</span> <span style="font-weight:bold">}}</span> <span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>script<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/layout&#x27;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Page1&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
@@ -1401,7 +1402,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      value: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -1409,7 +1410,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  created() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home created]&#x27;</span>)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.$store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 25)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1418,11 +1419,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;value=&#x27;</span>, <span style="color:#0000ff">this</span>.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -1441,15 +1442,15 @@
 
 <p>Al leer este código, hay que tener en cuenta dos cosas:</p>
 <ul>
-  <li>el código ejecutado es el mismo tanto para el servidor como para el cliente;
+  <li>el código que se ejecuta es el mismo tanto para el servidor como para el cliente;
   </li>
-  <li>el objeto [this] no es el mismo: hay un version y un [this] en el lado del servidor y otro [client] en el lado del cliente;
+  <li>el objeto [this] no es el mismo: hay una versión [this] en el lado del servidor y otra, [client], en el lado del cliente;
   </li>
 </ul>
 
-<p>Queremos saber si el [this.$store] del servidor es el mismo que el [this.$store] del cliente. Dado que es el servidor el que se ejecuta primero (al iniciar la aplicación), esto equivale a preguntarse: ¿se transmite al cliente el [store] inicializado por el servidor?</p>
+<p>Lo que queremos saber es si el [this.$store] del servidor es el mismo que el [this.$store] del cliente. Dado que el servidor es el que se ejecuta primero (al iniciar la aplicación), esto equivale a preguntarse: ¿se transmite al cliente el [store] inicializado por el servidor?</p>
 <h3 id="523-ejecucion">5.2.3. <span style="color: #4f81bd">Ejecución</span></h3>
-<p>Ejecutamos el proyecto [nuxt-02] y escribimos [localhost:81/nuxt-02/page1] manualmente para que se solicite el servidor. Al igual que al inicio para la página [index]:</p>
+<p>Ejecutamos el proyecto [nuxt-02] y tecleamos [localhost:81/nuxt-02/page1] manualmente para que se solicite al servidor. Al igual que al inicio con la página [index]:</p>
 <ul>
   <li>el servidor ejecuta la página [page1.vue];
   </li>
@@ -1463,17 +1464,17 @@
 
 <p>El resultado final es el siguiente:</p>
 <p><img src="images/10000000000005A9000002C321431812.png" width="435" height="212" style="width:11.501cm;height:5.622cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005A9000002C321431812.png" /></p>
-<p>Esta vez, el valor mostrado es efectivamente el establecido por el servidor y, visualmente, no se ve que la página «salte» debido a un cambio por parte del cliente del valor mostrado por el servidor. ¿Qué ha pasado esta vez?</p>
+<p>Esta vez, el valor mostrado es efectivamente el establecido por el servidor y, visualmente, no se aprecia que la página «titubee» debido a un cambio por parte del cliente del valor mostrado por el servidor. ¿Qué ha ocurrido esta vez?</p>
 <p>El servidor ha ejecutado la siguiente página [page1]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>script<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/layout&#x27;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Page1&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
@@ -1486,7 +1487,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      value: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page1 beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -1494,7 +1495,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  created() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page1 created]&#x27;</span>)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.$store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 25)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1503,11 +1504,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;value=&#x27;</span>, <span style="color:#0000ff">this</span>.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page1 beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page1 mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -1515,7 +1516,7 @@
 </code></pre></div>
 
 <ul>
-  <li>las líneas 30-32 se ejecutaron sin errores. Lo que significa que, también en el lado del servidor, [this.$store] hace referencia al almacén [Vuex]. La línea 31 aumentó el contador del almacén a 25;
+  <li>las líneas 30-32 se ejecutaron sin errores. Esto significa que, también en el lado del servidor, [this.$store] hace referencia al almacén [Vuex]. La línea 31 aumentó el contador del almacén a 25;
   </li>
   <li>una vez hecho esto, la página se envió al cliente;
   </li>
@@ -1601,20 +1602,20 @@
 <ul>
   <li>línea 47: el valor enviado por el servidor;
   </li>
-  <li>línea 60: se observa que el estado del almacén [Vuex] se ha incorporado a la página. Esto permitirá al cliente, que se ejecutará tras la recepción de la página, reconstruir un nuevo almacén [Vuex] con 25 como valor inicial del contador;
+  <li>línea 60: se observa que el estado del almacén [Vuex] se ha incluido en la página. Esto permitirá al cliente, que se ejecutará tras recibir la página, reconstruir un nuevo almacén [Vuex] con 25 como valor inicial del contador;
   </li>
 </ul>
 
 <p>Tras recibir y mostrar la página recibida del servidor, el cliente toma el control y ejecuta a su vez la página [page1]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>script<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/layout&#x27;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Page1&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
@@ -1627,7 +1628,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      value: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page1 beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -1635,7 +1636,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  created() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page1 created]&#x27;</span>)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.$store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 25)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1644,11 +1645,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;value=&#x27;</span>, <span style="color:#0000ff">this</span>.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page1 beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page1 mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -1660,37 +1661,38 @@
   </li>
 </ul>
 
-<p>El almacén de [nuxt] permite, por tanto, que el servidor transmita información al cliente durante la carga inicial de la página, cuando esta se busca en el servidor. Cabe recordar que, una vez obtenida esta página, ya no se solicita nada al servidor y la aplicación funciona como una aplicación [vue] clásica, en modo SAP.</p>
+<p>El almacén de [nuxt] permite, por tanto, que el servidor transmita información al cliente durante la carga inicial de la página, cuando esta se solicita al servidor. Cabe recordar que, una vez obtenida esta página, ya no se solicita nada más al servidor y la aplicación funciona como una aplicación [vue] clásica, en modo SAP.</p>
 <p><span id="nuxt02page2" name="nuxt02page2" class="odt-bookmark-anchor"></span>
 <span id="refheadingtoc1175683691645526" name="refheadingtoc1175683691645526" class="odt-bookmark-anchor"></span></p>
 <h2 id="53-la-pagina-page2">5.3. <span style="color: #4f81bd">La página [page2]</span></h2>
-<p>En la página [page2], mostramos otra forma de que:</p>
+<p>En la página [page2], mostramos otra forma de conseguir que:</p>
 <ul>
   <li>el servidor incluya información calculada en la página;
   </li>
   <li>el cliente no la modifique;
   </li>
 </ul>
+
 <h3 id="531-el-codigo-de-la-pagina">5.3.1. <span style="color: #4f81bd">El código de la página</span></h3>
 <p>El código de la página [page2] evoluciona de la siguiente manera:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página2 --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página 2 --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navegación --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span> <span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;right&quot;</span> <span style="color:#ff0000">show</span> <span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;secondary&quot;&gt;</span> Page 2 - value = <span style="font-weight:bold">{{</span> <span style="color:#800080">value</span> <span style="font-weight:bold">}}</span> <span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>script<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable nuxt/no-timing-in-fetch-data */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/layout&#x27;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Page2&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
@@ -1699,14 +1701,14 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    Navigation</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  asyncData(context) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿quién ejecuta este código?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿Quién ejecuta este código?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;asyncData, client=&#x27;</span>, process.client, <span style="color:#a31515">&#x27;serveur=&#x27;</span>, process.server)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para el servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo para el servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// se devuelve una promesa</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">return</span> <span style="color:#0000ff">new</span> Promise(<span style="color:#0000ff">function</span>(resolve, reject) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// normalmente se trata de una función asíncrona</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// lo simulamos con una espera de un segundo</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// Normalmente, aquí hay una función asíncrona</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// la simulamos con una espera de un segundo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        setTimeout(() =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// este resultado se incluirá en las propiedades de [data]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          resolve({ value: 87 })</span></span>
@@ -1716,7 +1718,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page2 beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -1726,11 +1728,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page2 created]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page2 beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page2 mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -1742,19 +1744,19 @@
   </li>
   <li>la propiedad [value] no existe como elemento de un objeto devuelto por la función [data]. En este caso, dicha función no existe. La propiedad [value] se crea dinámicamente en la línea 36;
   </li>
-  <li>línea 25: la función [asyncData] es una función [nuxt]. Como su nombre indica, normalmente es una función asíncrona. Su función habitual es recuperar datos externos. [nuxt] garantiza que la página no se envíe al navegador del cliente antes de que la función [asyncData] haya devuelto sus datos asíncronos;
+  <li>línea 25: la función [asyncData] es una función [nuxt]. Como su nombre indica, normalmente se trata de una función asíncrona. Su función habitual es recuperar datos externos. [nuxt] garantiza que la página no se envíe al navegador del cliente hasta que la función [asyncData] haya devuelto sus datos asíncronos;
   </li>
-  <li>la función [asyncData] recibe como parámetro el contexto [nuxt]. Este objeto es muy denso y da acceso a mucha información sobre la aplicación [nuxt]. Lo descubriremos en las secciones siguientes;
+  <li>la función [asyncData] recibe como parámetro el contexto [nuxt]. Este objeto es muy completo y da acceso a mucha información sobre la aplicación [Nuxt]. Lo veremos en las secciones siguientes;
   </li>
   <li>línea 31: se implementa la función [asyncData] con un [Promise] (véase el documento <a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"><u><span style="color: #0563c1">|Introducción al lenguaje </span></u></a><a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"><u><span style="color: #0563c1">ECMASCRIPT 6 </span></u></a><a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"><u><span style="color: #0563c1">con</span></u></a> ejemplos|). El constructor de esta clase acepta como parámetro una función asíncrona que:
     <ul>
-      <li>indica que se ha realizado correctamente devolviendo datos con la función [resolve]. El objeto devuelto por esta función se incluye automáticamente en las propiedades [data] de la página;
+      <li>indica que se ha realizado correctamente devolviendo datos mediante la función [resolve]. El objeto devuelto por esta función se incluye automáticamente en las propiedades [data] de la página;
       </li>
-      <li>indica un error devolviendo un error con la función [reject];
+      <li>indica un error devolviendo un error mediante la función [reject];
       </li>
     </ul>
   </li>
-  <li>línea 34: se simula una función asíncrona con la función [setTimeout]. Esta función devuelve el objeto [{ value: 87 }] (línea 36) al cabo de un segundo (línea 31) gracias a la función [resolve], que indica el éxito de la [Promise]. El objeto devuelto por la función asíncrona se incluye automáticamente en las propiedades [data] de la página. Y es, por tanto, esta propiedad la que muestra la línea 7;
+  <li>línea 34: se simula una función asíncrona con la función [setTimeout]. Esta función devuelve el objeto [{ value: 87 }] (línea 36) al cabo de un segundo (línea 31) gracias a la función [resolve], que indica que la función [Promise] se ha ejecutado correctamente. El objeto devuelto por la función asíncrona se incluye automáticamente en las propiedades [data] de la página. Y es precisamente esta propiedad la que muestra la línea 7;
   </li>
   <li>línea 27: veremos que la función [asyncData] se ejecuta en el servidor, pero no en el cliente;
   </li>
@@ -1762,9 +1764,9 @@
   </li>
 </ul>
 
-<p><strong>Nota</strong>: el objeto [this] no se reconoce en la función [asyncData] porque aún no se ha creado el objeto que encapsula el componente [vue];</p>
-<h3 id="532-ejecucion">5.3.2. <span style="color: #4f81bd">Ejecución</span></h3>
-<p>Se ejecuta el proyecto [nuxt-02] y se escribe [localhost:81/nuxt-02/page2] manualmente para que se solicite al servidor. Al igual que al inicio para la página [index]:</p>
+<p><strong>Nota</strong>: el objeto [this] no se reconoce en la función [asyncData], ya que aún no se ha creado el objeto que encapsula el componente [vue];</p>
+<h3 id="532-ejecucion">5.3.2. <span style="color: #4f81bd"><strong>Ejecución</strong></span></h3>
+<p>Se ejecuta el proyecto [nuxt-02] y se escribe [localhost:81/nuxt-02/page2] manualmente para que se solicite al servidor. Al igual que al inicio con la página [index]:</p>
 <ul>
   <li>el servidor ejecuta la página [page2.vue];
   </li>
@@ -1778,26 +1780,26 @@
 
 <p>El resultado final es el siguiente:</p>
 <p><img src="images/10000000000005C1000002E0B2660390.png" width="516" height="258" style="width:13.64cm;height:6.819cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C1000002E0B2660390.png" /></p>
-<p>Esta vez, el valor mostrado es efectivamente el establecido por el servidor y, visualmente, no se ve que la página «salte» debido a un cambio por parte del cliente del valor mostrado por el servidor. ¿Qué ha pasado esta vez?</p>
+<p>Esta vez, el valor mostrado es efectivamente el establecido por el servidor y, visualmente, no se aprecia que la página «titubee» debido a un cambio por parte del cliente del valor mostrado por el servidor. ¿Qué ha ocurrido esta vez?</p>
 <p>El servidor ha ejecutado la siguiente página [page2]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página2 --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página 2 --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navegación --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span> <span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;right&quot;</span> <span style="color:#ff0000">show</span> <span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;secondary&quot;&gt;</span> Page 2 - value = <span style="font-weight:bold">{{</span> <span style="color:#800080">value</span> <span style="font-weight:bold">}}</span> <span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>script<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable nuxt/no-timing-in-fetch-data */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/layout&#x27;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Page2&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
@@ -1806,14 +1808,14 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    Navigation</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  asyncData(context) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿quién ejecuta este código?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿Quién ejecuta este código?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;asyncData, client=&#x27;</span>, process.client, <span style="color:#a31515">&#x27;serveur=&#x27;</span>, process.server)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para el servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo para el servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// se devuelve una promesa</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">return</span> <span style="color:#0000ff">new</span> Promise(<span style="color:#0000ff">function</span>(resolve, reject) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// normalmente se trata de una función asíncrona</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// lo simulamos con una espera de un segundo</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// Normalmente, aquí hay una función asíncrona</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// la simulamos con una espera de un segundo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        setTimeout(() =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// este resultado se incluirá en las propiedades de [data]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          resolve({ value: 87 })</span></span>
@@ -1823,7 +1825,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page2 beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -1833,18 +1835,18 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page2 created]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page2 beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page2 mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>script<span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>Es la línea 36 la que ha fijado el valor mostrado por la línea 7. Por lo tanto, esto es lo que ha recibido el navegador del cliente. Concretamente, recibe la siguiente página:</p>
+<p>La línea 36 es la que ha establecido el valor mostrado por la línea 7. Por lo tanto, eso es lo que ha recibido el navegador del cliente. Concretamente, recibe la siguiente página:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>!doctype<span style="color:#000000"> </span><span style="color:#ff0000">html</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#000000"> </span>data-n-head-ssr<span style="color:#0000ff">&gt;</span></span></span>
@@ -1923,9 +1925,9 @@
 </code></pre></div>
 
 <ul>
-  <li>línea 48: vemos que el valor en la página recibida es 87;
+  <li>línea 48: se observa que el valor de la página recibida es 87;
   </li>
-  <li>línea 61: en la respuesta del servidor, vemos dos objetos: [data] y [state]:
+  <li>línea 61: en la respuesta del servidor, se ven dos objetos: [data] y [state]:
     <ul>
       <li>[state] es el estado del almacén [Vuex]. Este se ha instanciado a partir del contenido de la carpeta [store] de la aplicación [nuxt-02];
       </li>
@@ -1937,23 +1939,23 @@
 
 <p>Volvamos al código de la página [page2]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página2 --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página 2 --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navegación --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span> <span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;right&quot;</span> <span style="color:#ff0000">show</span> <span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;secondary&quot;&gt;</span> Page 2 - value = <span style="font-weight:bold">{{</span> <span style="color:#800080">value</span> <span style="font-weight:bold">}}</span> <span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>script<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable nuxt/no-timing-in-fetch-data */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/layout&#x27;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Page2&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
@@ -1962,14 +1964,14 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    Navigation</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  asyncData(context) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿quién ejecuta este código?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿Quién ejecuta este código?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;asyncData, client=&#x27;</span>, process.client, <span style="color:#a31515">&#x27;serveur=&#x27;</span>, process.server)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para el servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo para el servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// se devuelve una promesa</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">return</span> <span style="color:#0000ff">new</span> Promise(<span style="color:#0000ff">function</span>(resolve, reject) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// normalmente se trata de una función asíncrona</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// lo simulamos con una espera de un segundo</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// Normalmente, aquí hay una función asíncrona</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// la simulamos con una espera de un segundo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        setTimeout(() =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// este resultado se incluirá en las propiedades de [data]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          resolve({ value: 87 })</span></span>
@@ -1979,7 +1981,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page2 beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -1989,11 +1991,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page2 created]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page2 beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page2 mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -2005,14 +2007,14 @@
   </li>
 </ul>
 
-<p>Los registros muestran, además, que la función [asyncData] no ha sido ejecutada por el cliente:</p>
+<p>Además, los registros muestran que el cliente no ha ejecutado la función [asyncData]:</p>
 <p><img src="images/100000000000031E0000025FD1253326.png" width="399" height="303" style="width:10.56cm;height:8.029cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031E0000025FD1253326.png" /></p>
-<p>La función [asyncData] fue ejecutada por el servidor [1], pero no por el cliente [2]. Por otra parte, cabe señalar que el servidor no ejecuta las funciones del ciclo de vida hasta que finaliza la función [asyncData]. Se puede aumentar el tiempo de espera dentro de la función [asyncData] para verificarlo.</p>
+<p>La función [asyncData] fue ejecutada por el servidor [1], pero no por el cliente [2]. Por otra parte, cabe señalar que el servidor no ejecuta las funciones del ciclo de vida hasta que finaliza la función [asyncData]. Para comprobarlo, se puede aumentar el tiempo de espera dentro de la función [asyncData].</p>
 <h2 id="54-la-pagina-page3">5.4. <span style="color: #4f81bd">La página [page3]</span></h2>
 <p>Añadimos una nueva página [page3] a nuestra aplicación:</p>
 <p><img src="images/1000000000000192000001DEE296B47D.png" width="161" height="191" style="width:4.262cm;height:5.061cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000192000001DEE296B47D.png" /></p>
 <h3 id="541-el-componente-navigation">5.4.1. <span style="color: #4f81bd">El componente [navigation]</span></h3>
-<p>El componente [vavigation] se modifica para permitir el enlace de navigation a la nueva página:</p>
+<p>Se modifica el componente [vavigation] para permitir la navegación a la nueva página:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- menú Bootstrap con tres opciones --&gt;</span></span></span>
@@ -2036,23 +2038,23 @@
 <h3 id="542-el-codigo-de-page3">5.4.2. <span style="color: #4f81bd">El código de [page3]</span></h3>
 <p>El código de la página [page3] es el siguiente:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página3 --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página 3 --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navegación --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span> <span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;right&quot;</span> <span style="color:#ff0000">show</span> <span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;secondary&quot;&gt;</span> Page 3 - value = <span style="font-weight:bold">{{</span> <span style="color:#800080">value</span> <span style="font-weight:bold">}}</span> <span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>script<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable nuxt/no-timing-in-fetch-data */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/layout&#x27;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Page3&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
@@ -2066,25 +2068,25 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  fetch(context) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿quién ejecuta este código?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿Quién ejecuta este código?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;fetch, client=&#x27;</span>, process.client, <span style="color:#a31515">&#x27;serveur=&#x27;</span>, process.server)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para el servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo para el servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// se devuelve una promesa</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">return</span> <span style="color:#0000ff">new</span> Promise(<span style="color:#0000ff">function</span>(resolve, reject) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// normalmente se trata de una función asíncrona</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// lo simulamos con una espera de un segundo</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// Normalmente, aquí hay una función asíncrona</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// la simulamos con una espera de un segundo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        setTimeout(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#008000">// éxito</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#008000">// Éxito</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          resolve()</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }, 1000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }).then(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// modificar los ciegos</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// se modifica el store</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        context.store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 28)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page3 beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -2095,11 +2097,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page3 created], value=&#x27;</span>, <span style="color:#0000ff">this</span>.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page3 beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page3 mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -2111,11 +2113,11 @@
     <ul>
       <li>se ejecuta antes que las funciones del ciclo de vida;
       </li>
-      <li>el objeto [this] no se conoce en esta función;
+      <li>el objeto [this] no se reconoce en esta función;
       </li>
       <li>su funcionamiento es asíncrono;
       </li>
-      <li>el ciclo de vida no comienza hasta que la función asíncrona no haya devuelto su resultado;
+      <li>el ciclo de vida no comienza hasta que la función asíncrona haya devuelto su resultado;
       </li>
       <li>el resultado se devuelve aquí mediante el método [then] de [Promise], línea 43;
       </li>
@@ -2125,13 +2127,14 @@
   </li>
   <li>línea 30: entre sus numerosas propiedades, el objeto [context] tiene una propiedad [store] que representa el almacén [Vuex] de la aplicación;
   </li>
-  <li>línea 41: de forma artificial, se señala el éxito de [Promise] al cabo de un segundo (véase el documento <a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"><u><span style="color: #0563c1">|Introducción al lenguaje </span></u></a><a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"><u><span style="color: #0563c1">ECMASCRIPT 6 </span></u></a><a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"><u><span style="color: #0563c1">con</span></u></a> ejemplos|);
+  <li>línea 41: de forma artificial, se indica que la [Promise] se ha completado con éxito al cabo de un segundo (véase el documento <a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"><u><span style="color: #0563c1">|Introducción al lenguaje </span></u></a><a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"><u><span style="color: #0563c1">ECMASCRIPT 6 </span></u></a><a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"><u><span style="color: #0563c1">con</span></u></a> ejemplos|);
   </li>
   <li>línea 45: a continuación, se ejecuta el método [then]. En él se incrementa el contador de [store];
   </li>
 </ul>
-<h3 id="543-ejecucion">5.4.3. <span style="color: #4f81bd"><strong>Ejecución</strong></span></h3>
-<p>Se ejecuta el proyecto [nuxt-02] y se escribe [localhost:81/nuxt-02/page3] manualmente para que se solicite al servidor. Al igual que al inicio para la página [index]:</p>
+
+<h3 id="543-ejecucion">5.4.3. <span style="color: #4f81bd">Ejecución</span></h3>
+<p>Se ejecuta el proyecto [nuxt-02] y se escribe [localhost:81/nuxt-02/page3] manualmente para que se solicite al servidor. Al igual que al inicio con la página [index]:</p>
 <ul>
   <li>el servidor ejecuta la página [page3.vue];
   </li>
@@ -2145,26 +2148,26 @@
 
 <p>El resultado final es el siguiente:</p>
 <p><img src="images/1000000000000562000002BDAD3CEA91.png" width="482" height="245" style="width:12.762cm;height:6.489cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000562000002BDAD3CEA91.png" /></p>
-<p>El valor mostrado es efectivamente el establecido por el servidor y, visualmente, no se ve que la página «salte» debido a un cambio por parte del cliente del valor mostrado por el servidor. ¿Qué ha pasado esta vez?</p>
+<p>El valor mostrado es efectivamente el establecido por el servidor y, visualmente, no se aprecia que la página «titubee» debido a un cambio por parte del cliente del valor mostrado por el servidor. ¿Qué ha ocurrido esta vez?</p>
 <p>El servidor ha ejecutado la siguiente página [page3]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página3 --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página 3 --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navegación --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span> <span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;right&quot;</span> <span style="color:#ff0000">show</span> <span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;secondary&quot;&gt;</span> Page 3 - value = <span style="font-weight:bold">{{</span> <span style="color:#800080">value</span> <span style="font-weight:bold">}}</span> <span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>script<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable nuxt/no-timing-in-fetch-data */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/layout&#x27;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Page3&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
@@ -2178,27 +2181,27 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  fetch(context) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿quién ejecuta este código?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿Quién ejecuta este código?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;fetch, client=&#x27;</span>, process.client, <span style="color:#a31515">&#x27;serveur=&#x27;</span>, process.server)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para el servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo para el servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// se devuelve una promesa</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">return</span> <span style="color:#0000ff">new</span> Promise(<span style="color:#0000ff">function</span>(resolve, reject) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// normalmente se trata de una función asíncrona</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// lo simulamos con una espera de un segundo</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// Normalmente, aquí hay una función asíncrona</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// la simulamos con una espera de un segundo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        setTimeout(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#008000">// éxito</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#008000">// Éxito</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          resolve()</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }, 1000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }).then(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// modificar los ciegos</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// se modifica el store</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        context.store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 28)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008000">// registrar</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008000">// registro</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        console.log(</span>&#x27;fetch commit terminé&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page3 beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -2209,11 +2212,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page3 created], value=&#x27;</span>, <span style="color:#0000ff">this</span>.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page3 beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page3 mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -2221,15 +2224,15 @@
 </code></pre></div>
 
 <ul>
-  <li>línea 45: la función asíncrona [fetch] es la primera de las funciones anteriores en ejecutarse. Recibe como parámetro un objeto llamado [context], que es el contexto [nuxt] del momento. Entre las numerosas propiedades de este objeto, la propiedad [context.store] representa el almacén [Vuex];
+  <li>línea 45: la función asíncrona [fetch] es la primera de las funciones anteriores en ejecutarse. Recibe como parámetro un objeto denominado [context], que es el contexto [nuxt] del momento. Entre las numerosas propiedades de este objeto, la propiedad [context.store] representa el almacén [Vuex];
   </li>
-  <li>línea 45: en la función asíncrona [fetch], el servidor fija el contador del almacén en 28;
+  <li>línea 45: en la función asíncrona [fetch], el servidor establece el contador del almacén en 28;
   </li>
-  <li>línea 56: cuando se ejecuta la función [created], [nuxt] garantiza que la función asíncrona [fetch] ha finalizado su trabajo;
+  <li>línea 56: cuando se ejecuta la función [created], [nuxt] garantiza que la función asíncrona [fetch] haya finalizado su trabajo;
   </li>
   <li>línea 58: el valor del contador de la persiana se asigna a la propiedad [value] de la línea 27;
   </li>
-  <li>línea 7: visualización del valor de [value], es decir, del contador del almacén;
+  <li>línea 7: se muestra el valor de [value], es decir, el del contador del almacén;
   </li>
 </ul>
 
@@ -2317,7 +2320,7 @@
 </code></pre></div>
 
 <ul>
-  <li>línea 52: se ve que el valor de la página recibida es 28;
+  <li>línea 52: se observa que el valor de la página recibida es 28;
   </li>
   <li>línea 65: en la respuesta del servidor, se observa que el servidor ha enviado al cliente el estado [state] del almacén [Vuex]. Gracias a esta información, los scripts del cliente podrán reconstruir un almacén [Vuex];
   </li>
@@ -2325,23 +2328,23 @@
 
 <p>A su vez, los scripts del cliente ejecutarán el código de la página [page3]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página3 --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página 3 --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navegación --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span> <span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;right&quot;</span> <span style="color:#ff0000">show</span> <span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;secondary&quot;&gt;</span> Page 3 - value = <span style="font-weight:bold">{{</span> <span style="color:#800080">value</span> <span style="font-weight:bold">}}</span> <span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>script<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable nuxt/no-timing-in-fetch-data */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/layout&#x27;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Page3&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
@@ -2355,27 +2358,27 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  fetch(context) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿quién ejecuta este código?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿Quién ejecuta este código?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;fetch, client=&#x27;</span>, process.client, <span style="color:#a31515">&#x27;serveur=&#x27;</span>, process.server)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para el servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo para el servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// se devuelve una promesa</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">return</span> <span style="color:#0000ff">new</span> Promise(<span style="color:#0000ff">function</span>(resolve, reject) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// normalmente se trata de una función asíncrona</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// lo simulamos con una espera de un segundo</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// Normalmente, aquí hay una función asíncrona</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// la simulamos con una espera de un segundo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        setTimeout(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#008000">// éxito</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#008000">// Éxito</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          resolve()</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }, 1000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }).then(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// modificar los ciegos</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// se modifica el almacén</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        context.store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 28)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008000">// registro</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        console.log(</span>&#x27;fetch commit terminé&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page3 beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -2386,11 +2389,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page3 created], value=&#x27;</span>, <span style="color:#0000ff">this</span>.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page3 beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page3 mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -2400,19 +2403,19 @@
 <ul>
   <li>línea 58: la función [created] ejecutada por el cliente asigna el valor del contador a la propiedad [value] de la línea 27;
   </li>
-  <li>la línea 7 muestra este valor. Dado que es el mismo que el enviado por el servidor, no se ve que la página «salte» debido a una modificación;
+  <li>la línea 7 muestra este valor. Dado que es el mismo que el enviado por el servidor, no se observa que la página «titubee» debido a un cambio;
   </li>
 </ul>
 
-<p>Los registros muestran, además, que la función [fetch] no ha sido ejecutada por el cliente:</p>
+<p>Además, los registros muestran que el cliente no ha ejecutado la función [fetch]:</p>
 <p><img src="images/100000000000027A0000024613EC7847.png" width="317" height="291" style="width:8.393cm;height:7.699cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000027A0000024613EC7847.png" /></p>
-<p>La función [fetch] fue ejecutada por el servidor [1], pero no por el cliente [2]. Por otra parte, cabe señalar que el servidor no ejecuta las funciones del ciclo de vida antes de que finalice la función [fetch] [3]. Se puede aumentar el tiempo de espera dentro de la función [fetch] para verificarlo.</p>
-<p>Las páginas [page1] y [page3] han mostrado dos métodos que utilizan el almacén [Vuex] para transmitir información del servidor al cliente. Cabe preguntarse si son equivalentes. Creamos una página [page4] para verificarlo.</p>
+<p>La función [fetch] fue ejecutada por el servidor [1], pero no por el cliente [2]. Por otra parte, cabe señalar que el servidor no ejecuta las funciones del ciclo de vida hasta que finalice la función [fetch] [3]. Para comprobarlo, se puede aumentar el tiempo de espera dentro de la función [fetch].</p>
+<p>Las páginas [page1] y [page3] han mostrado dos métodos que utilizan el almacén [Vuex] para transmitir información del servidor al cliente. Cabe preguntarse si son equivalentes. Creamos una página [page4] para comprobarlo.</p>
 <h2 id="55-la-pagina-page4">5.5. <span style="color: #4f81bd">La página [page4]</span></h2>
 <p>Añadimos una nueva página [page4] a nuestra aplicación:</p>
 <p><img src="images/1000000000000174000001FC55AE52D6.png" width="149" height="203" style="width:3.932cm;height:5.382cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000174000001FC55AE52D6.png" /></p>
 <h3 id="551-el-componente-navigation">5.5.1. <span style="color: #4f81bd">El componente [navigation]</span></h3>
-<p>El componente [navigation] se modifica para permitir el enlace de navigation a la nueva página:</p>
+<p>Se modifica el componente [navigation] para permitir la navegación a la nueva página:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- menú Bootstrap con cinco opciones --&gt;</span></span></span>
@@ -2439,22 +2442,22 @@
 <h3 id="552-el-codigo-de-page4">5.5.2. <span style="color: #4f81bd">El código de [page4]</span></h3>
 <p>El código de la página [page4] es el siguiente:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página4 --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página 4 --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navegación --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span> <span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;right&quot;</span> <span style="color:#ff0000">show</span> <span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;secondary&quot;&gt;</span> Page 4 - value = <span style="font-weight:bold">{{</span> <span style="color:#800080">value</span> <span style="font-weight:bold">}}</span> <span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>script<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/layout&#x27;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Page4&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
@@ -2467,24 +2470,24 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      value: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">async</span> beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page4 beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para el servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo para el servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// ejecutar la función asíncrona</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// se ejecuta la función asíncrona</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">const</span> valeur = <span style="color:#0000ff">await</span> <span style="color:#0000ff">new</span> Promise(<span style="color:#0000ff">function</span>(resolve, reject) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// normalmente se trata de una función asíncrona</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// lo simulamos con una espera de 10 segundos</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// Normalmente, aquí hay una función asíncrona</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// se simula con una espera de 10 segundos</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        setTimeout(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// success - se devuelve el valor del contador</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// Éxito: se devuelve el valor del contador</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          resolve(52)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }, 10000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      })</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// modificar los ciegos</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// Se modifica el store</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.$store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, valeur)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#008000">// registrar</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#008000">// registro</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span>&#x27;[page4 beforeCreate], fonction asynchrone terminée, compteur=&#x27;<span style="color:#000000">, </span><span style="color:#0000ff">this</span><span style="color:#000000">.$store.state.counter)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
@@ -2494,11 +2497,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page4 created], value=&#x27;</span>, <span style="color:#0000ff">this</span>.value)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page4 beforeMount]&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page4 mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -2510,11 +2513,12 @@
   </li>
   <li>línea 36: se recupera el resultado de la función asíncrona devuelto en la línea 41 tras 10 segundos (línea 42);
   </li>
-  <li>líneas 50-54: en el método [created], ejecutado tanto en el lado del servidor como en el del cliente, el contador se asigna a la propiedad [value] de la página;
+  <li>líneas 50-54: en el método [created], que se ejecuta tanto en el lado del servidor como en el del cliente, el contador se asigna a la propiedad [value] de la página;
   </li>
 </ul>
+
 <h3 id="553-ejecucion">5.5.3. <span style="color: #4f81bd">Ejecución</span></h3>
-<p>Se ejecuta el proyecto [nuxt-02] y se escribe [localhost:81/nuxt-02/page4] manualmente para que se solicite al servidor. Al igual que al inicio de la página [index]:</p>
+<p>Se ejecuta el proyecto [nuxt-02] y se introduce manualmente [localhost:81/nuxt-02/page4] para que se solicite al servidor. Al igual que al inicio con la página [index]:</p>
 <ul>
   <li>el servidor ejecuta la página [page4.vue];
   </li>
@@ -2528,14 +2532,14 @@
 
 <p>El resultado final es el siguiente:</p>
 <p><img src="images/100000000000056600000330F8A7F91C.png" width="415" height="245" style="width:10.97cm;height:6.481cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000056600000330F8A7F91C.png" /></p>
-<p>Contrariamente a lo esperado, el valor mostrado en [2] no es 52. ¿Qué ha pasado?</p>
+<p>Contrariamente a lo esperado, el valor que se muestra en [2] no es 52. ¿Qué ha pasado?</p>
 <p>Los registros son los siguientes:</p>
 <p><img src="images/10000000000004D60000012A29D49986.png" width="619" height="149" style="width:16.379cm;height:3.941cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004D60000012A29D49986.png" /></p>
-<p>Se puede observar que en [1] no se ha mostrado el registro de fin de la acción asíncrona. La función [created], que muestra el valor del contador, muestra 0. Todo esto sugiere que [nuxt] no esperó a que finalizara la acción asíncrona.</p>
-<p>Si volvemos al terminal de VSCode que se utilizó para iniciar la aplicación, encontramos los registros de [3-4]. Vemos que la función asíncrona se ha ejecutado correctamente en el lado del servidor.</p>
-<p>Al final, la función [beforeCreate] se ha ejecutado completamente en el lado del servidor, pero [nuxt] no ha esperado a que finalizara su ejecución para enviar la página al navegador del cliente, mientras que sí espera a que finalice la función [fetch]. Por lo tanto, este es el método que hay que utilizar si se quiere que el servidor inicialice un almacén [Vuex].</p>
-<h2 id="56-navigation-en-la-aplicacion-vue">5.6. <span style="color: #4f81bd">Navigation en la aplicación [vue]</span></h2>
-<p>Hemos mostrado lo que ocurría cuando cada una de las páginas [index, page1, page2, page3, page4] se cargaba inicialmente desde el servidor. En la práctica, esto no es lo que ocurre: en un funcionamiento normal, solo se busca la página [index] en el servidor. Veamos las tres páginas en este caso:</p>
+<p>Se puede observar que en [1] no se ha mostrado el registro de finalización de la acción asíncrona. La función [created], que muestra el valor del contador, muestra 0. Todo ello sugiere que [nuxt] no ha esperado a que finalizara la acción asíncrona.</p>
+<p>Si volvemos al terminal de VSCode, que se utilizó para iniciar la aplicación, encontramos los registros de [3-4]. Se observa que la función asíncrona se ha ejecutado correctamente en el lado del servidor.</p>
+<p>En definitiva, la función [beforeCreate] se ha ejecutado íntegramente en el servidor, pero [nuxt] no ha esperado a que finalizara su ejecución para enviar la página al navegador del cliente, mientras que sí espera a que finalice la función [fetch]. Por lo tanto, este es el método que hay que utilizar si se quiere que el servidor inicialice un almacén [Vuex].</p>
+<h2 id="56-navegacion-por-la-aplicacion-vue">5.6. <span style="color: #4f81bd">Navegación por la aplicación [vue]</span></h2>
+<p>Hemos mostrado lo que ocurría cuando el servidor cargaba inicialmente cada una de las páginas [index, page1, page2, page3, page4]. En la práctica, esto no es lo que ocurre: en un funcionamiento normal, solo se busca en el servidor la página [index]. Veamos las tres páginas en este caso:</p>
 <p><u><strong>página [index]</strong></u></p>
 <p><img src="images/100000000000058D000002B9BEB01E93.png" width="426" height="209" style="width:11.282cm;height:5.532cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000058D000002B9BEB01E93.png" /></p>
 <p>Ya hemos explicado este resultado en el apartado <a href="../../../../../../st-2020/st-2020/cours/nuxtjs/masters/02/chap-05.docx#nuxt02_index_execution"><u><span style="color: #0563c1">«enlace</span></u></a>».</p>
@@ -2546,7 +2550,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  created() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[page1 created]&#x27;</span>)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.$store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 25)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -2559,12 +2563,12 @@
 <p>Es la línea 6 la que ponía el contador en 25. Como la página no se solicitó al servidor, las líneas 5-7 no se ejecutaron y el contador de la variable [Vuex] se quedó en 0.</p>
 <p>Ahora, hagamos clic en el enlace [Page 2]:</p>
 <p><img src="images/100000000000057B00000284F2F07154.png" width="421" height="193" style="width:11.13cm;height:5.112cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000057B00000284F2F07154.png" /></p>
-<p>Esta vez, no se muestra ningún valor y, además, aparece una advertencia en los registros de la consola:</p>
+<p>Esta vez no se muestra ningún valor y, además, aparece una advertencia en los registros de la consola:</p>
 <p><img src="images/10000000000006690000018B518016D1.png" width="574" height="138" style="width:15.199cm;height:3.662cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006690000018B518016D1.png" /></p>
 <ul>
-  <li>En [1], vemos que la función [asyncData] ha sido ejecutada por el cliente. Siempre es así:
+  <li>En [1], vemos que la función [asyncData] ha sido ejecutada por el cliente. Siempre ocurre lo mismo:
     <ul>
-      <li>la ejecuta el servidor si la página se solicita al servidor. En este caso, no la ejecuta el cliente;
+      <li>la ejecuta el servidor si la página se solicita al servidor; en ese caso, no la ejecuta el cliente;
       </li>
       <li>y cada vez que la página es el <b>destino </b>de la ruta actual del cliente;
       </li>
@@ -2577,13 +2581,13 @@
 <p>Recordemos el código ejecutado por el cliente:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">asyncData() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿quién ejecuta este código?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿Quién ejecuta este código?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;asyncData, client=&#x27;</span>, process.client, <span style="color:#a31515">&#x27;serveur=&#x27;</span>, process.server)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para el servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo para el servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (<span style="background-color:#ffff00">process.server</span>) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// se devuelve una promesa</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">return</span> <span style="color:#0000ff">new</span> Promise(<span style="color:#0000ff">function</span>(resolve, reject) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// normalmente se trata de una función asíncrona, pero no en este caso</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// Normalmente aquí habría una función asíncrona, pero en este caso no</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// este resultado se incluirá en las propiedades de [data]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        resolve({ value: 87 })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      })</span></span>
@@ -2592,41 +2596,41 @@
 </code></pre></div>
 
 <ul>
-  <li>la línea 3 permitió ver que la función [asyncData] fue ejecutada por el cliente incluso antes que las funciones del ciclo de vida;
+  <li>en la línea 3 se ha podido comprobar que la función [asyncData] fue ejecutada por el cliente incluso antes que las funciones del ciclo de vida;
   </li>
-  <li>la línea 5 impidió la ejecución del resto del código que creaba la propiedad [value], ya que este código es ejecutado por el cliente;
+  <li>la línea 5 impidió la ejecución del resto del código que creaba la propiedad [value], ya que dicho código lo ejecuta el cliente;
   </li>
 </ul>
 
 <p>Ahora pasemos a la página [page3]:</p>
 <p><img src="images/100000000000050A000001DDC9E03F0E.png" width="645" height="238" style="width:17.069cm;height:6.309cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000050A000001DDC9E03F0E.png" /></p>
 <ul>
-  <li>en [2], teníamos 28 cuando la página fue proporcionada por el servidor. Aquí no es el caso;
+  <li>en [2], teníamos 28 cuando la página fue servida por el servidor. Aquí no es así;
   </li>
   <li>en [4], vemos que la función [fetch] se ha ejecutado en el lado del cliente;
   </li>
 </ul>
 
-<p>Examinemos el código ejecutado por el cliente:</p>
+<p>Analicemos el código ejecutado por el cliente:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">fetch(context) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿quién ejecuta este código?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// ¿Quién ejecuta este código?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;fetch, client=&#x27;</span>, process.client, <span style="color:#a31515">&#x27;serveur=&#x27;</span>, process.server)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para el servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo para el servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// se devuelve una promesa</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">return</span> <span style="color:#0000ff">new</span> Promise(<span style="color:#0000ff">function</span>(resolve, reject) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// normalmente se trata de una función asíncrona</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// lo simulamos con una espera de un segundo</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// Normalmente, aquí hay una función asíncrona</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// la simulamos con una espera de un segundo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        setTimeout(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#008000">// éxito</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#008000">// Éxito</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          resolve()</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }, 1000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }).then(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// modificar los ciegos</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// se modifica el store</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        context.store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, 28)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008000">// registrar</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008000">// registro</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        console.log(</span>&#x27;fetch commit terminé&#x27;<span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -2637,7 +2641,7 @@
 <ul>
   <li>el cliente ejecuta el método [fetch], línea 2;
   </li>
-  <li>Las líneas 6-21 no se ejecutan porque la condición [process.server] es falsa. Por lo tanto, la línea 17, que establece el contador en 28, no se ejecuta. El contador permanece en cero. Por eso el cliente muestra 0 en lugar de 28;
+  <li>las líneas 6-21 no se ejecutan porque la condición [process.server] es falsa. Por lo tanto, la línea 17, que establece el contador en 28, no se ejecuta. Se queda en cero. Por eso el cliente muestra 0 en lugar de 28;
   </li>
 </ul>
 
@@ -2658,24 +2662,24 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      value: 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">async</span> beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[page4 beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para el servidor</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo para el servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">if</span> (process.server) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// ejecutar la función asíncrona</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// se ejecuta la función asíncrona</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">const</span> valeur = <span style="color:#0000ff">await</span> <span style="color:#0000ff">new</span> Promise(<span style="color:#0000ff">function</span>(resolve, reject) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// normalmente se trata de una función asíncrona</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// lo simulamos con una espera de 10 segundos</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// Aquí normalmente hay una función asíncrona</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// se simula con una espera de 10 segundos</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        setTimeout(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// success - se devuelve el valor del contador</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// Éxito: se devuelve el valor del contador</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          resolve(52)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }, 10000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      })</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// modificar los ciegos</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// Se modifica el store</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">this</span>.$store.commit(<span style="color:#a31515">&#x27;increment&#x27;</span>, valeur)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#008000">// registrar</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#008000">// registro</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span>&#x27;[page4 beforeCreate], fonction asynchrone terminée, compteur=&#x27;<span style="color:#000000">, </span><span style="color:#0000ff">this</span><span style="color:#000000">.$store.state.counter)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
@@ -2692,27 +2696,28 @@
   </li>
 </ul>
 
-<p>Cabe preguntarse qué ocurre cuando se comenta la condición [if] de las líneas 12 y 26. He aquí la respuesta:</p>
+<p>Cabe preguntarse qué ocurre cuando se comenta la condición [if] de las líneas 12 y 26. Esta es la respuesta:</p>
 <ul>
-  <li>esta vez, el cliente ejecuta las líneas 14-25, pero [nuxt] no espera a que termine la función asíncrona (como en el caso del servidor) y, por lo tanto, deja el contador en 0;
+  <li>esta vez, el cliente ejecuta las líneas 14-25, pero [nuxt] no espera a que finalice la función asíncrona (como ocurre con el servidor) y, por lo tanto, deja el contador en 0;
   </li>
-  <li>al cabo de 10 s, la función asíncrona finaliza y el contador se pone a 52 en la línea 23;
+  <li>al cabo de 10 s, la función asíncrona finaliza y el contador se establece en 52 en la línea 23;
   </li>
-  <li>cuando se vuelve a navegar a la página [page4], se muestra entonces el valor 52;
-  </li>
-</ul>
-<h2 id="57-resumen">5.7. <span style="color: #4f81bd">Resumen</span></h2>
-<p>De nuestras diferentes pruebas, destacamos los siguientes puntos:</p>
-<ul>
-  <li>si la página [index] debe contener datos externos, el servidor puede buscarlos mediante la función [asyncData];
-  </li>
-  <li>si el servidor debe inicializar un almacén [Vuex] con datos externos al cargar la página [index], lo hará en la función [fetch];
-  </li>
-  <li>la página generada por el servidor y la página generada por el cliente deben ser <b>idénticas </b>si se quiere evitar el efecto de «salto» provocado por el hecho de que la página del cliente sustituye visualmente a la página enviada por el servidor y mostrada inicialmente;
+  <li>cuando se vuelve a acceder a la página [page4], se muestra el valor 52;
   </li>
 </ul>
 
-<p>Descubriremos otros aspectos de [nuxt] a través de un nuevo ejemplo.</p>
+<h2 id="57-resume">5.7. <span style="color: #4f81bd">Résumé</span></h2>
+<p>De nuestras diferentes pruebas, cabe destacar los siguientes puntos:</p>
+<ul>
+  <li>si la página [index] debe contener datos externos, el servidor puede recuperarlos mediante la función [asyncData];
+  </li>
+  <li>si el servidor debe inicializar un almacén [Vuex] con datos externos al cargar la página [index], lo hará en la función [fetch];
+  </li>
+  <li>la página generada por el servidor y la generada por el cliente deben ser <b>idénticas </b>si se quiere evitar el efecto de «salto» provocado por el hecho de que la página del cliente sustituya visualmente a la página enviada por el servidor y mostrada inicialmente;
+  </li>
+</ul>
+
+<p>Vamos a descubrir otros aspectos de [nuxt] a través de un nuevo ejemplo.</p>
 
 
 

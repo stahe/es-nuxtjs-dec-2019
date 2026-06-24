@@ -386,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-01-enrutamiento-y-navigation.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-01-enrutamiento-y-navegacion.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Ejemplo [nuxt-01]: enrutamiento y navigation
+    4. Ejemplo [nuxt-01]: enrutamiento y navegación
   
 
     
@@ -608,10 +608,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#101-presentacion" class="md-nav__link">
+  <a href="#101-presentation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.1. Presentación
+        10.1. Présentation
       
     </span>
   </a>
@@ -715,14 +715,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-09-control-de-navigation.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-09-control-de-la-navegacion.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Ejemplo [nuxt-09]: control de navigation
+    12. Ejemplo [nuxt-09]: control de la navegación
   
 
     
@@ -749,7 +749,7 @@
   <span class="md-ellipsis">
     
   
-    13. Ejemplo [nuxt-10]: asyncData y loading
+    13. Ejemplo [nuxt-10]: asyncData y «loading»
   
 
     
@@ -823,14 +823,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ejemplo-nuxt-13-control-de-la-navigation-de-nuxt-12.html" class="md-nav__link">
+      <a href="ejemplo-nuxt-13-comprobacion-de-la-navegacion-de-nuxt-12.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. Ejemplo [nuxt-13]: control de la navigation de [nuxt-12]
+    16. Ejemplo [nuxt-13]: comprobación de la navegación de [nuxt-12]
   
 
     
@@ -887,27 +887,28 @@
 
 
 
-<h1 id="10-ejemplo-nuxt-07-los-contextos-de-cliente-y-servidor">10. <span style="color: #365f91"><strong>Ejemplo [nuxt-07]: los contextos de cliente y servidor</strong></span></h1>
-<h2 id="101-presentacion">10.1. <span style="color: #4f81bd">Presentación</span></h2>
-<p>El ejemplo [nuxt-07] tiene como objetivo explorar el objeto [context] tanto del lado del servidor como del lado del cliente. No hay que olvidar que estos dos actores de las aplicaciones [nuxt] están separados: <strong>no comparten</strong> nada salvo:</p>
+<h1 id="10-ejemplo-nuxt-07-los-contextos-de-cliente-y-servidor">10. <span style="color: #365f91">Ejemplo [nuxt-07]: los contextos de cliente y servidor</span></h1>
+<h2 id="101-presentation">10.1. <span style="color: #4f81bd">Présentation</span></h2>
+<p>El ejemplo [nuxt-07] tiene como objetivo explorar el objeto [context] tanto del lado del servidor como del lado del cliente. No hay que olvidar que estos dos actores de las aplicaciones [nuxt] están separados: <strong>no comparten</strong> nada, salvo:</p>
 <ul>
-  <li>lo que el servidor está dispuesto a enviar al cliente (en la respuesta HTTP y la página enviada);
+  <li>lo que el servidor decide enviar al cliente (en la respuesta HTTP y la página enviada);
   </li>
   <li>lo que el cliente decide enviar al servidor (en su solicitud HTTP);
   </li>
 </ul>
 
-<p>Por lo tanto, aunque, como veremos, los objetos manipulados por el servidor y los manipulados por el cliente <strong>tengan el mismo nombre</strong>, no son idénticos: a veces pueden ser copias el uno del otro, pero nunca tienen la misma referencia. Modificar un objeto del cliente no tiene ningún efecto sobre el objeto del mismo nombre, en el lado del servidor, y viceversa.</p>
-<p>El ejemplo [nuxt-07] se obtiene inicialmente copiando el ejemplo [nuxt-01]:</p>
+<p>Por lo tanto, aunque, como veremos, los objetos manipulados por el servidor y los manipulados por el cliente <strong>tengan el mismo nombre</strong>, no son idénticos: a veces pueden ser copias entre sí, pero nunca tienen la misma referencia. Modificar un objeto del cliente no tiene ningún efecto sobre el objeto del mismo nombre en el lado del servidor, y viceversa.</p>
+<p>El ejemplo [nuxt-07] se obtiene inicialmente mediante una copia del ejemplo [nuxt-01]:</p>
 <p><img src="images/1000000000000160000001D7C9F9C2ED.png" width="141" height="188" style="width:3.731cm;height:4.979cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000160000001D7C9F9C2ED.png" /></p>
 <ul>
-  <li>en [2], vamos a añadir un plugin común al cliente y al servidor;
+  <li>en [2], vamos a añadir un complemento común al cliente y al servidor;
   </li>
-  <li>en [3], vamos a modificar ligeramente la página [index];
+  <li>en [3], modificaremos ligeramente la página [index];
   </li>
 </ul>
+
 <h2 id="102-el-complemento-common-mainjs">10.2. <span style="color: #4f81bd">El complemento [common / main.js]</span></h2>
-<p>El plugin [common / main.js] se ejecuta tanto en el cliente como en el servidor: esto se debe a la siguiente configuración [nuxt.config.js]:</p>
+<p>El complemento [common / main.js] se ejecuta tanto en el cliente como en el servidor: esto se debe a la siguiente configuración [nuxt.config.js]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
 <span class="odt-code-line"><span class="odt-code-line-content">/*</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   ** Plugins to load before mounting the App</span></span>
@@ -920,43 +921,43 @@
   </li>
 </ul>
 
-<p>Este plugin será el siguiente:</p>
+<p>Este complemento será el siguiente:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-undef */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> </span>function<span style="color:#000000">(...args) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ¿quién ejecuta este código?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ¿Quién ejecuta este código?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  console.log(<span style="color:#a31515">&#x27;[main server], process.server=&#x27;</span>, process.server, <span style="color:#a31515">&#x27;process.client=&#x27;</span>, process.client)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> who = process.server ? <span style="color:#a31515">&#x27;server&#x27;</span> : <span style="color:#a31515">&#x27;client&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> main = <span style="color:#a31515">&#x27;[main &#x27;</span> + who + <span style="color:#a31515">&#x27;]&#x27;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// número de argumentos</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Número de argumentos</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  console.log(main + <span style="color:#a31515">&#x27;, il y a&#x27;</span>, args.length, <span style="color:#a31515">&#x27;arguments&#x27;</span>)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 1er argumento</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// primer argumento</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> context = args[0]</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// contexto clave</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// claves del contexto</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  dumpkeys(main + <span style="color:#a31515">&#x27;, context&#x27;</span>, context)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// la aplicación</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  dumpkeys(main + <span style="color:#a31515">&#x27;, context.app&#x27;</span>, context.app)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// el camino</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// la ruta</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  dumpkeys(main + <span style="color:#a31515">&#x27;, context.route&#x27;</span>, context.route)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  console.log(main + <span style="color:#a31515">&#x27;, context.route=&#x27;</span>, context.route)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// el router</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  dumpkeys(main + <span style="color:#a31515">&#x27;, context.app.router&#x27;</span>, context.app.router)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// en router.options.routes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// el router.options.routes</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  dumpkeys(main + <span style="color:#a31515">&#x27;, context.app.router.options.routes&#x27;</span>, context.app.router.options.routes)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  console.log(main + <span style="color:#a31515">&#x27;, context.app.router.options.routes=&#x27;</span>, context.app.router.options.routes)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 2º argumento</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// segundo argumento</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> inject = args[1]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  console.log(<span style="color:#a31515">&#x27;inject=&#x27;</span>, <span style="color:#0000ff">typeof</span> inject)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span> dumpkeys(message, object) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// lista de claves [object]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// lista de claves de [object]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">const</span> ligne = <span style="color:#a31515">&#x27;Liste des clés [&#x27;</span> + message + <span style="color:#a31515">&#x27;]&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  console.log(ligne)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// lista de llaves</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// lista de claves</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">if</span> (object) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(Object.keys(object))</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
@@ -966,15 +967,15 @@
 <ul>
   <li>líneas 31-39: la función [dumpkeys] enumera las propiedades del objeto pasado como segundo parámetro. Esta lista va precedida del mensaje pasado como primer parámetro;
   </li>
-  <li>línea 3: queremos saber cuántos argumentos recibe la función. Para ello, utilizamos la notación [...args], que tendrá como efecto colocar los parámetros efectivos de la función en la tabla [args]. Descubriremos que hay dos argumentos;
+  <li>línea 3: queremos saber cuántos argumentos recibe la función. Para ello, utilizamos la notación [...args], que tendrá como efecto colocar los parámetros efectivos de la función en la matriz [args]. Descubriremos que hay dos argumentos;
   </li>
-  <li>línea 5: se muestra quién ejecuta el código, si el servidor o el cliente;
+  <li>línea 5: se muestra quién ejecuta el código, si es el servidor o el cliente;
   </li>
   <li>línea 6: el ejecutor del código, cliente o servidor;
   </li>
   <li>línea 7: una cadena de caracteres constante utilizada en los registros;
   </li>
-  <li>línea 12: veremos que el primer argumento recibido por el plugin es el contexto del ejecutor;
+  <li>línea 12: veremos que el primer argumento que recibe el plugin es el contexto del ejecutor;
   </li>
   <li>línea 14: lista de claves del objeto [context];
   </li>
@@ -989,6 +990,7 @@
   <li>líneas 27-28: el segundo argumento del plugin es la función [inject] que hemos utilizado en el ejemplo [nuxt-06];
   </li>
 </ul>
+
 <h2 id="103-el-complemento-ejecutado-por-el-servidor">10.3. <span style="color: #4f81bd">El complemento ejecutado por el servidor</span></h2>
 <p>Al ejecutarse, el servidor muestra lo siguiente:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -1019,25 +1021,25 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>[main server], il y a 2 arguments
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>Liste des clés [[main server], context]
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>[
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>   &#39;isStatic&#39;,
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>   &#39;isDev&#39;,
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>   &#39;isHMR&#39;,
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>   &#39;app&#39;,
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>   &#39;payload&#39;,
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>   &#39;error&#39;,
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a>   &#39;base&#39;,
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a>   &#39;env&#39;,
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a>   &#39;req&#39;,
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a>   &#39;res&#39;,
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a>   &#39;ssrContext&#39;,
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a>   &#39;redirigir&quot;,
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a>   &#39;beforeNuxtRender&#39;,
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a>   &#39;ruta&#39;,
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a>   &#39;siguiente&#39;,
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a>   &#39;_redirected&#39;,
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a>   &#39;_errored&#39;,
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a>   &#39;params&#39;,
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a>   &#39;consulta&#39;,
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>  &#39;isStatic&#39;,
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>  &#39;isDev&#39;,
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>  &#39;isHMR&#39;,
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>  &#39;app&#39;,
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>  &#39;payload&#39;,
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>  &#39;error&#39;,
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>  &#39;base&#39;,
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>  &#39;env&#39;,
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>  &#39;req&#39;,
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>  &#39;res&#39;,
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>  &#39;ssrContext&#39;,
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>  &#39;redirect&#39;,
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>  &#39;beforeNuxtRender&#39;,
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>  &#39;route&#39;,
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>  &#39;next&#39;,
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>  &#39;_redirected&#39;,
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>  &#39;_errored&#39;,
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>  &#39;params&#39;,
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>  &#39;query&#39;,
 <a id="__codelineno-0-24" name="__codelineno-0-24"></a>   &#39;$axios&#39;
 <a id="__codelineno-0-25" name="__codelineno-0-25"></a>]
 </code></pre></div></td></tr></table></div>
@@ -1046,7 +1048,7 @@
   </li>
   <li>línea 8: la propiedad [app] designa la aplicación [nuxt];
   </li>
-  <li>línea 18: la propiedad [route] designa la ruta actual del enrutador, es decir, la página que va a enviar el servidor;
+  <li>línea 18: la propiedad [route] indica la ruta actual del enrutador, es decir, la página que va a enviar el servidor;
   </li>
   <li>línea 13: la solicitud HTTP del navegador del cliente;
   </li>
@@ -1073,19 +1075,19 @@
 <span class="normal"><a href="#__codelineno-1-16">16</a></span>
 <span class="normal"><a href="#__codelineno-1-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Liste des clés [[main server], context.app]
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>[
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>   &#39;router&#39;,
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>   &#39;nuxt&#39;,
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>   &#39;cabeza&quot;,
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>   &#39;render&quot;,
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>   &#39;data&#39;,
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>   &#39;beforeCreate&#39;,
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>   &#39;creado&quot;,
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>   &#39;montado&#39;,
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>   &#39;watch&#39;,
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>   &#39;computado&#39;,
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>   &#39;métodos&quot;,
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>   &#39;componentes&quot;,
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>   &#39;contexto&quot;,
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>  &#39;router&#39;,
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>  &#39;nuxt&#39;,
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>  &#39;head&#39;,
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>  &#39;render&#39;,
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>  &#39;data&#39;,
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>  &#39;beforeCreate&#39;,
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>  &#39;created&#39;,
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>  &#39;mounted&#39;,
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>  &#39;watch&#39;,
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>  &#39;computed&#39;,
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>  &#39;methods&#39;,
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>  &#39;components&#39;,
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>  &#39;context&#39;,
 <a id="__codelineno-1-16" name="__codelineno-1-16"></a>   &#39;$axios&#39;
 <a id="__codelineno-1-17" name="__codelineno-1-17"></a>]
 </code></pre></div></td></tr></table></div>
@@ -1107,14 +1109,14 @@
 <span class="normal"><a href="#__codelineno-2-10">10</a></span>
 <span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Liste des clés [[main server], context.route]
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>[
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>   &#39;name&#39;,
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>   &#39;meta&#39;,
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>   &#39;path&#39;,
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a>   &#39;hash&#39;,
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>   &#39;consulta&#39;,
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>   &#39;params&#39;,
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>   &#39;fullPath&#39;,
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>   &#39;emparejado&#39;
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>  &#39;name&#39;,
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>  &#39;meta&#39;,
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>  &#39;path&#39;,
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>  &#39;hash&#39;,
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>  &#39;query&#39;,
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>  &#39;params&#39;,
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>  &#39;fullPath&#39;,
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>   &#39;coincidente&#39;
 <a id="__codelineno-2-11" name="__codelineno-2-11"></a>]
 </code></pre></div></td></tr></table></div>
 <p>La ruta [context.route] al iniciar el servidor es la siguiente:</p>
@@ -1190,19 +1192,19 @@
 <span class="normal"><a href="#__codelineno-4-10">10</a></span>
 <span class="normal"><a href="#__codelineno-4-11">11</a></span>
 <span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>Liste des clés [[main server], context.app.router]
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>[
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>   &#39;app&#39;,
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>   &#39;aplicaciones&quot;,
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>   &#39;opciones&quot;,
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>   &#39;beforeHooks&#39;,
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>   &#39;resolveHooks&#39;,
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>   &#39;afterHooks&#39;,
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>   &#39;matcher&#39;,
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>   &#39;fallback&#39;,
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a>   &#39;modo&quot;,
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a>   &#39;historia
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a>]
+<span class="normal"><a href="#__codelineno-4-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">Liste</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">cl</span><span class="err">és [[main server], context.app.router]</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="err">[</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="c1">&#39;app&#39;,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span><span class="c1">&#39;apps&#39;,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="c1">&#39;options&#39;,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">  </span><span class="c1">&#39;beforeHooks&#39;,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">  </span><span class="c1">&#39;resolveHooks&#39;,</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">  </span><span class="c1">&#39;afterHooks&#39;,</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">  </span><span class="c1">&#39;matcher&#39;,</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">  </span><span class="c1">&#39;fallback&#39;,</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">  </span><span class="c1">&#39;mode&#39;,</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">   </span><span class="c1">&#39;historial&#39;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="err">]</span>
 </code></pre></div></td></tr></table></div>
 <p>En la propiedad [context.app.router.options.routes] se encuentran las diferentes rutas de la aplicación:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
@@ -1260,7 +1262,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- página principal --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>template<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&lt;<span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span>=&quot;true&quot;<span style="color:#000000"> </span><span style="color:#ff0000">:right</span>=&quot;true&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navigation --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- navegación --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">Navigation</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;left&quot;<span style="color:#000000"> </span>/&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensaje--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>&lt;<span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span>=&quot;right&quot;<span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span>=&quot;warning&quot;&gt;</span></span>
@@ -1268,15 +1270,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span>b-alert<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span>Layout<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span>template<span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span>script<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-undef */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable no-console */</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">/* eslint-disable nuxt/no-env-in-hooks */</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Navigation </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/navigation&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span>&#x27;@/components/layout&#x27;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export<span style="color:#000000"> </span>default<span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  name: <span style="color:#a31515">&#x27;Home&#x27;</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes utilizados</span></span></span>
@@ -1289,8 +1291,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      who: process.server ? <span style="color:#a31515">&#x27;server&#x27;</span> : <span style="color:#a31515">&#x27;client&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo vital</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeCreate() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cliente y servidor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span>&#x27;[home beforeCreate]&#x27;<span style="color:#000000">)</span></span></span>
@@ -1302,16 +1304,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">this</span>.dumpkeys(<span style="color:#a31515">&#x27;[home &#x27;</span> + <span style="color:#0000ff">this</span>.who + <span style="color:#a31515">&#x27; created], this.$nuxt.context&#x27;</span>, <span style="color:#0000ff">this</span>.$nuxt.context)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  beforeMount() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home &#x27;</span> + <span style="color:#0000ff">this</span>.who + <span style="color:#a31515">&#x27; beforeMount]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  mounted() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// sólo para clientes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// solo cliente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    console.log(<span style="color:#a31515">&#x27;[home &#x27;</span> + <span style="color:#0000ff">this</span>.who + <span style="color:#a31515">&#x27; mounted]&#x27;</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  methods: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    dumpkeys(message, object) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// lista de claves [object]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// lista de claves de [object]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">const</span> ligne = <span style="color:#a31515">&#x27;Liste des clés [&#x27;</span> + message + <span style="color:#a31515">&#x27;]&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      console.log(ligne)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">if</span> (object) {</span></span>
@@ -1386,53 +1388,53 @@
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="err">[home server created]</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">Liste</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">cl</span><span class="err">és [[home server created], this.$nuxt]</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="err">[</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">   </span><span class="c1">&#39;_uid&#39;,</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">   </span><span class="c1">&#39;_isVue&#39;,</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">  </span><span class="c1">&#39;_uid&#39;,</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">  </span><span class="c1">&#39;_isVue&#39;,</span>
 <a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">   </span><span class="c1">&#39;$options&#39;,</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">   </span><span class="c1">&#39;_renderProxy&#39;,</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">   </span><span class="c1">&#39;_self&#39;,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">  </span><span class="c1">&#39;_renderProxy&#39;,</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">  </span><span class="c1">&#39;_self&#39;,</span>
 <a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">   </span><span class="c1">&#39;$parent&#39;,</span>
 <a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">   </span><span class="c1">&#39;$root&#39;,</span>
 <a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">   </span><span class="c1">&#39;$children&#39;,</span>
 <a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">   </span><span class="c1">&#39;$refs&#39;,</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">   </span><span class="c1">&#39;_watcher&#39;,</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">   </span><span class="c1">&#39;_inactive&#39;,</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">   </span><span class="c1">&#39;_directInactive&#39;,</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">   </span><span class="c1">&#39;_isMounted&#39;,</span>
-<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">   </span><span class="c1">&#39;_isDestroyed&#39;,</span>
-<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">   </span><span class="c1">&#39;_isBeingDestroyed&#39;,</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">   </span><span class="c1">&#39;_events&#39;,</span>
-<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">   </span><span class="c1">&#39;_hasHookEvent&#39;,</span>
-<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">   </span><span class="c1">&#39;_vnode&#39;,</span>
-<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">   </span><span class="c1">&#39;_staticTrees&#39;,</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">  </span><span class="c1">&#39;_watcher&#39;,</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">  </span><span class="c1">&#39;_inactive&#39;,</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">  </span><span class="c1">&#39;_directInactive&#39;,</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">  </span><span class="c1">&#39;_isMounted&#39;,</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">  </span><span class="c1">&#39;_isDestroyed&#39;,</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">  </span><span class="c1">&#39;_isBeingDestroyed&#39;,</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">  </span><span class="c1">&#39;_events&#39;,</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">  </span><span class="c1">&#39;_hasHookEvent&#39;,</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">  </span><span class="c1">&#39;_vnode&#39;,</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">  </span><span class="c1">&#39;_staticTrees&#39;,</span>
 <a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="w">   </span><span class="c1">&#39;$vnode&#39;,</span>
 <a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="w">   </span><span class="c1">&#39;$slots&#39;,</span>
 <a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="w">   </span><span class="c1">&#39;$scopedSlots&#39;,</span>
-<a id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="w">   </span><span class="c1">&#39;_c&#39;,</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="w">  </span><span class="c1">&#39;_c&#39;,</span>
 <a id="__codelineno-7-28" name="__codelineno-7-28"></a><span class="w">   </span><span class="c1">&#39;$createElement&#39;,</span>
 <a id="__codelineno-7-29" name="__codelineno-7-29"></a><span class="w">   </span><span class="c1">&#39;$attrs&#39;,</span>
 <a id="__codelineno-7-30" name="__codelineno-7-30"></a><span class="w">   </span><span class="c1">&#39;$listeners&#39;,</span>
-<a id="__codelineno-7-31" name="__codelineno-7-31"></a><span class="w">   </span><span class="c1">&#39;_routerRoot&#39;,</span>
-<a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="w">   </span><span class="c1">&#39;_router&#39;,</span>
-<a id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="w">   </span><span class="c1">&#39;_route&#39;,</span>
-<a id="__codelineno-7-34" name="__codelineno-7-34"></a><span class="w">   </span><span class="c1">&#39;_bv__modal&#39;,</span>
-<a id="__codelineno-7-35" name="__codelineno-7-35"></a><span class="w">   </span><span class="c1">&#39;_bv__toast&#39;,</span>
-<a id="__codelineno-7-36" name="__codelineno-7-36"></a><span class="w">   </span><span class="c1">&#39;_vueMeta&#39;,</span>
-<a id="__codelineno-7-37" name="__codelineno-7-37"></a><span class="w">   </span><span class="c1">&#39;nuxt&#39;,</span>
-<a id="__codelineno-7-38" name="__codelineno-7-38"></a><span class="w">   </span><span class="c1">&#39;_watchers&#39;,</span>
-<a id="__codelineno-7-39" name="__codelineno-7-39"></a><span class="w">   </span><span class="c1">&#39;refreshOnlineStatus&#39;,</span>
-<a id="__codelineno-7-40" name="__codelineno-7-40"></a><span class="w">   </span><span class="c1">&#39;refrescar&#39;,</span>
-<a id="__codelineno-7-41" name="__codelineno-7-41"></a><span class="w">   </span><span class="c1">&#39;errorChanged&#39;,</span>
-<a id="__codelineno-7-42" name="__codelineno-7-42"></a><span class="w">   </span><span class="c1">&#39;setLayout&#39;,</span>
-<a id="__codelineno-7-43" name="__codelineno-7-43"></a><span class="w">   </span><span class="c1">&#39;loadLayout&#39;,</span>
-<a id="__codelineno-7-44" name="__codelineno-7-44"></a><span class="w">   </span><span class="c1">&#39;_data&#39;,</span>
-<a id="__codelineno-7-45" name="__codelineno-7-45"></a><span class="w">   </span><span class="c1">&#39;layoutName&#39;,</span>
-<a id="__codelineno-7-46" name="__codelineno-7-46"></a><span class="w">   </span><span class="c1">&#39;diseño&#39;,</span>
-<a id="__codelineno-7-47" name="__codelineno-7-47"></a><span class="w">   </span><span class="c1">&#39;isOnline&#39;,</span>
-<a id="__codelineno-7-48" name="__codelineno-7-48"></a><span class="w">   </span><span class="c1">&#39;_computedWatchers&#39;,</span>
-<a id="__codelineno-7-49" name="__codelineno-7-49"></a><span class="w">   </span><span class="c1">&#39;isOffline&#39;,</span>
-<a id="__codelineno-7-50" name="__codelineno-7-50"></a><span class="w">   </span><span class="c1">&#39;error&#39;,</span>
-<a id="__codelineno-7-51" name="__codelineno-7-51"></a><span class="w">   </span><span class="c1">&#39;contexto</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31"></a><span class="w">  </span><span class="c1">&#39;_routerRoot&#39;,</span>
+<a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="w">  </span><span class="c1">&#39;_router&#39;,</span>
+<a id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="w">  </span><span class="c1">&#39;_route&#39;,</span>
+<a id="__codelineno-7-34" name="__codelineno-7-34"></a><span class="w">  </span><span class="c1">&#39;_bv__modal&#39;,</span>
+<a id="__codelineno-7-35" name="__codelineno-7-35"></a><span class="w">  </span><span class="c1">&#39;_bv__toast&#39;,</span>
+<a id="__codelineno-7-36" name="__codelineno-7-36"></a><span class="w">  </span><span class="c1">&#39;_vueMeta&#39;,</span>
+<a id="__codelineno-7-37" name="__codelineno-7-37"></a><span class="w">  </span><span class="c1">&#39;nuxt&#39;,</span>
+<a id="__codelineno-7-38" name="__codelineno-7-38"></a><span class="w">  </span><span class="c1">&#39;_watchers&#39;,</span>
+<a id="__codelineno-7-39" name="__codelineno-7-39"></a><span class="w">  </span><span class="c1">&#39;refreshOnlineStatus&#39;,</span>
+<a id="__codelineno-7-40" name="__codelineno-7-40"></a><span class="w">  </span><span class="c1">&#39;refresh&#39;,</span>
+<a id="__codelineno-7-41" name="__codelineno-7-41"></a><span class="w">  </span><span class="c1">&#39;errorChanged&#39;,</span>
+<a id="__codelineno-7-42" name="__codelineno-7-42"></a><span class="w">  </span><span class="c1">&#39;setLayout&#39;,</span>
+<a id="__codelineno-7-43" name="__codelineno-7-43"></a><span class="w">  </span><span class="c1">&#39;loadLayout&#39;,</span>
+<a id="__codelineno-7-44" name="__codelineno-7-44"></a><span class="w">  </span><span class="c1">&#39;_data&#39;,</span>
+<a id="__codelineno-7-45" name="__codelineno-7-45"></a><span class="w">  </span><span class="c1">&#39;layoutName&#39;,</span>
+<a id="__codelineno-7-46" name="__codelineno-7-46"></a><span class="w">  </span><span class="c1">&#39;layout&#39;,</span>
+<a id="__codelineno-7-47" name="__codelineno-7-47"></a><span class="w">  </span><span class="c1">&#39;isOnline&#39;,</span>
+<a id="__codelineno-7-48" name="__codelineno-7-48"></a><span class="w">  </span><span class="c1">&#39;_computedWatchers&#39;,</span>
+<a id="__codelineno-7-49" name="__codelineno-7-49"></a><span class="w">  </span><span class="c1">&#39;isOffline&#39;,</span>
+<a id="__codelineno-7-50" name="__codelineno-7-50"></a><span class="w">  </span><span class="c1">&#39;error&#39;,</span>
+<a id="__codelineno-7-51" name="__codelineno-7-51"></a><span class="w">   </span><span class="c1">&#39;contexto&#39;</span>
 <a id="__codelineno-7-52" name="__codelineno-7-52"></a><span class="err">]</span>
 </code></pre></div></td></tr></table></div>
 <p>Las propiedades del contexto del servidor en la página [index] son las siguientes:</p>
@@ -1460,29 +1462,29 @@
 <span class="normal"><a href="#__codelineno-8-22">22</a></span>
 <span class="normal"><a href="#__codelineno-8-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>Liste des clés [[home server created], this.$nuxt.context]
 <a id="__codelineno-8-2" name="__codelineno-8-2"></a>[
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a>   &#39;isStatic&#39;,
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a>   &#39;isDev&#39;,
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a>   &#39;isHMR&#39;,
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a>   &#39;app&#39;,
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a>   &#39;payload&#39;,
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a>   &#39;error&#39;,
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a>   &#39;base&#39;,
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a>   &#39;env&#39;,
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a>   &#39;req&#39;,
-<a id="__codelineno-8-12" name="__codelineno-8-12"></a>   &#39;res&#39;,
-<a id="__codelineno-8-13" name="__codelineno-8-13"></a>   &#39;ssrContext&#39;,
-<a id="__codelineno-8-14" name="__codelineno-8-14"></a>   &#39;redirigir&quot;,
-<a id="__codelineno-8-15" name="__codelineno-8-15"></a>   &#39;beforeNuxtRender&#39;,
-<a id="__codelineno-8-16" name="__codelineno-8-16"></a>   &#39;ruta&#39;,
-<a id="__codelineno-8-17" name="__codelineno-8-17"></a>   &#39;siguiente&#39;,
-<a id="__codelineno-8-18" name="__codelineno-8-18"></a>   &#39;_redirected&#39;,
-<a id="__codelineno-8-19" name="__codelineno-8-19"></a>   &#39;_errored&#39;,
-<a id="__codelineno-8-20" name="__codelineno-8-20"></a>   &#39;params&#39;,
-<a id="__codelineno-8-21" name="__codelineno-8-21"></a>   &#39;consulta&#39;,
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>  &#39;isStatic&#39;,
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>  &#39;isDev&#39;,
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>  &#39;isHMR&#39;,
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>  &#39;app&#39;,
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>  &#39;payload&#39;,
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>  &#39;error&#39;,
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>  &#39;base&#39;,
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>  &#39;env&#39;,
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>  &#39;req&#39;,
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a>  &#39;res&#39;,
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a>  &#39;ssrContext&#39;,
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a>  &#39;redirect&#39;,
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a>  &#39;beforeNuxtRender&#39;,
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a>  &#39;route&#39;,
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a>  &#39;next&#39;,
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a>  &#39;_redirected&#39;,
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a>  &#39;_errored&#39;,
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a>  &#39;params&#39;,
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a>  &#39;query&#39;,
 <a id="__codelineno-8-22" name="__codelineno-8-22"></a>   &#39;$axios&#39;
 <a id="__codelineno-8-23" name="__codelineno-8-23"></a>]
 </code></pre></div></td></tr></table></div>
-<p>Son las mismas propiedades que en el objeto [context] del complemento.</p>
+<p>Son las mismas propiedades que las del objeto [context] del complemento.</p>
 <h2 id="105-el-complemento-ejecutado-por-el-cliente">10.5. <span style="color: #4f81bd">El complemento ejecutado por el cliente</span></h2>
 <p>Una vez que el servidor ha enviado la página [index] al navegador del cliente, los scripts del cliente toman el control. A continuación, se ejecutará el complemento [main.js]. Estos son los registros:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
@@ -1515,7 +1517,7 @@
 <a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="err">[main client], context.app.router.options.routes= Array(3)0: {path: &quot;/page1&quot;, name: &quot;page1&quot;, component: ƒ}1: {path: &quot;/page2&quot;, name: &quot;page2&quot;, component: ƒ}2: {path: &quot;/&quot;, name: &quot;index&quot;, component: ƒ}length: 3__proto__: Array(0)</span>
 <a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="n">inject</span><span class="o">=</span><span class="w"> </span><span class="k">function</span>
 </code></pre></div></td></tr></table></div>
-<p>Encontramos propiedades análogas a las que se encuentran en el lado del servidor, con algunas propiedades que han desaparecido y otras que han aparecido. Así, en la línea 4, no se encuentran las propiedades [req, res], que eran las solicitudes HTTP del navegador del cliente y la respuesta HTTP del servidor.</p>
+<p>Encontramos propiedades similares a las que se observan en el lado del servidor, aunque algunas han desaparecido y otras han aparecido. Así, en la línea 4, no aparecen las propiedades [req, res], que correspondían a las solicitudes HTTP del navegador del cliente y a la respuesta HTTP del servidor.</p>
 <h2 id="106-la-pagina-index-del-cliente">10.6. <span style="color: #4f81bd">La página [index] del cliente</span></h2>
 <p>La página [index] del cliente genera los siguientes registros:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
@@ -1537,7 +1539,7 @@
 <ul>
   <li>línea 4: las propiedades del objeto [this.$nuxt]. Se trata de un objeto complejo con 51 propiedades;
   </li>
-  <li>línea 6: las propiedades del objeto [this.$nuxt.context]. Encontramos las mismas propiedades que en el objeto [context] del plugin del cliente;
+  <li>línea 6: las propiedades del objeto [this.$nuxt.context]. Se observan las mismas propiedades que en el objeto [context] del complemento del cliente;
   </li>
 </ul>
 
